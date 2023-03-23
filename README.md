@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Plant Shop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Sources
+### Images
+• https://cdn.britannica.com/41/93441-050-F58F8EF1/Gardeners-rhododendrons-flowers.jpg
 
-## Available Scripts
+• https://upload.wikimedia.org/wikipedia/commons/9/9c/Tibouchina_semidecandra.jpg?20050507130046
 
-In the project directory, you can run:
+• https://viverogarden.com/wp-content/uploads/2022/06/white-with-red-star.jpg
 
-### `npm start`
+• https://images.immediate.co.uk/production/volatile/sites/10/2019/07/2048x1365-Plectranthus-fruticosus-LI3917943-5433d9d.jpg?quality=90&resize=960%2C640
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+• https://cdn.shopify.com/s/files/1/0012/9689/2016/products/Jacks2_1024x1024@2x.jpg?v=1646599582
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+• https://upload.wikimedia.org/wikipedia/commons/f/f8/Starr_030418-0058_Bougainvillea_spectabilis.jpg
 
-### `npm test`
+• https://h2.commercev3.net/cdn.springhillnursery.com/images/800/09337A.jpg
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+• https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Rosa_Iceberg_1.jpg/1200px-Rosa_Iceberg_1.jpg
 
-### `npm run build`
+• https://i.etsystatic.com/17057214/r/il/3fb9ff/2570987170/il_fullxfull.2570987170_5a2x.jpg
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+• https://ncfarmsinc.com/products_images/Calibrachoa-Noa-Mega-Pink.jpg
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+• https://live.staticflickr.com/8774/17074137641_fddf69d1fb_z.jpg
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+• https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Brassica_oleracea_var._laciniata_flower.jpg/768px-Brassica_oleracea_var._laciniata_flower.jpg
 
-### `npm run eject`
+• https://mullerseeds.de/app/uploads/2021/04/viola_cornuta_penny_orange_jump_up51.jpg
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+• https://www.anniesannuals.com/signs/b%20-%20c/images/cotula_lineariloba_habit_wide.jpg
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+• phttps://www.gardenia.net/storage/app/public/uploads/images/detail/Pelargonium%20peltatum.webp
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+• https://www.babikow.com/_ccLib/image/plants/DETA-1710.jpg
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+• https://cdn.shopify.com/s/files/1/0257/4565/3811/products/Yellow-Blotch-Pansy-Bonnieplants.com.jpg?v=1642630183
 
-## Learn More
+• https://millefioriflorist.com/wp-content/uploads/2021/03/7C5DF741-B57F-4F22-B6D3-FB1C73904FE5-rotated.jpeg
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+• https://littleprinceplants.com/wp-content/uploads/2019/06/Dianthus-x-Spotty-April-scaled.jpg
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+• https://www.lucasgreenhouses.com/_ccLib/image/plants/DETA-1530.jpg
 
-### Code Splitting
+• https://takaonursery.com/wp-content/uploads/2017/01/armeria_alliacea.jpg
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+• https://s3.amazonaws.com/eit-planttoolbox-prod/media/images/Salvia-splendens--Dinesh-Valke--CC-BY-NC-ND.jpg
 
-### Analyzing the Bundle Size
+• https://d2j6dbq0eux0bg.cloudfront.net/images/26177256/1564395046.jpg
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+• https://theoriginalgarden.com/Argazkiak/Fotos/20221213164825.jpg
 
-### Making a Progressive Web App
+• https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/516e13UNVZS._AC_UF894,1000_QL80_.jpg
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+• https://s3.amazonaws.com/eit-planttoolbox-prod/media/images/Senecio-cineraria-bloom--Jon-Sullivan--CC-BY-NC.jpg
 
-### Advanced Configuration
+• https://cdn11.bigcommerce.com/s-nqbbuyl3/images/stencil/600w/products/617/1524/grafted_red_large__12502.1435900150.JPG?c=3
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+• https://gardenerspath.com/wp-content/uploads/2022/10/Bright-Orange-Flowers-of-Aloe.jpg
 
-### Deployment
+• https://s3.amazonaws.com/eit-planttoolbox-prod/media/images/Schlumbergera-truncata--Maja-Dumat--CC-BY.jpg
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+• https://i.ebayimg.com/images/g/WBcAAOSw68FiJqkg/s-l500.jpg
 
-### `npm run build` fails to minify
+### Flower Data
+https://gist.github.com/sandeepcmsm/2e1f5762fa5ca351d8f129e73c730071
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+sandeepcmsm/flowers.json
