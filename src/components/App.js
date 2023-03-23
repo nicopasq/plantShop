@@ -11,10 +11,11 @@ function App(){
         fetch('http://localhost:3000/flowerlist')
         .then(r => r.json())
         .then(data => setDisplayPlants(data))
-    })
+    }, [])
 
     return (
         <div>
+            <NavBar/>
             <Switch>
                 <Route exact path="/">
                     <Home/>
@@ -26,7 +27,6 @@ function App(){
                     <Cart/>
                 </Route>
             </Switch>
-            <NavBar/>
         </div>
     );
 }
