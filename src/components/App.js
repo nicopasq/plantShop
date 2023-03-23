@@ -18,7 +18,7 @@ function App(){
             <NavBar/>
             <Switch>
                 <Route exact path="/">
-                    <Home/>
+                    <Home plantList={displayPlants}/>
                 </Route>
                 <Route path="/addPlant">
                     <AddPlant/>

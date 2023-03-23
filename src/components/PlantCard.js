@@ -1,8 +1,12 @@
 import React from "react";
 
-function PlantCard(){
+function PlantCard({plant}){
+    const {name, image, price} = plant
     return (
-        <h1>This is a plant card</h1>
+        <div id="card">
+            <img src={image}/>
+            <h1>{name} {price}</h1>
+        </div>
     )
 }
 
