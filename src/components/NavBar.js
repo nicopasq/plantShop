@@ -4,8 +4,9 @@ import "../styles/navBar.css"
 function NavBar(){
     return (
         <div id="navBar">
-        <Link to = "/">Home</Link>
-        <Link to = "/addPlant">Add New Plant</Link>
+        <Link to ="/">Home</Link>
+        <Link to = "/flowers">Flowers</Link>
+        <Link to = "/flowers/new">Add New Plant</Link>
         <Link to = "/cart">Cart</Link>
         </div>
     );

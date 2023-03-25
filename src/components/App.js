@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import NavBar from "./NavBar";
-import Home from "./Home"
+import Flowers from "./Flowers"
+import FlowerDetails from "./FlowerDetails";
 import AddPlant from "./AddPlant"
 import Cart from "./Cart"
+import Home from "./Home";
 import {Switch, Route} from "react-router-dom";
 
 function App(){
@@ -13,15 +15,25 @@ function App(){
         .then(data => setDisplayPlants(data))
     }, [])
 
+    function addNewPlant(plant){
+        setDisplayPlants([...displayPlants, plant])
+    }
+
     return (
         <div>
             <NavBar/>
             <Switch>
                 <Route exact path="/">
-                    <Home plantList={displayPlants}/>
+                    <Home/>
                 </Route>
-                <Route path="/addPlant">
-                    <AddPlant/>
+                <Route exact path="/flowers">
+                    <Flowers plantList={displayPlants}/>
+                </Route>
+                <Route path="/flowers/new">
+                    <AddPlant submitForm={addNewPlant}/>
+                </Route>
+                <Route path="/flowers/:id">
+                    <FlowerDetails/>
                 </Route>
                 <Route path="/cart">
                     <Cart/>

@@ -1,16 +1,9 @@
 import React from "react";
-import PlantCard from "./PlantCard"
-import "../styles/home.css";
 
-function Home({plantList}){
-    const cards = plantList.map(plant => <PlantCard key={plant.id} plant={plant}/>)
+function Home(){
     return (
-        <div>
-            <ul id="listContainer">
-                {cards}
-            </ul>
-        </div>
-    )
+        <h1> This is the Home Component</h1>
+    );
 }
 
-export default Home;
+export default Home

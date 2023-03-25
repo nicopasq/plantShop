@@ -1,22 +1,50 @@
 import React, { useState } from "react";
 import "../styles/addPlant.css";
-function AddPlant(){
+
+function AddPlant({submitForm}){
     const [image, setImage] = useState('');
     const [name, setName] = useState('');
-    const [price, setPrice] = useState();
+    const [price, setPrice] = useState('');
+    const [category, setCategory] = useState('')
     const [instructions, setInstructions] = useState('');
+
+    function handleSubmit(e){
+        e.preventDefault();
+        const plantObj = {
+            category: category,
+            price: price,
+            instructions: instructions,
+            image: image,
+            name: name
+        }
+        fetch('http://localhost:3000/flowerlist',{
+            method: "POST",
+            headers: {
+                "Content-Type" : "application/json"
+            },
+            body: JSON.stringify(plantObj)
+        })
+        .then(r => r.json())
+        .then(data => submitForm(data))
+    }
 
     return (
         <div className="addPlantComp">
         <h1>Add a plant to sell!</h1>
 
         <div id="addForm">
-        <form>
+        <form onSubmit={handleSubmit}>
             <input 
             type='text'
             placeholder="Image URL"
             value={image}
             onChange={e => setImage(e.target.value)}/>
+            <br/>
+            <input 
+            type='text'
+            placeholder="Category"
+            value={category}
+            onChange={e => setCategory(e.target.value)}/>
             <br/>
             <input 
             type='text' 
