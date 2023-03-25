@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 function FlowerDetails(){
-    const [flower, setFlower] = useState(null);
+    const [flower, setFlower] = useState('');
     const {id} = useParams();
 
     useEffect(() => {
@@ -13,7 +13,16 @@ function FlowerDetails(){
     
     const {name, image, price, instructions} = flower;
 
-    return null
+    if (!flower) return <h1>Loading...</h1>
+
+    return  (
+        <div>
+            <img src={image}/>
+            <h3>{name}</h3>
+            <h4>{price}</h4>
+            <p>{instructions}</p>
+        </div>
+    )
 }
 
 
