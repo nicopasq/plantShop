@@ -1,0 +1,23 @@
+.addPlantComp{
+    text-align: center;
+}
+
+#addForm{
+    display: inline-block;
+    text-align: left;
+    width: fit-content;
+}
+input{
+    margin-bottom: 5px;
+}
+#instructions{
+    height: 100px;
+    width: 500px;
+}
+
+#prevAdd{
+    border: 1px solid black;
+    display: inline-block;
+    height: 800px;
+    width: 900px;
+}
