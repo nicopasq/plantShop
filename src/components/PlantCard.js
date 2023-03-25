@@ -6,7 +6,9 @@ function PlantCard({plant}){
     return (
         <div id="card">
             <img src={image}/>
-            <h3>{name} {price}</h3>
+            <div id="namePriceContainer">
+            <p>{name} <br/> ${price}</p>
+            </div>
         </div>
     )
 }
