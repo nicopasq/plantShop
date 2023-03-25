@@ -1,13 +1,14 @@
 import React from "react";
+import "../styles/cart.css";
 
 function Cart(){
     return (
-        <div>
-        <h1>Plants to be purchased...</h1>
-        
-        <div id="productsInCart">
+        <div className="cartComponent">
+        <h1 id="title">Plants to be purchased...</h1>
+
+        <div id="cartDisplay">
         <h2>Cart</h2>
-        <ul id="purchaseList">
+        <ul id="cartContents">
             <li>item 1</li>
             <li>item 2</li>
             <li>item 3</li>
