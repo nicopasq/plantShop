@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
+import "../styles/flowerDetails.css";
 function FlowerDetails(){
     const [flower, setFlower] = useState('');
     const {id} = useParams();
