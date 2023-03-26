@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import "../styles/addPlant.css";
 
 function AddPlant({submitForm}){
@@ -7,6 +8,8 @@ function AddPlant({submitForm}){
     const [price, setPrice] = useState('');
     const [category, setCategory] = useState('')
     const [instructions, setInstructions] = useState('');
+
+    const history = useHistory();
 
     function handleSubmit(e){
         e.preventDefault();
@@ -25,7 +28,10 @@ function AddPlant({submitForm}){
             body: JSON.stringify(plantObj)
         })
         .then(r => r.json())
-        .then(data => submitForm(data))
+        .then(data =>{
+            history.push(`/flowers/${data.id}`)
+             submitForm(data)
+            })
     }
 
     return (
