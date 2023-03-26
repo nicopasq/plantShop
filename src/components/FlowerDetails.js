@@ -16,7 +16,7 @@ function FlowerDetails(){
     if (!flower) return <h1>Loading...</h1>
 
     return  (
-        <div>
+        <div id="details">
             <img src={image}/>
             <h3>{name}</h3>
             <h4>{price}</h4>

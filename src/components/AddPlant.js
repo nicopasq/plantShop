@@ -29,9 +29,9 @@ function AddPlant({submitForm}){
         })
         .then(r => r.json())
         .then(data =>{
-            history.push(`/flowers/${data.id}`)
-             submitForm(data)
-            })
+            history.push(`/flowers/${data.id}`);
+            submitForm(data);
+        })
     }
 
     return (
