@@ -51,7 +51,7 @@
     {
       "category": "Shrubs",
       "price": 22.99,
-      "instructions": "Deep purple colored flowers bushy rounded growth habit to 3 feet tall. Plant in full sun. Water regularly.",
+      "instructions": "Deep purple colored flowers, bushy rounded growth, habitate until 3 feet tall. Plant in full sun. Water regularly.",
       "image": "https://h2.commercev3.net/cdn.springhillnursery.com/images/800/09337A.jpg",
       "name": "Rosa Burgundy",
       "id": 7
@@ -59,7 +59,7 @@
     {
       "category": "Shrubs",
       "price": 22.99,
-      "instructions": "Deep purple colored flowers bushy rounded growth habit to 3 feet tall. Plant in full sun. Water regularly.",
+      "instructions": "Bright white colored flowers, bushy rounded growth, habitate until 3 feet tall. Plant in full sun. Water regularly.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Rosa_Iceberg_1.jpg/1200px-Rosa_Iceberg_1.jpg",
       "name": "Rosa Iceberg",
       "id": 8
@@ -239,14 +239,6 @@
       "image": "https://i.ebayimg.com/images/g/WBcAAOSw68FiJqkg/s-l500.jpg",
       "name": "Senecio Rowleyanus",
       "id": 30
-    },
-    {
-      "category": "",
-      "price": "2323",
-      "instructions": "adfsdfsdfsdf",
-      "image": "https://i.pinimg.com/736x/2d/42/8c/2d428cd651b0840602e6055e0f81c494--pretty-flower-tattoos-pretty-flowers.jpg",
-      "name": "Test",
-      "id": 31
     }
   ]
 }

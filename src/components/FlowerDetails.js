@@ -11,15 +11,16 @@ function FlowerDetails(){
         .then(data => setFlower(data))
     }, [id]);
     
-    const {name, image, price, instructions} = flower;
+    const {name, image, price, category, instructions} = flower;
 
     if (!flower) return <h1>Loading...</h1>
 
     return  (
         <div id="details">
             <img src={image}/>
-            <h3>{name}</h3>
+            <h2>{name}</h2>
             <h4>{price}</h4>
+            <h4>{category}</h4>
             <p>{instructions}</p>
         </div>
     )
