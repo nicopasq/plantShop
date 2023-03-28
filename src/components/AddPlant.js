@@ -44,8 +44,10 @@ function AddPlant({submitForm, listLength}){
             headers: {
                 "Content-Type":"application/json"
             },
-            body: JSON.stringify({...plantObj, ['new'] : 'true'})
+            body: JSON.stringify({...plantObj, new : 'true'})
         })
+        .then(r => r.json())
+        .then(data => history.push(`/flowers/${data.id + 30}`))
     }
 
     const displayPlants = addedPlants.map(plant => <PlantCard key={plant.id} plant={plant}/>)
@@ -105,26 +107,3 @@ function AddPlant({submitForm, listLength}){
 }
 
 export default AddPlant;
-
-
-
-// const [plantObj, setPlantObj] = useState({
-//     category: '',
-//         price: '',
-//         instructions: '',
-//         image: '',
-//         name: ''
-//     });
-//     const {category, price, image, name, instructions} = plantObj;
-//     e.preventDefault();
-//         fetch('http://localhost:3000/flowerlist',{
-//             method: "POST",
-//             headers: {
-//                 "Content-Type" : "application/json"
-//             },
-//             body: JSON.stringify(plantObj)
-//         })
-//         .then(r => r.json())
-//         .then(data => {
-//             submitForm(data)
-//         })

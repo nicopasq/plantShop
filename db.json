@@ -241,29 +241,45 @@
       "id": 30
     },
     {
-      "category": "",
-      "price": "",
-      "instructions": "",
-      "image": "",
-      "name": "",
+      "category": "test",
+      "price": "40.25",
+      "instructions": "This is here to have example/test content. :)",
+      "image": "https://plainviewpure.com/wp-content/uploads/2018/05/colorfuze-orchids-cool-peppermint-plainview-pure-flowers-1-800-flowers-van-vugt.jpg",
+      "name": "Example",
       "id": 31
     },
     {
       "category": "",
       "price": "",
       "instructions": "",
-      "image": "https://plainviewpure.com/wp-content/uploads/2018/05/colorfuze-orchids-cool-peppermint-plainview-pure-flowers-1-800-flowers-van-vugt.jpg",
+      "image": "",
       "name": "",
       "id": 32
-    }
-  ],
-  "addedHistory": [
+    },
+    {
+      "category": "",
+      "price": "",
+      "instructions": "TEST TEST TEST",
+      "image": "https://plainviewpure.com/wp-content/uploads/2018/05/colorfuze-orchids-cool-peppermint-plainview-pure-flowers-1-800-flowers-van-vugt.jpg",
+      "name": "Bitches",
+      "id": 33
+    },
     {
       "category": "",
       "price": "",
       "instructions": "",
       "image": "",
       "name": "",
+      "id": 34
+    }
+  ],
+  "addedHistory": [
+    {
+      "category": "test",
+      "price": "40.25",
+      "instructions": "This is here to have example/test content. :)",
+      "image": "https://plainviewpure.com/wp-content/uploads/2018/05/colorfuze-orchids-cool-peppermint-plainview-pure-flowers-1-800-flowers-van-vugt.jpg",
+      "name": "Example",
       "new": "true",
       "id": 1
     },
@@ -271,10 +287,28 @@
       "category": "",
       "price": "",
       "instructions": "",
-      "image": "https://plainviewpure.com/wp-content/uploads/2018/05/colorfuze-orchids-cool-peppermint-plainview-pure-flowers-1-800-flowers-van-vugt.jpg",
+      "image": "",
       "name": "",
       "new": "true",
       "id": 2
+    },
+    {
+      "category": "",
+      "price": "",
+      "instructions": "TEST TEST TEST",
+      "image": "https://plainviewpure.com/wp-content/uploads/2018/05/colorfuze-orchids-cool-peppermint-plainview-pure-flowers-1-800-flowers-van-vugt.jpg",
+      "name": "Bitches",
+      "new": "true",
+      "id": 3
+    },
+    {
+      "category": "",
+      "price": "",
+      "instructions": "",
+      "image": "",
+      "name": "",
+      "new": "true",
+      "id": 4
     }
   ]
 }
