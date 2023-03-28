@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import "../styles/addPlant.css";
 import PlantCard from "./PlantCard";
 
-function AddPlant({submitForm, listLength}){
+function AddPlant({submitForm}){
     const [addedPlants, setAddedPlants] = useState([])
     const [plantObj, setPlantObj] = useState({
     category: '',
