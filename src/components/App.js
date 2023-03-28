@@ -30,7 +30,7 @@ function App(){
                     <Flowers plantList={displayPlants}/>
                 </Route>
                 <Route path="/flowers/new">
-                    <AddPlant submitForm={addNewPlant}/>
+                    <AddPlant lastPlant={displayPlants[displayPlants.length-1]} submitForm={addNewPlant}/>
                 </Route>
                 <Route path="/flowers/:id">
                     <FlowerDetails/>

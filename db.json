@@ -239,6 +239,24 @@
       "image": "https://i.ebayimg.com/images/g/WBcAAOSw68FiJqkg/s-l500.jpg",
       "name": "Senecio Rowleyanus",
       "id": 30
+    },
+    {
+      "category": "Test",
+      "price": "420.69",
+      "instructions": "It needs water and sunlight.",
+      "image": "https://live.staticflickr.com/3078/2928645662_8d909c4707_b.jpg",
+      "name": "Cool Flower",
+      "id": 31
+    }
+  ],
+  "addedHistory": [
+    {
+      "category": "Test",
+      "price": "420.69",
+      "instructions": "It needs water and sunlight.",
+      "image": "https://live.staticflickr.com/3078/2928645662_8d909c4707_b.jpg",
+      "name": "Cool Flower",
+      "id": 1
     }
   ]
 }
