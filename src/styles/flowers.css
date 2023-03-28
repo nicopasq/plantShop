@@ -1,5 +1,7 @@
 #listContainer{
-    margin-left: 27%;
+    margin: 0;
     width: 50%;
+    list-style: none;
     position: relative;
+    left: 27%;
 }

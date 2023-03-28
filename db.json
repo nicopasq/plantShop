@@ -241,22 +241,40 @@
       "id": 30
     },
     {
-      "category": "Test",
-      "price": "420.69",
-      "instructions": "It needs water and sunlight.",
-      "image": "https://live.staticflickr.com/3078/2928645662_8d909c4707_b.jpg",
-      "name": "Cool Flower",
+      "category": "",
+      "price": "",
+      "instructions": "",
+      "image": "",
+      "name": "",
       "id": 31
+    },
+    {
+      "category": "",
+      "price": "",
+      "instructions": "",
+      "image": "https://plainviewpure.com/wp-content/uploads/2018/05/colorfuze-orchids-cool-peppermint-plainview-pure-flowers-1-800-flowers-van-vugt.jpg",
+      "name": "",
+      "id": 32
     }
   ],
   "addedHistory": [
     {
-      "category": "Test",
-      "price": "420.69",
-      "instructions": "It needs water and sunlight.",
-      "image": "https://live.staticflickr.com/3078/2928645662_8d909c4707_b.jpg",
-      "name": "Cool Flower",
+      "category": "",
+      "price": "",
+      "instructions": "",
+      "image": "",
+      "name": "",
+      "new": "true",
       "id": 1
+    },
+    {
+      "category": "",
+      "price": "",
+      "instructions": "",
+      "image": "https://plainviewpure.com/wp-content/uploads/2018/05/colorfuze-orchids-cool-peppermint-plainview-pure-flowers-1-800-flowers-van-vugt.jpg",
+      "name": "",
+      "new": "true",
+      "id": 2
     }
   ]
 }

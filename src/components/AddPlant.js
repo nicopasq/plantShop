@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import "../styles/addPlant.css";
 import PlantCard from "./PlantCard";
 
-function AddPlant({submitForm, lastPlant}){
+function AddPlant({submitForm, listLength}){
     const [addedPlants, setAddedPlants] = useState([])
     const [plantObj, setPlantObj] = useState({
     category: '',
@@ -44,13 +44,11 @@ function AddPlant({submitForm, lastPlant}){
             headers: {
                 "Content-Type":"application/json"
             },
-            body: JSON.stringify(plantObj)
+            body: JSON.stringify({...plantObj, ['new'] : 'true'})
         })
     }
 
-    const displayPlants = addedPlants.map(plant => (
-        <PlantCard plant={plant}/>
-    ))
+    const displayPlants = addedPlants.map(plant => <PlantCard key={plant.id} plant={plant}/>)
 
     return (
         <div className="addPlantComp">

@@ -1,4 +1,4 @@
-#card{
+.card{
     display: inline-block;
     vertical-align: top;
     width: 250px;
@@ -6,7 +6,7 @@
     margin: 10px;
     transition: 300ms;
 }
-#card:hover{
+.card:hover{
     scale: 1.1;
 }
 img{
@@ -18,7 +18,7 @@ p{
     margin-left: 10px;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
 }
-#namePriceContainer{
+.namePriceContainer{
     background-color: rgba(255, 255, 255, 0.7);
     height: 40px;
     position: relative;

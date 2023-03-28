@@ -18,6 +18,7 @@ input{
 #prevAdd{
     border: 1px solid black;
     display: inline-block;
-    height: 800px;
+    height: fit-content;
     width: 900px;
+    text-align: left;
 }

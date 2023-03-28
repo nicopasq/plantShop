@@ -6,12 +6,20 @@ function PlantCard({plant}){
     const {name, image, price, id} = plant
     const history = useHistory();
 
+    function handleClick(){
+        if(plant.new){
+            history.push(`/flowers/${id + 30}`)
+        } else {
+            history.push(`/flowers/${id}`)
+        }
+    }
+
     return (
         <div 
-        id="card"
-        onClick={() => history.push(`/flowers/${id}`)}>
+        onClick={handleClick}
+        className="card">
             <img src={image}/>
-            <div id="namePriceContainer">
+            <div className="namePriceContainer">
             <p>{name} <br/> ${price}</p>
             </div>
         </div>
