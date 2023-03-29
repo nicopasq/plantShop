@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../styles/flowerDetails.css";
-function FlowerDetails(){
+
+function FlowerDetails({addToCart}){
     const [flower, setFlower] = useState('');
     const {id} = useParams();
 
@@ -15,13 +16,31 @@ function FlowerDetails(){
 
     if (!flower) return <h1>Loading...</h1>
 
+    function handleAddToCart(){
+        const cartItem = {
+            image: image,
+            name: name,
+            price: price
+        };
+        addToCart(cartItem)
+    }
+
     return  (
-        <div id="details">
-            <img src={image}/>
-            <h2>{name}</h2>
-            <h4>{price}</h4>
-            <h4>{category}</h4>
-            <p>{instructions}</p>
+        <div id="flowerDetails">
+            <div id="details">
+                <img src={image}/>
+                <h2>{name}</h2>
+                <h4>{price}</h4>
+                <h4>{category}</h4>
+                <p>{instructions}</p>
+            </div>
+
+            <div id="buttons">
+                <button id="edit">Edit Post</button>
+                <button 
+                onClick={handleAddToCart}
+                id="addToCart">Add To Cart</button>
+            </div>
         </div>
     )
 }

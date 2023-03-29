@@ -249,20 +249,12 @@
       "id": 31
     },
     {
-      "category": "Orchid",
-      "price": "420.69",
-      "instructions": "AAAAAHHHHH",
-      "image": "https://plainviewpure.com/wp-content/uploads/2018/05/colorfuze-orchids-cool-peppermint-plainview-pure-flowers-1-800-flowers-van-vugt.jpg",
-      "name": "TEST",
-      "id": 32
-    },
-    {
-      "category": "fgsdfg",
-      "price": "34534",
-      "instructions": "sdfsdfsd\nsdfsdf\nsdfsdfsdfsdfsdfsd\nsdfsdfsdf\nsdfsdfsffgddffgdgfsd",
+      "category": "Flowers",
+      "price": "15.25",
+      "instructions": "Water...",
       "image": "https://images.fineartamerica.com/images-medium-large/really-cool-flowers-nick-s.jpg",
-      "name": "dffgdg",
-      "id": 33
+      "name": "Example Flower",
+      "id": 32
     }
   ],
   "addedHistory": [
@@ -276,22 +268,13 @@
       "id": 1
     },
     {
-      "category": "Orchid",
-      "price": "420.69",
-      "instructions": "AAAAAHHHHH",
-      "image": "https://plainviewpure.com/wp-content/uploads/2018/05/colorfuze-orchids-cool-peppermint-plainview-pure-flowers-1-800-flowers-van-vugt.jpg",
-      "name": "TEST",
+      "category": "Flowers",
+      "price": "15.25",
+      "instructions": "Water...",
+      "image": "https://images.fineartamerica.com/images-medium-large/really-cool-flowers-nick-s.jpg",
+      "name": "Example Flower",
       "new": "true",
       "id": 2
-    },
-    {
-      "category": "fgsdfg",
-      "price": "34534",
-      "instructions": "sdfsdfsd\nsdfsdf\nsdfsdfsdfsdfsdfsd\nsdfsdfsdf\nsdfsdfsffgddffgdgfsd",
-      "image": "https://images.fineartamerica.com/images-medium-large/really-cool-flowers-nick-s.jpg",
-      "name": "dffgdg",
-      "new": "true",
-      "id": 3
     }
   ]
 }

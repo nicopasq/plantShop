@@ -8,16 +8,24 @@ import Home from "./Home";
 import {Switch, Route} from "react-router-dom";
 
 function App(){
-    const [displayPlants, setDisplayPlants] = useState([])
+    const [displayPlants, setDisplayPlants] = useState([]);
+    const [itemsInCart, setItemsInCart] = useState([]);
+
     useEffect(() => {
         fetch('http://localhost:3000/flowerlist')
         .then(r => r.json())
         .then(data => setDisplayPlants(data))
-    }, [])
+    }, []);
 
     function addNewPlant(plant){
         setDisplayPlants([...displayPlants, plant])
-    }
+    };
+
+    function addToCart(newItem){
+        const updatedCart = [...itemsInCart, newItem];
+        setItemsInCart(updatedCart)
+    };
+
 
     return (
         <div>
@@ -33,7 +41,7 @@ function App(){
                     <AddPlant submitForm={addNewPlant}/>
                 </Route>
                 <Route path="/flowers/:id">
-                    <FlowerDetails/>
+                    <FlowerDetails addToCart={addToCart}/>
                 </Route>
                 <Route path="/cart">
                     <Cart/>
