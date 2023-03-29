@@ -11,6 +11,26 @@
 }
 #cartContents{
     border: 1px solid black;
+    width: 155%;
 }
-
+.cartItem{
+    width: fit-content;
+    height: 100px;
+    margin-top: 5px;
+    position: relative;
+    right: 45px;
+}
+.cartItem img{
+    border-radius: 100%;
+    scale: .40;
+    position:relative;
+    top: -75px;
+    right: 60px;
+}
+.cartItem p{
+    font-size: 17px;
+    position: relative;
+    left: 50%;
+    top: -25vh;
+}
 
