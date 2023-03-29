@@ -20,7 +20,8 @@ function FlowerDetails({addToCart}){
         const cartItem = {
             image: image,
             name: name,
-            price: price
+            price: price,
+            id: flower.id
         };
         addToCart(cartItem)
     }

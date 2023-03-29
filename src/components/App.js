@@ -44,7 +44,7 @@ function App(){
                     <FlowerDetails addToCart={addToCart}/>
                 </Route>
                 <Route path="/cart">
-                    <Cart/>
+                    <Cart items={itemsInCart}/>
                 </Route>
             </Switch>
         </div>

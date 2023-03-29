@@ -1,7 +1,14 @@
 import React from "react";
 import "../styles/cart.css";
 
-function Cart({plant}){
+function Cart({items}){
+    const displayItems = items.map(plant => (
+        <div key={plant.id} className="cartItem">
+            <img src={plant.image}/>
+            <p>{plant.name}</p>
+            <p>{plant.price}</p>
+        </div>
+    ))
 
     return (
         <div className="cartComponent">
@@ -10,11 +17,7 @@ function Cart({plant}){
         <div id="cartDisplay">
         <h2>Cart</h2>
         <ul id="cartContents">
-            {/* <li>
-                <img>Image of product</img>
-                <p>Name</p>
-                <p>Price</p>
-            </li> */}
+            {displayItems}
         </ul>
         <h3>Total: NaN</h3>
         <button>Checkout</button>
