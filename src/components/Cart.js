@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../styles/cart.css";
 
 function Cart({indexes, plantList}){
+
     const displayPlants = indexes.map(i => {
         const plant = plantList[i - 1]
         const {image, name, price} = plant
@@ -14,6 +15,12 @@ function Cart({indexes, plantList}){
             )
     })
 
+    let total = 0;
+    indexes.forEach(i => {
+        const plant = plantList[i - 1];
+        total = total + parseFloat(plant.price)
+    })
+
     return (
         <div className="cartComponent">
         <h1 id="title">Plants to be purchased...</h1>
@@ -23,7 +30,7 @@ function Cart({indexes, plantList}){
         <ul id="cartContents">
             {displayPlants}
         </ul>
-        <h3>Total: {/*{total.toFixed(2)}*/}</h3>
+        <h3>Total: {total.toFixed(2)}</h3>
         <button>Checkout</button>
         </div>    
 
