@@ -4,6 +4,7 @@ import "../styles/flowerDetails.css";
 
 function FlowerDetails({addToCart}){
     const [flower, setFlower] = useState('');
+    const [qty, setQty] = useState(1);
     const {id} = useParams();
 
     useEffect(() => {
@@ -21,6 +22,7 @@ function FlowerDetails({addToCart}){
             image: image,
             name: name,
             price: price,
+            qty: qty,
             id: flower.id
         };
             addToCart(cartObj)
@@ -38,9 +40,15 @@ function FlowerDetails({addToCart}){
 
             <div id="buttons">
                 <button id="edit">Edit Post</button>
-                <button 
-                onClick={handleClick}
-                id="addToCart">Add To Cart</button>
+
+                <form id="addToCartForm">
+                <input 
+                value={qty}
+                onChange={(e) => setQty(e.target.value)}
+                type='number'></input>
+                <button id="addToCart">Add To Cart</button>
+                </form>
+
             </div>
         </div>
     )
