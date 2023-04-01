@@ -4,7 +4,6 @@ import Flowers from "./Flowers"
 import FlowerDetails from "./FlowerDetails";
 import AddPlant from "./AddPlant"
 import Cart from "./Cart"
-import Home from "./Home";
 import {Switch, Route} from "react-router-dom";
 
 function App(){
@@ -22,18 +21,12 @@ function App(){
     };
 
     function addToCart(newItem){
-        const updatedCart = [...itemsInCart, newItem];
-        setItemsInCart(updatedCart)
-    };
-
-
+        setItemsInCart([...itemsInCart, newItem])
+    }
     return (
         <div>
             <NavBar/>
             <Switch>
-                <Route exact path="/">
-                    <Home/>
-                </Route>
                 <Route exact path="/flowers">
                     <Flowers plantList={displayPlants}/>
                 </Route>

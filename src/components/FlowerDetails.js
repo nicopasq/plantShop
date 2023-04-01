@@ -16,14 +16,14 @@ function FlowerDetails({addToCart}){
 
     if (!flower) return <h1>Loading...</h1>
 
-    function handleAddToCart(){
-        const cartItem = {
+    function handleClick(){
+        const cartObj = {
             image: image,
             name: name,
             price: price,
             id: flower.id
         };
-        addToCart(cartItem)
+            addToCart(cartObj)
     }
 
     return  (
@@ -39,7 +39,7 @@ function FlowerDetails({addToCart}){
             <div id="buttons">
                 <button id="edit">Edit Post</button>
                 <button 
-                onClick={handleAddToCart}
+                onClick={handleClick}
                 id="addToCart">Add To Cart</button>
             </div>
         </div>

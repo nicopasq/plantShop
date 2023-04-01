@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/cart.css";
 
 function Cart({items}){
-    const displayItems = items.map(plant => (
-        <div key={plant.id} className="cartItem">
-            <img src={plant.image}/>
-            <p>{plant.name}</p>
-            <p>{plant.price}</p>
-        </div>
-    ))
-
+    const displayPlants = items.map(plant => {
+        const {image, name, price} = plant
+        return (
+            <div key={plant.id} className="cartItem">
+            <img src={image}/>
+            <p>{name}</p>
+            <p>{price}</p>
+            </div>
+        )
+    })
+    let total = 0;
+    items.forEach(plant => {
+        total = total + parseFloat(plant.price)
+    })
     return (
         <div className="cartComponent">
         <h1 id="title">Plants to be purchased...</h1>
@@ -17,9 +23,9 @@ function Cart({items}){
         <div id="cartDisplay">
         <h2>Cart</h2>
         <ul id="cartContents">
-            {displayItems}
+            {displayPlants}
         </ul>
-        <h3>Total: NaN</h3>
+        <h3>Total: {total.toFixed(2)}</h3>
         <button>Checkout</button>
         </div>    
 
