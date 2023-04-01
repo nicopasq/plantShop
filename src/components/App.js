@@ -23,6 +23,17 @@ function App(){
     function addToCart(newItem){
         setItemsInCart([...itemsInCart, newItem])
     }
+
+    const filteredCart = []
+    itemsInCart.filter((plant, index) => {
+        if (itemsInCart[index].id === plant.id){
+            filteredCart.push(plant.id)
+        }
+    })
+
+    const plantIndexes = filteredCart.filter((num, index) => {
+    return filteredCart.indexOf(num) === index})
+
     return (
         <div>
             <NavBar/>
@@ -37,7 +48,7 @@ function App(){
                     <FlowerDetails addToCart={addToCart}/>
                 </Route>
                 <Route path="/cart">
-                    <Cart items={itemsInCart}/>
+                    <Cart indexes={plantIndexes} plantList={displayPlants}/>
                 </Route>
             </Switch>
         </div>

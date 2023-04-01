@@ -6,6 +6,7 @@ function FlowerDetails({addToCart}){
     const [flower, setFlower] = useState('');
     const [qty, setQty] = useState(1);
     const {id} = useParams();
+    const {name, image, price, category, instructions} = flower;
 
     useEffect(() => {
         fetch(`http://localhost:3000/flowerlist/${id}`)
@@ -13,11 +14,8 @@ function FlowerDetails({addToCart}){
         .then(data => setFlower(data))
     }, [id]);
     
-    const {name, image, price, category, instructions} = flower;
-
-    if (!flower) return <h1>Loading...</h1>
-
-    function handleClick(){
+    function handleSubmit(e){
+        e.preventDefault()
         const cartObj = {
             image: image,
             name: name,
@@ -25,9 +23,10 @@ function FlowerDetails({addToCart}){
             qty: qty,
             id: flower.id
         };
-            addToCart(cartObj)
+        addToCart(cartObj)
     }
-
+    
+    if (!flower) return <h1>Loading...</h1>
     return  (
         <div id="flowerDetails">
             <div id="details">
@@ -41,12 +40,15 @@ function FlowerDetails({addToCart}){
             <div id="buttons">
                 <button id="edit">Edit Post</button>
 
-                <form id="addToCartForm">
-                <input 
-                value={qty}
-                onChange={(e) => setQty(e.target.value)}
-                type='number'></input>
-                <button id="addToCart">Add To Cart</button>
+                <form 
+                    onSubmit={handleSubmit}
+                    id="addToCartForm">
+                    <label>Select Quantity </label>
+                    <input 
+                        value={qty}
+                        onChange={(e) => setQty(e.target.value)}
+                        type='number'></input>
+                    <button type="submit" id="addToCart">Add To Cart</button>
                 </form>
 
             </div>
