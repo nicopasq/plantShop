@@ -30,9 +30,7 @@ function App(){
             filteredCart.push(plant.id)
         }
     })
-
-    const plantIndexes = filteredCart.filter((num, index) => {
-    return filteredCart.indexOf(num) === index})
+    const plantIndexes = [...new Set(filteredCart)]
 
     return (
         <div>

@@ -2,15 +2,16 @@ import React, { useEffect, useState } from "react";
 import "../styles/cart.css";
 
 function Cart({indexes, plantList}){
-
+// return null
     const displayPlants = indexes.map(i => {
         const plant = plantList[i - 1]
-        const {image, name, price} = plant
+        const {image, name, price, qty} = plant
         return (
                 <div key={plant.id} className="cartItem">
                 <img src={image}/>
                 <p>{name}</p>
                 <p>{price}</p>
+                <p>{qty}</p>
                 </div>
             )
     })
@@ -36,7 +37,7 @@ function Cart({indexes, plantList}){
 
         </div>
     );
-}
+ }
 
 export default Cart;
 // const displayPlants = items.map(plant => {
