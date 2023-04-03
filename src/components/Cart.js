@@ -3,24 +3,28 @@ import "../styles/cart.css";
 
 function Cart({indexes, plantList}){
 // return null
-    const displayPlants = indexes.map(i => {
-        const plant = plantList[i - 1]
-        const {image, name, price, qty} = plant
-        return (
-                <div key={plant.id} className="cartItem">
-                <img src={image}/>
-                <p>{name}</p>
-                <p>${price}</p>
-                <p>Quantity: {qty}</p>
-                </div>
-            )
-    })
+const [plantsInCart, setPlantsInCart] = useState([])
 
-    let total = 0;
-    indexes.forEach(i => {
-        const plant = plantList[i - 1];
-        total = total + parseFloat(plant.price)
+useEffect(() => {
+     indexes.forEach(i => {
+        fetch(`http://localhost:3000/flowerlist/${i}`)
+        .then(r => r.json())
+        .then(data => setPlantsInCart((currentPlants) => [...currentPlants, data]))
     })
+}, [indexes])
+
+const displayPlants = plantsInCart.map(plant => {
+    const {image, name, price, qty} = plant;
+    return (
+        <div key={plant.id} className="cartItem">
+        <img src={image}/>
+        <p>{name}</p>
+        <p>${price}</p>
+        <p>Quantity: {qty}</p>
+        </div>
+    )
+})
+
 
     return (
         <div className="cartComponent">
@@ -31,7 +35,7 @@ function Cart({indexes, plantList}){
         <ul id="cartContents">
             {displayPlants}
         </ul>
-        <h3>Total: {total.toFixed(2)}</h3>
+        {/* <h3>Total: {total.toFixed(2)}</h3> */}
         <button>Checkout</button>
         </div>    
 

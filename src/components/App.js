@@ -24,13 +24,7 @@ function App(){
         setItemsInCart([...itemsInCart, newItem])
     }
 
-    const filteredCart = []
-    itemsInCart.filter((plant, index) => {
-        if (itemsInCart[index].id === plant.id){
-            filteredCart.push(plant.id)
-        }
-    })
-    const plantIndexes = [...new Set(filteredCart)]
+    const plantIndexes = [...new Set(itemsInCart)]
 
     return (
         <div>
