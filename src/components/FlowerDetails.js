@@ -34,7 +34,7 @@ function FlowerDetails({addToCart}){
     if (!flower) return <h1>Loading...</h1>
     return  (
         <div id="flowerDetails">
-            {/* <button onClick={() => history.push('/flowers')}> 🔙</button> */}
+            <button> 🔙</button>
             <div id="details">
                 <img src={image}/>
                 <h2>{name}</h2>
