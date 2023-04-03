@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import "../styles/flowerDetails.css";
 
 function FlowerDetails({addToCart}){
     const [flower, setFlower] = useState('');
     const [qty, setQty] = useState(1);
     const {id} = useParams();
+    const history = useHistory()
     const {name, image, price, category, instructions} = flower;
+
 
     useEffect(() => {
         fetch(`http://localhost:3000/flowerlist/${id}`)
@@ -24,11 +26,15 @@ function FlowerDetails({addToCart}){
             body:JSON.stringify({"qty" : qty} )
         })
         .then(r => r.json())
-        .then(data => addToCart(data.id))
+        .then(data => {
+            addToCart(data.id)
+            history.push('/cart');
+        })
     }
     if (!flower) return <h1>Loading...</h1>
     return  (
         <div id="flowerDetails">
+            {/* <button onClick={() => history.push('/flowers')}> 🔙</button> */}
             <div id="details">
                 <img src={image}/>
                 <h2>{name}</h2>

@@ -19,8 +19,8 @@ const displayPlants = plantsInCart.map(plant => {
         <div key={plant.id} className="cartItem">
         <img src={image}/>
         <p>{name}</p>
+        <p>(qty: {qty})</p>
         <p>${price}</p>
-        <p>Quantity: {qty}</p>
         </div>
     )
 })
@@ -50,18 +50,3 @@ const displayPlants = plantsInCart.map(plant => {
  }
 
 export default Cart;
-// const displayPlants = items.map(plant => {
-        // const {image, name, price} = plant
-        // return (
-        //         <div key={plant.id} className="cartItem">
-        //         <img src={image}/>
-        //         <p>{name}</p>
-        //         <p>{price}</p>
-        //         </div>
-        //     )
-        // })
-
-        // let total = 0;
-        // items.forEach(plant => {
-        //     total = total + parseFloat(plant.price)
-        // })

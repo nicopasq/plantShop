@@ -11,7 +11,7 @@
 }
 #cartContents{
     border: 1px solid black;
-    width: 130%;
+    width: 200%;
 }
 .cartItem{
     width: fit-content;
@@ -32,7 +32,7 @@
     margin-top: -5px;
     position: relative;
     left: 50%;
-    top: -25vh;
+    top: -24vh;
 }
 #removeItem{
     position: relative;
