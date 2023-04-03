@@ -25,7 +25,13 @@ const displayPlants = plantsInCart.map(plant => {
     )
 })
 
-
+    let total = 0;
+    const finalPrices = [];
+    plantsInCart.forEach(plant => {
+        const finalPlantPrice = plant.price * plant.qty;
+        total = total + finalPlantPrice;
+    })
+    
     return (
         <div className="cartComponent">
         <h1 id="title">Plants to be purchased...</h1>
@@ -35,7 +41,7 @@ const displayPlants = plantsInCart.map(plant => {
         <ul id="cartContents">
             {displayPlants}
         </ul>
-        {/* <h3>Total: {total.toFixed(2)}</h3> */}
+        <h3>Total: {total.toFixed(2)}</h3>
         <button>Checkout</button>
         </div>    
 
