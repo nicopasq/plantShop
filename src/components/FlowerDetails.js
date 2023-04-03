@@ -15,15 +15,16 @@ function FlowerDetails({addToCart}){
     }, [id]);
     
     function handleSubmit(e){
-        e.preventDefault()
-        const cartObj = {
-            image: image,
-            name: name,
-            price: price,
-            qty: qty,
-            id: flower.id
-        };
-        addToCart(cartObj)
+        e.preventDefault();
+        fetch(`http://localhost:3000/flowerlist/${id}`, {
+            method: "PATCH",
+            headers:{
+                "Content-Type": "application/json"
+            },
+            body:JSON.stringify({"qty" : qty} )
+        })
+        .then(r => r.json())
+        .then(data => console.log(data))
     }
     
     if (!flower) return <h1>Loading...</h1>
