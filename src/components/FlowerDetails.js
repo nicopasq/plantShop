@@ -5,6 +5,7 @@ import "../styles/flowerDetails.css";
 function FlowerDetails({addToCart}){
     const [flower, setFlower] = useState('');
     const [qty, setQty] = useState(1);
+    const [plantToAdd, setPlantToAdd] = useState(null)
     const {id} = useParams();
     const {name, image, price, category, instructions} = flower;
 
@@ -24,9 +25,8 @@ function FlowerDetails({addToCart}){
             body:JSON.stringify({"qty" : qty} )
         })
         .then(r => r.json())
-        .then(data => console.log(data))
+        .then(data => addToCart(data))
     }
-    
     if (!flower) return <h1>Loading...</h1>
     return  (
         <div id="flowerDetails">

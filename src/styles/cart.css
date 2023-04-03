@@ -29,6 +29,7 @@
 }
 .cartItem p{
     font-size: 17px;
+    margin-top: -5px;
     position: relative;
     left: 50%;
     top: -25vh;

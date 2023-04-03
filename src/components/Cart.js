@@ -10,8 +10,8 @@ function Cart({indexes, plantList}){
                 <div key={plant.id} className="cartItem">
                 <img src={image}/>
                 <p>{name}</p>
-                <p>{price}</p>
-                <p>{qty}</p>
+                <p>${price}</p>
+                <p>Quantity: {qty}</p>
                 </div>
             )
     })
