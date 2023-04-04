@@ -4,7 +4,7 @@ import "../styles/navBar.css";
 function NavBar() {
   return (
     <div id="navBar">
-      <Link to="/flowers">Flowers</Link>
+      <Link to="/">Flowers</Link>
       <Link to="/flowers/new">Add New Plant</Link>
       <Link to="/cart">Cart</Link>
     </div>

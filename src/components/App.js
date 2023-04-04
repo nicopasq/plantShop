@@ -15,7 +15,6 @@ function App() {
     fetch("http://localhost:3000/flowerlist")
       .then((r) => r.json())
       .then((data) => setDisplayPlants(data));
-    history.push("/flowers");
   }, []);
 
   function addNewPlant(plant) {
