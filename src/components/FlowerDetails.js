@@ -10,7 +10,7 @@ function FlowerDetails({addToCart}){
     const {id} = useParams();
     const history = useHistory();
     const {name, image, price, category, instructions} = flower;
-
+    const arrow = '<––';
 
     useEffect(() => {
         fetch(`http://localhost:3000/flowerlist/${id}`)
@@ -37,14 +37,13 @@ function FlowerDetails({addToCart}){
     if (!flower) return <h1>Loading...</h1>
     return  (
         <div id="flowerDetails">
-            <button onClick={() => history.push('/flowers')}> 🔙</button>
-            <div id="details">
+            <div id="content">
+            <p className="back" onClick={() => history.push('/flowers')}> {arrow} Back</p>
                 <img src={image}/>
                 <h2>{name}</h2>
                 <h4>{price}</h4>
                 <h4>{category}</h4>
                 <p>{instructions}</p>
-            </div>
             <div id="buttons">
                 <button 
                 onClick={() => setDisplay('block')}
@@ -60,8 +59,9 @@ function FlowerDetails({addToCart}){
                         type='number'></input>
                     <button type="submit" id="addToCart">Add To Cart</button>
                 </form>
-                <UpdatePlantForm display={display}/>
+                        </div>
             </div>
+                <UpdatePlantForm display={display}/>
         </div>
     )
 }

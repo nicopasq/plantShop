@@ -3,7 +3,8 @@ import "../styles/updatePlantForm.css";
 
 function UpdatePlantForm({display}) {
   return (
-    <form style={{ display: display }}>
+        <div id="updateFormContainer" style={{ display: display }}>
+      <form id='updateForm' style={{ display: display }}>
       <input type="text" placeholder="Image URL"></input>
       <br />
       <input type="text" placeholder="Category"></input>
@@ -16,11 +17,12 @@ function UpdatePlantForm({display}) {
         id="instructions"
         type="text"
         placeholder="Care Instructions"
-      ></textarea>
+        ></textarea>
       <br />
       <button type="submit">Submit</button>
       <button>Delete Plant</button>
     </form>
+        </div>
   );
 }
 export default UpdatePlantForm;

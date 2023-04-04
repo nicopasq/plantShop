@@ -1,7 +1,25 @@
 #flowerDetails{
-    z-index: 1;
-    scale: 1.5;
+    margin: 0;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.591); */
+}
+#content{
+    scale: 1.2;
     position: relative;
-    left: 26%;
-    top: 130px;
+    top: 8vh;
+    left: 11%;
+}
+.back{
+    border: 1px solid black;
+    border-radius: 6%;
+    background: rgba(128, 128, 128, 0.591);
+    font-size: 20px;
+    width: 90px;
+    height: 25px;
+    margin: 0;
+    position: relative;
+    top: -15px;
+}
+.back, p  :hover{
+    cursor: pointer;
 }

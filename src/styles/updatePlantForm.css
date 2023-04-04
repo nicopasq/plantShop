@@ -1,9 +1,15 @@
-form {
-    z-index: 20;
+#updateFormContainer{
     display: none;
-    margin-left: 23%;
-    margin-top: -50vh;
+    background: rgba(0, 0, 0, 0.591);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: -1px;
 }
-body::after{
-background: blue;
+#updateForm{
+    scale: 1.2;
+    width: fit-content;
+    position: relative;
+    top: 20%;
+    left: 40%;
 }
