@@ -1,6 +1,7 @@
 #flowerDetails{
+    z-index: 1;
     scale: 1.5;
-    margin: 18%;
     position: relative;
-    bottom: 22vh;
+    left: 26%;
+    top: 130px;
 }

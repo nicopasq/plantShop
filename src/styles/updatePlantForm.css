@@ -1,4 +1,9 @@
 form {
-    z-index: 10000;
+    z-index: 20;
     display: none;
+    margin-left: 23%;
+    margin-top: -50vh;
+}
+body::after{
+background: blue;
 }
