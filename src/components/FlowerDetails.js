@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import "../styles/flowerDetails.css";
-import updatePlantForm from "./updatePlantForm";
+import UpdatePlantForm from "./UpdatePlantForm";
 
 function FlowerDetails({addToCart}){
     const [flower, setFlower] = useState('');
     const [qty, setQty] = useState(1);
+    const [display, setDisplay] = useState('none');
     const {id} = useParams();
     const history = useHistory();
     const {name, image, price, category, instructions} = flower;
@@ -33,11 +34,6 @@ function FlowerDetails({addToCart}){
         })
     }
 
-    function updatePlant(){
-       return updatePlantForm.props.style.display = "block";
-    }
-
-
     if (!flower) return <h1>Loading...</h1>
     return  (
         <div id="flowerDetails">
@@ -51,7 +47,7 @@ function FlowerDetails({addToCart}){
             </div>
             <div id="buttons">
                 <button 
-                onClick={updatePlant}
+                onClick={() => setDisplay('block')}
                 id="edit">Edit Post</button>
 
                 <form 
@@ -64,7 +60,7 @@ function FlowerDetails({addToCart}){
                         type='number'></input>
                     <button type="submit" id="addToCart">Add To Cart</button>
                 </form>
-                {updatePlantForm}
+                <UpdatePlantForm display={display}/>
             </div>
         </div>
     )
