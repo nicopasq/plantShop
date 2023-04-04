@@ -1,6 +1,7 @@
 #flowerDetails{
     margin: 0;
     height: 100%;
+    width: 50%;
     /* background: rgba(0, 0, 0, 0.591); */
 }
 #content{
@@ -20,6 +21,6 @@
     position: relative;
     top: -15px;
 }
-.back, p  :hover{
+.back, button, p  :hover{
     cursor: pointer;
 }
