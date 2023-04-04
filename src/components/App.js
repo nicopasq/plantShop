@@ -31,7 +31,7 @@ function App() {
     <div>
       <NavBar />
       <Switch>
-        <Route exact path="/flowers">
+        <Route exact path="/">
           <Flowers plantList={displayPlants} />
         </Route>
         <Route path="/flowers/new">
