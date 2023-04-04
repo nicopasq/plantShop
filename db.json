@@ -16,7 +16,7 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Tibouchina_semidecandra.jpg?20050507130046",
       "name": "Tibouchina Semidecandra",
       "id": 2,
-      "qty": 1
+      "qty": "5"
     },
     {
       "category": "Shrubs",
@@ -254,6 +254,14 @@
       "name": "Blue Lily",
       "id": 31,
       "qty": 1
+    },
+    {
+      "category": "",
+      "price": "",
+      "instructions": "",
+      "image": "",
+      "name": "",
+      "id": 32
     }
   ],
   "addedHistory": [
@@ -265,6 +273,15 @@
       "name": "Blue Lily",
       "new": "true",
       "id": 1
+    },
+    {
+      "category": "",
+      "price": "",
+      "instructions": "",
+      "image": "",
+      "name": "",
+      "new": "true",
+      "id": 2
     }
   ]
 }

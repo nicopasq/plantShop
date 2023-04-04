@@ -3,107 +3,113 @@ import { useHistory } from "react-router-dom";
 import "../styles/addPlant.css";
 import PlantCard from "./PlantCard";
 
-function AddPlant({submitForm}){
-    const [addedPlants, setAddedPlants] = useState([])
-    const [plantObj, setPlantObj] = useState({
-    category: '',
-        price: '',
-        instructions: '',
-        image: '',
-        name: ''
-    });
-    const {category, price, image, name, instructions} = plantObj;
+function AddPlant({ submitForm }) {
+  const [addedPlants, setAddedPlants] = useState([]);
+  const [plantObj, setPlantObj] = useState({
+    category: "",
+    price: "",
+    instructions: "",
+    image: "",
+    name: "",
+  });
+  const { category, price, image, name, instructions } = plantObj;
+  const history = useHistory();
+  const displayPlants = addedPlants.map((plant) => (
+    <PlantCard key={plant.id} plant={plant} />
+  ));
 
-    const history = useHistory()
+  useEffect(() => {
+    fetch("http://localhost:3000/addedHistory")
+      .then((r) => r.json())
+      .then((data) => setAddedPlants(data));
+  }, [addedPlants]);
 
-    useEffect(() => {
-        fetch('http://localhost:3000/addedHistory')
-        .then(r => r.json())
-        .then(data => setAddedPlants(data))
-    }, [addedPlants])
+  function handleSubmit(e) {
+    e.preventDefault();
+    fetch("http://localhost:3000/flowerlist", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(plantObj),
+    })
+      .then((r) => r.json())
+      .then((data) => {
+        submitForm(data);
+      });
+    addToHistory();
+  }
 
-    function handleSubmit(e){
-        e.preventDefault();
-        fetch('http://localhost:3000/flowerlist',{
-            method:"POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(plantObj)
-        })
-        .then(r => r.json())
-        .then(data => {
-            submitForm(data)
-        })
-        addToHistory()
-    }
+  function addToHistory() {
+    fetch("http://localhost:3000/addedHistory", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ ...plantObj, new: "true" }),
+    })
+      .then((r) => r.json())
+      .then((data) => history.push(`/flowers/${data.id + 30}`));
+  }
 
-    function addToHistory(){
-        fetch('http://localhost:3000/addedHistory', {
-            method: "POST",
-            headers: {
-                "Content-Type":"application/json"
-            },
-            body: JSON.stringify({...plantObj, new : 'true'})
-        })
-        .then(r => r.json())
-        .then(data => history.push(`/flowers/${data.id + 30}`))
-    }
+  return (
+    <div className="addPlantComp">
+      <h1>Add a plant to sell!</h1>
 
-    const displayPlants = addedPlants.map(plant => <PlantCard key={plant.id} plant={plant}/>)
-
-    return (
-        <div className="addPlantComp">
-        <h1>Add a plant to sell!</h1>
-
-        <div id="addForm">
+      <div id="addForm">
         <form onSubmit={handleSubmit}>
-            <input 
-            type='text'
+          <input
+            type="text"
             placeholder="Image URL"
             value={image}
-            onChange={e => setPlantObj({...plantObj, image : e.target.value})}/>
-            <br/>
-            <input 
-            type='text'
+            onChange={(e) =>
+              setPlantObj({ ...plantObj, image: e.target.value })
+            }
+          />
+          <br />
+          <input
+            type="text"
             placeholder="Category"
             value={category}
-            onChange={e => setPlantObj({...plantObj, category : e.target.value})}
-            />
-            <br/>
-            <input 
-            type='text' 
+            onChange={(e) =>
+              setPlantObj({ ...plantObj, category: e.target.value })
+            }
+          />
+          <br />
+          <input
+            type="text"
             placeholder="Plant Name"
             value={name}
-            onChange={e => setPlantObj({...plantObj, name : e.target.value})}
-            />
-            <br/>
-            <input 
-            type='number' 
+            onChange={(e) => setPlantObj({ ...plantObj, name: e.target.value })}
+          />
+          <br />
+          <input
+            type="number"
             placeholder="Price"
             value={price}
-            onChange={e => setPlantObj({...plantObj ,price : e.target.value})}
-            />
-            <br/>
-            <textarea 
-            id="instructions" 
-            type='text' 
+            onChange={(e) =>
+              setPlantObj({ ...plantObj, price: e.target.value })
+            }
+          />
+          <br />
+          <textarea
+            id="instructions"
+            type="text"
             placeholder="Care Instructions"
             value={instructions}
-            onChange={e => setPlantObj({...plantObj, instructions : e.target.value})}
-            />
-            <br/>
-            <button type="submit">Submit</button>
+            onChange={(e) =>
+              setPlantObj({ ...plantObj, instructions: e.target.value })
+            }
+          />
+          <br />
+          <button type="submit">Submit</button>
         </form>
-        </div>
+      </div>
 
-        <h1>History of Added Plants</h1>
-        <ul id="prevAdd">
-            {displayPlants}
-        </ul>
-        </div>
-
-    )
+      <h1>History of Added Plants</h1>
+      <ul id="prevAdd">{displayPlants}</ul>
+    </div>
+  );
 }
 
 export default AddPlant;

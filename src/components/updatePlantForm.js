@@ -4,7 +4,9 @@ import "../styles/updatePlantForm.css";
 function UpdatePlantForm({display}) {
   return (
         <div id="updateFormContainer" style={{ display: display }}>
-      <form id='updateForm' style={{ display: display }}>
+      <form id='updateForm' 
+      style={{ display: display }}
+      onSubmit={e => e.preventDefault()}>
         <div id="formContent">
         <h2>Update Plant</h2>
         Image URL:
