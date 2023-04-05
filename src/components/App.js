@@ -9,13 +9,13 @@ import { Switch, Route, useHistory } from "react-router-dom";
 function App() {
   const [displayPlants, setDisplayPlants] = useState([]);
   const [itemsInCart, setItemsInCart] = useState([]);
-  const history = useHistory();
+ 
 
   useEffect(() => {
     fetch("http://localhost:3000/flowerlist")
       .then((r) => r.json())
       .then((data) => setDisplayPlants(data));
-  }, []);
+  }, [displayPlants]);
 
   function addNewPlant(plant) {
     setDisplayPlants([...displayPlants, plant]);
