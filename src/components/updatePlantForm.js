@@ -28,9 +28,18 @@ function UpdatePlantForm({display, plant, closeForm}) {
       },
       body:JSON.stringify(newPlantObj)
     })
-closeForm()
+    closeForm()
+    updateAddedHistory()
   }
-
+function updateAddedHistory(){
+  fetch(`http://localhost:3000/addedHistory/${id - 30}`, {
+    method:"PATCH",
+    headers: {
+      "Content-Type":"application/json"
+    },
+    body:JSON.stringify(newPlantObj)
+  })
+}
 
   return (
         <div id="updateFormContainer" style={{ display: display }}>
