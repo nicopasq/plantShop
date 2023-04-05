@@ -2,7 +2,7 @@
   "flowerlist": [
     {
       "category": "Shrubs",
-      "price": 15.99,
+      "price": "15.99",
       "instructions": "Large double. Good grower, heavy bloomer. Early to mid-season, acid loving plants. Plant in moist well drained soil with pH of 4.0-5.5.",
       "image": "https://cdn.britannica.com/41/93441-050-F58F8EF1/Gardeners-rhododendrons-flowers.jpg",
       "name": "Azalea",
@@ -16,7 +16,7 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Tibouchina_semidecandra.jpg?20050507130046",
       "name": "Tibouchina Semidecandra",
       "id": 2,
-      "qty": "5"
+      "qty": 1
     },
     {
       "category": "Shrubs",
@@ -249,7 +249,7 @@
     {
       "category": "Flowers",
       "price": "42.00",
-      "instructions": "Water",
+      "instructions": "WATER IT!!!!",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR96pZmCaUrt5eV1Q6L36NtmxPYNAIz-enmCrSiodrQKSaanaPJoKyPqDeblt5kxZbogCk&usqp=CAU",
       "name": "Blue Lily",
       "id": 31,
@@ -260,7 +260,7 @@
     {
       "category": "Flowers",
       "price": "42.00",
-      "instructions": "Water",
+      "instructions": "WATER IT!!!!",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR96pZmCaUrt5eV1Q6L36NtmxPYNAIz-enmCrSiodrQKSaanaPJoKyPqDeblt5kxZbogCk&usqp=CAU",
       "name": "Blue Lily",
       "new": "true",

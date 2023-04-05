@@ -13,7 +13,7 @@ function Cart({ indexes, plantList }) {
           setPlantsInCart((currentPlants) => [...currentPlants, data])
         );
     });
-  }, [indexes]);
+  }, []);
 
   const displayPlants = plantsInCart.map((plant) => {
     const { image, name, price, qty } = plant;
