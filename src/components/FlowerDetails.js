@@ -64,7 +64,7 @@ function FlowerDetails({ addToCart }) {
           </form>
         </div>
       </div>
-      <UpdatePlantForm display={display} />
+      <UpdatePlantForm display={display} plant={flower} />
     </div>
   );
 }
