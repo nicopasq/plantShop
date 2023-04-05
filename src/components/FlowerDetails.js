@@ -16,7 +16,7 @@ function FlowerDetails({ addToCart }) {
     fetch(`http://localhost:3000/flowerlist/${id}`)
       .then((r) => r.json())
       .then((data) => setFlower(data));
-  }, [id]);
+  }, [id, flower]);
 
   function handleSubmit(e) {
     e.preventDefault();

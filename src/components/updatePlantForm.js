@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import "../styles/updatePlantForm.css";
 
 function UpdatePlantForm({display, plant}) {
+  const [formDisplay, setFormDisplay] = useState(display)
   const {name, image, category, instructions, price, id} = plant;
   const history= useHistory();
   const [newPlantObj, setNewPlantObj] = useState({
