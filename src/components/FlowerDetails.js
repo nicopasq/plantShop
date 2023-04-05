@@ -34,6 +34,15 @@ function FlowerDetails({ addToCart }) {
       });
   }
 
+  function handleEdit(){
+    if(display === "none"){
+      setDisplay("block");
+    }else if(display === "block"){
+      setDisplay("none");
+    };
+  }
+
+
   if (!flower) return <h1>Loading...</h1>;
   return (
     <div id="flowerDetails">
@@ -47,7 +56,7 @@ function FlowerDetails({ addToCart }) {
         <h4>{category}</h4>
         <p>{instructions}</p>
         <div id="buttons">
-          <button onClick={() => setDisplay("block")} id="edit">
+          <button onClick={handleEdit} id="edit">
             Edit Post
           </button>
 
@@ -64,7 +73,7 @@ function FlowerDetails({ addToCart }) {
           </form>
         </div>
       </div>
-      <UpdatePlantForm display={display} plant={flower} />
+      <UpdatePlantForm closeForm={handleEdit} display={display} plant={flower} />
     </div>
   );
 }

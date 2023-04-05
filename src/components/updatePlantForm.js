@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { useHistory } from "react-router-dom";
 import "../styles/updatePlantForm.css";
 
-function UpdatePlantForm({display, plant}) {
+function UpdatePlantForm({display, plant, closeForm}) {
   const [formDisplay, setFormDisplay] = useState(display)
   const {name, image, category, instructions, price, id} = plant;
   const history= useHistory();
@@ -28,7 +28,7 @@ function UpdatePlantForm({display, plant}) {
       },
       body:JSON.stringify(newPlantObj)
     })
-    history.push(`/flowers/${id}`)
+closeForm()
   }
 
 
