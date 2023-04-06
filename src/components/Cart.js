@@ -28,7 +28,6 @@ function Cart({ indexes, plantList }) {
   });
 
   let total = 0;
-  const finalPrices = [];
   plantsInCart.forEach((plant) => {
     const finalPlantPrice = plant.price * plant.qty;
     total = total + finalPlantPrice;

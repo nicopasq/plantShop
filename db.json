@@ -7,7 +7,7 @@
       "image": "https://cdn.britannica.com/41/93441-050-F58F8EF1/Gardeners-rhododendrons-flowers.jpg",
       "name": "Azalea",
       "id": 1,
-      "qty": 1
+      "qty": "2"
     },
     {
       "category": "Shrubs",
@@ -236,7 +236,8 @@
       "instructions": "Easy to care for, requiring watering only when they’re dry. They like bright but indirect light.",
       "image": "https://s3.amazonaws.com/eit-planttoolbox-prod/media/images/Schlumbergera-truncata--Maja-Dumat--CC-BY.jpg",
       "name": "Schlumbergera",
-      "id": 29
+      "id": 29,
+      "qty": "8"
     },
     {
       "category": "Cacti & Succulents",
@@ -265,6 +266,15 @@
       "name": "Blue Lily",
       "new": "true",
       "id": 1
+    },
+    {
+      "category": "Note",
+      "price": "420.69",
+      "instructions": "NEED TO WORK ON DELETE PLANT BUTTON",
+      "image": "https://static6.depositphotos.com/1036149/590/i/600/depositphotos_5907962-stock-photo-cool-frog.jpg",
+      "name": "DELETE BTN",
+      "new": "true",
+      "id": 2
     }
   ]
 }

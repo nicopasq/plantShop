@@ -1,8 +1,10 @@
 import React, {useState} from "react";
+import { useHistory } from "react-router-dom";
 import "../styles/updatePlantForm.css";
 
 function UpdatePlantForm({display, plant, closeForm}) {
   const {name, image, category, instructions, price, id} = plant;
+  const history = useHistory();
   const [newPlantObj, setNewPlantObj] = useState({
     category: "",
     price: "",
@@ -13,6 +15,7 @@ function UpdatePlantForm({display, plant, closeForm}) {
 
   function updatePlant(e){
     e.preventDefault();
+console.log('submityed')
     for(let key in newPlantObj){
       if(newPlantObj[key] === ""){
         newPlantObj[key] = plant[key]
@@ -37,6 +40,12 @@ function updateAddedHistory(){
     body:JSON.stringify(newPlantObj)
   })
 }
+
+function handleDelete(){
+  fetch(`http://localhost:3000/flowerlist/${id}`, {method:"DELETE"});
+  history.push('/');
+}
+
 
   return (
         <div id="updateFormContainer" style={{ display: display }}>
@@ -99,7 +108,9 @@ function updateAddedHistory(){
             }
           />
       <br />
-      <button type="submit">Submit</button> ––– <button>Delete Plant</button>
+      <button type="submit">Submit</button> 
+      ––– 
+      <button onClick={handleDelete}>Delete Plant</button>
         </div>
     </form>
         </div>
