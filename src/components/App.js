@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
     fetch("http://localhost:3000/flowerlist")
       .then((r) => r.json())
-      .then((data) => setDisplayPlants(data));
+      .then((data) => setDisplayPlants(data))
   }, [displayPlants]);
 
   function addNewPlant(plant) {
@@ -25,7 +25,7 @@ function App() {
     setItemsInCart([...itemsInCart, newItem]);
   }
 
-  const plantIndexes = [...new Set(itemsInCart)];
+  const plantIndexes = itemsInCart.filter((id, i) => itemsInCart.indexOf(id) === i);
 
   return (
     <div>

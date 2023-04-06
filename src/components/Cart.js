@@ -6,7 +6,7 @@ function Cart({ indexes, plantList }) {
   const [plantsInCart, setPlantsInCart] = useState([]);
 
   useEffect(() => {
-    indexes.forEach((i) => {
+    indexes.map((i) => {
       fetch(`http://localhost:3000/flowerlist/${i}`)
         .then((r) => r.json())
         .then((data) =>
@@ -14,7 +14,7 @@ function Cart({ indexes, plantList }) {
         );
     });
   }, []);
-
+  
   const displayPlants = plantsInCart.map((plant) => {
     const { image, name, price, qty } = plant;
     return (

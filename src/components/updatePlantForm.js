@@ -43,7 +43,8 @@ function updateAddedHistory(){
 
 function handleDelete(){
   fetch(`http://localhost:3000/flowerlist/${id}`, {method:"DELETE"});
-  history.push('/');
+  history.goBack();
+  fetch(`http://localhost:3000/addedHistory/${id - 30}`, {method:"DELETE"});
 }
 
 

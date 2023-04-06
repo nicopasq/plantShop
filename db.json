@@ -7,7 +7,7 @@
       "image": "https://cdn.britannica.com/41/93441-050-F58F8EF1/Gardeners-rhododendrons-flowers.jpg",
       "name": "Azalea",
       "id": 1,
-      "qty": "2"
+      "qty": "4"
     },
     {
       "category": "Shrubs",
@@ -266,15 +266,6 @@
       "name": "Blue Lily",
       "new": "true",
       "id": 1
-    },
-    {
-      "category": "Note",
-      "price": "420.69",
-      "instructions": "NEED TO WORK ON DELETE PLANT BUTTON",
-      "image": "https://static6.depositphotos.com/1036149/590/i/600/depositphotos_5907962-stock-photo-cool-frog.jpg",
-      "name": "DELETE BTN",
-      "new": "true",
-      "id": 2
     }
   ]
 }
