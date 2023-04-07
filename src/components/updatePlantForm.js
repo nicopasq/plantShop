@@ -52,6 +52,10 @@ function handleDelete(e){
   fetch(`http://localhost:3000/addedHistory/${id - 30}`, {method:"DELETE"});
 }
 
+function closeOnly(e){
+  e.preventDefault();
+  closeForm()
+}
 
   return (
         <div id="updateFormContainer" style={{ display: display }}>
@@ -59,6 +63,9 @@ function handleDelete(e){
       style={{ display: display }}
       onSubmit={updatePlant}>
         <div id="formContent">
+        <button 
+        onClick={closeOnly}
+        id="x">x</button>
         <h2>Update Plant</h2>
         Image URL:
         <br/>
