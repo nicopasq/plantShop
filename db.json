@@ -25,7 +25,7 @@
       "image": "https://viverogarden.com/wp-content/uploads/2022/06/white-with-red-star.jpg",
       "name": "Hibiscus",
       "id": 3,
-      "qty": 1
+      "qty": "7"
     },
     {
       "category": "Shrubs",
@@ -42,8 +42,7 @@
       "instructions": "Slow growing, upright to spreading shrub. Oval, glossy, leaves and profuse winter to spring blooming flowers.",
       "image": "https://cdn.shopify.com/s/files/1/0012/9689/2016/products/Jacks2_1024x1024@2x.jpg?v=1646599582",
       "name": "Camellia Japonica",
-      "id": 5,
-      "qty": 1
+      "id": 5
     },
     {
       "category": "Shrubs",
@@ -51,8 +50,7 @@
       "instructions": "Thorny woody vine scrambles over other plants with their hooked thorns. Pest free.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Starr_030418-0058_Bougainvillea_spectabilis.jpg",
       "name": "Bougainvillea Spectabilis",
-      "id": 6,
-      "qty": 1
+      "id": 6
     },
     {
       "category": "Shrubs",
@@ -61,7 +59,7 @@
       "image": "https://h2.commercev3.net/cdn.springhillnursery.com/images/800/09337A.jpg",
       "name": "Rosa Burgundy",
       "id": 7,
-      "qty": "2"
+      "qty": 1
     },
     {
       "category": "Shrubs",
@@ -69,8 +67,7 @@
       "instructions": "Bright white colored flowers, bushy rounded growth, habitate until 3 feet tall. Plant in full sun. Water regularly.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Rosa_Iceberg_1.jpg/1200px-Rosa_Iceberg_1.jpg",
       "name": "Rosa Iceberg",
-      "id": 8,
-      "qty": 1
+      "id": 8
     },
     {
       "category": "Container Plants",
@@ -143,8 +140,7 @@
       "instructions": "Compact mounds of colorful dainty flowers, good for window boxes. Fertile well drained soil.",
       "image": "https://cdn.shopify.com/s/files/1/0257/4565/3811/products/Yellow-Blotch-Pansy-Bonnieplants.com.jpg?v=1642630183",
       "name": "Pansy Yellow with Blotch",
-      "id": 17,
-      "qty": 1
+      "id": 17
     },
     {
       "category": "Container Plants",
@@ -168,8 +164,7 @@
       "instructions": "Chrysanthemums respond to plenty of food and moisture, and prefer full sun.",
       "image": "https://www.lucasgreenhouses.com/_ccLib/image/plants/DETA-1530.jpg",
       "name": "Chrysanthemum",
-      "id": 20,
-      "qty": 1
+      "id": 20
     },
     {
       "category": "Herbaceous Perennials",
@@ -185,8 +180,7 @@
       "instructions": "Grows to 15 inches. The species is easy to grow from seeds or cuttings. This species prefers full sun.",
       "image": "https://s3.amazonaws.com/eit-planttoolbox-prod/media/images/Salvia-splendens--Dinesh-Valke--CC-BY-NC-ND.jpg",
       "name": "Salvia Splendens",
-      "id": 22,
-      "qty": 1
+      "id": 22
     },
     {
       "category": "Herbaceous Perennials",
@@ -226,8 +220,7 @@
       "instructions": "Add water until there is half inch of dry soil on the surface. Do not water again until the soil is completely dry.",
       "image": "https://cdn11.bigcommerce.com/s-nqbbuyl3/images/stencil/600w/products/617/1524/grafted_red_large__12502.1435900150.JPG?c=3",
       "name": "Red Cactus",
-      "id": 27,
-      "qty": 1
+      "id": 27
     },
     {
       "category": "Cacti & Succulents",
@@ -262,6 +255,15 @@
       "name": "Blue Lily",
       "id": 31,
       "qty": 1
+    },
+    {
+      "category": "Note",
+      "price": "420.69",
+      "instructions": "NEED TO WORK ON DELETE PLANT BUTTON",
+      "image": "https://static6.depositphotos.com/1036149/590/i/600/depositphotos_5907962-stock-photo-cool-frog.jpg",
+      "name": "DELETE BTN",
+      "id": 32,
+      "qty": 1
     }
   ],
   "addedHistory": [
@@ -273,6 +275,15 @@
       "name": "Blue Lily",
       "new": "true",
       "id": 1
+    },
+    {
+      "category": "Note",
+      "price": "420.69",
+      "instructions": "NEED TO WORK ON DELETE PLANT BUTTON",
+      "image": "https://static6.depositphotos.com/1036149/590/i/600/depositphotos_5907962-stock-photo-cool-frog.jpg",
+      "name": "DELETE BTN",
+      "new": "true",
+      "id": 2
     }
   ]
 }

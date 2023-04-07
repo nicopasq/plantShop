@@ -30,7 +30,7 @@ function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers }) {
       .then((r) => r.json())
       .then((data) => {
         addToCart(data.id);
-        history.push("/cart");
+        alert('Added to Cart')
       });
   }
 

@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import "../styles/cart.css";
 
 function Cart({ indexes}) {
   // return null
   const [plantsInCart, setPlantsInCart] = useState([]);
+  const history = useHistory();
 
   useEffect(() => {
     indexes.map((i) => {
@@ -22,7 +24,10 @@ function Cart({ indexes}) {
   const displayPlants = plantsInCart.filter(plant => plant.id).map((plant) => {
     const { image, name, price, qty, id } = plant;
     return (
-      <div key={plant.id} className="cartItem">
+      <div 
+      onClick={() => history.push(`/flowers/${id}`)}
+      key={plant.id} 
+      className="cartItem">
         <img src={image} />
         <p>{name}</p>
         <p>(qty: {qty})</p>
