@@ -50,7 +50,8 @@
       "instructions": "Thorny woody vine scrambles over other plants with their hooked thorns. Pest free.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Starr_030418-0058_Bougainvillea_spectabilis.jpg",
       "name": "Bougainvillea Spectabilis",
-      "id": 6
+      "id": 6,
+      "qty": 1
     },
     {
       "category": "Shrubs",
@@ -67,7 +68,8 @@
       "instructions": "Bright white colored flowers, bushy rounded growth, habitate until 3 feet tall. Plant in full sun. Water regularly.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Rosa_Iceberg_1.jpg/1200px-Rosa_Iceberg_1.jpg",
       "name": "Rosa Iceberg",
-      "id": 8
+      "id": 8,
+      "qty": 1
     },
     {
       "category": "Container Plants",
@@ -180,7 +182,8 @@
       "instructions": "Grows to 15 inches. The species is easy to grow from seeds or cuttings. This species prefers full sun.",
       "image": "https://s3.amazonaws.com/eit-planttoolbox-prod/media/images/Salvia-splendens--Dinesh-Valke--CC-BY-NC-ND.jpg",
       "name": "Salvia Splendens",
-      "id": 22
+      "id": 22,
+      "qty": 1
     },
     {
       "category": "Herbaceous Perennials",
