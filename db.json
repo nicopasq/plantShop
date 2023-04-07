@@ -255,15 +255,6 @@
       "name": "Blue Lily",
       "id": 31,
       "qty": 1
-    },
-    {
-      "category": "Note",
-      "price": "1",
-      "instructions": "NEED TO WORK ON DELETE PLANT BUTTON",
-      "image": "https://static6.depositphotos.com/1036149/590/i/600/depositphotos_5907962-stock-photo-cool-frog.jpg",
-      "name": "DUDE",
-      "id": 32,
-      "qty": "2"
     }
   ],
   "addedHistory": [
@@ -275,15 +266,6 @@
       "name": "Blue Lily",
       "new": "true",
       "id": 1
-    },
-    {
-      "category": "Note",
-      "price": "1",
-      "instructions": "NEED TO WORK ON DELETE PLANT BUTTON",
-      "image": "https://static6.depositphotos.com/1036149/590/i/600/depositphotos_5907962-stock-photo-cool-frog.jpg",
-      "name": "DUDE",
-      "new": "true",
-      "id": 2
     }
   ]
 }

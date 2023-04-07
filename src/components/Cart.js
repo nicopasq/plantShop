@@ -14,8 +14,8 @@ function Cart({ indexes}) {
         });
     });
   }, []);
-  
-  const displayPlants = plantsInCart.map((plant) => {
+
+  const displayPlants = plantsInCart.filter(plant => plant.id).map((plant) => {
     const { image, name, price, qty } = plant;
     return (
       <div key={plant.id} className="cartItem">
