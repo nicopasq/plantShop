@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../styles/cart.css";
 
-function Cart({ indexes, plantList }) {
+function Cart({ indexes}) {
   // return null
   const [plantsInCart, setPlantsInCart] = useState([]);
 
@@ -9,9 +9,9 @@ function Cart({ indexes, plantList }) {
     indexes.map((i) => {
       fetch(`http://localhost:3000/flowerlist/${i}`)
         .then((r) => r.json())
-        .then((data) =>
-          setPlantsInCart((currentPlants) => [...currentPlants, data])
-        );
+        .then((data) => {
+            setPlantsInCart((currentPlants) => [...currentPlants, data])
+        });
     });
   }, []);
   

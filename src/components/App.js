@@ -4,7 +4,7 @@ import Flowers from "./Flowers";
 import FlowerDetails from "./FlowerDetails";
 import AddPlant from "./AddPlant";
 import Cart from "./Cart";
-import { Switch, Route, useHistory } from "react-router-dom";
+import { Switch, Route} from "react-router-dom";
 
 function App() {
   const [displayPlants, setDisplayPlants] = useState([]);
@@ -15,10 +15,10 @@ function App() {
     fetch("http://localhost:3000/flowerlist")
       .then((r) => r.json())
       .then((data) => setDisplayPlants(data))
-  }, [displayPlants]);
+  }, []);
 
   function addNewPlant(plant) {
-    setDisplayPlants([...displayPlants, plant]);
+    setDisplayPlants([...displayPlants, plant])
   }
 
   function addToCart(newItem) {
@@ -26,7 +26,7 @@ function App() {
   }
 
   const plantIndexes = itemsInCart.filter((id, i) => itemsInCart.indexOf(id) === i);
-
+console.log(plantIndexes)
   return (
     <div>
       <NavBar />
@@ -41,7 +41,7 @@ function App() {
           <FlowerDetails addToCart={addToCart} />
         </Route>
         <Route path="/cart">
-          <Cart indexes={plantIndexes} plantList={displayPlants} />
+          <Cart indexes={plantIndexes} />
         </Route>
       </Switch>
     </div>

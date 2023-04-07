@@ -7,7 +7,7 @@
       "image": "https://cdn.britannica.com/41/93441-050-F58F8EF1/Gardeners-rhododendrons-flowers.jpg",
       "name": "Azalea",
       "id": 1,
-      "qty": "4"
+      "qty": 1
     },
     {
       "category": "Shrubs",
@@ -34,7 +34,7 @@
       "image": "https://images.immediate.co.uk/production/volatile/sites/10/2019/07/2048x1365-Plectranthus-fruticosus-LI3917943-5433d9d.jpg?quality=90&resize=960%2C640",
       "name": "Plectranthus",
       "id": 4,
-      "qty": "420"
+      "qty": 1
     },
     {
       "category": "Shrubs",
@@ -255,6 +255,23 @@
       "name": "Blue Lily",
       "id": 31,
       "qty": 1
+    },
+    {
+      "category": "Note",
+      "price": "420.69",
+      "instructions": "NEED TO WORK ON DELETE PLANT BUTTON",
+      "image": "https://static6.depositphotos.com/1036149/590/i/600/depositphotos_5907962-stock-photo-cool-frog.jpg",
+      "name": "DELETE BTN",
+      "id": 32,
+      "qty": 1
+    },
+    {
+      "category": "",
+      "price": "",
+      "instructions": "",
+      "image": "",
+      "name": "",
+      "id": 33
     }
   ],
   "addedHistory": [
@@ -266,6 +283,24 @@
       "name": "Blue Lily",
       "new": "true",
       "id": 1
+    },
+    {
+      "category": "Note",
+      "price": "420.69",
+      "instructions": "NEED TO WORK ON DELETE PLANT BUTTON",
+      "image": "https://static6.depositphotos.com/1036149/590/i/600/depositphotos_5907962-stock-photo-cool-frog.jpg",
+      "name": "DELETE BTN",
+      "new": "true",
+      "id": 2
+    },
+    {
+      "category": "",
+      "price": "",
+      "instructions": "",
+      "image": "",
+      "name": "",
+      "new": "true",
+      "id": 3
     }
   ]
 }
