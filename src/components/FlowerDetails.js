@@ -3,7 +3,7 @@ import { useHistory, useParams } from "react-router-dom";
 import "../styles/flowerDetails.css";
 import UpdatePlantForm from "./UpdatePlantForm";
 
-function FlowerDetails({ addToCart }) {
+function FlowerDetails({ addToCart, updateFlowers }) {
   const [flower, setFlower] = useState("");
   const [qty, setQty] = useState(1);
   const [display, setDisplay] = useState("none");
@@ -73,7 +73,7 @@ function FlowerDetails({ addToCart }) {
           </form>
         </div>
       </div>
-      <UpdatePlantForm closeForm={handleEdit} display={display} plant={flower} />
+      <UpdatePlantForm updateFlowers={updateFlowers} closeForm={handleEdit} display={display} plant={flower} />
     </div>
   );
 }

@@ -25,6 +25,10 @@ function App() {
     setItemsInCart([...itemsInCart, newItem]);
   }
 
+  function updateFlowersList(updatedPlant){
+    console.log('Updated Flower from App:', updatedPlant)
+  }
+
   const plantIndexes = itemsInCart.filter((id, i) => itemsInCart.indexOf(id) === i);
 console.log(plantIndexes)
   return (
@@ -38,7 +42,7 @@ console.log(plantIndexes)
           <AddPlant submitForm={addNewPlant} />
         </Route>
         <Route path="/flowers/:id">
-          <FlowerDetails addToCart={addToCart} />
+          <FlowerDetails updateFlowers={updateFlowersList} addToCart={addToCart} />
         </Route>
         <Route path="/cart">
           <Cart indexes={plantIndexes} />
