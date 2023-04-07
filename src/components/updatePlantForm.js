@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { useHistory } from "react-router-dom";
 import "../styles/updatePlantForm.css";
 
-function UpdatePlantForm({display, plant, closeForm, updateFlowers}) {
+function UpdatePlantForm({display, plant, closeForm, updateFlowers, deleteFromFlowers}) {
   const {name, image, category, instructions, price, id} = plant;
   const history = useHistory();
   const [newPlantObj, setNewPlantObj] = useState({
@@ -44,8 +44,10 @@ function updateAddedHistory(){
   }
 }
 
-function handleDelete(){
+function handleDelete(e){
+  e.preventDefault()
   fetch(`http://localhost:3000/flowerlist/${id}`, {method:"DELETE"});
+  deleteFromFlowers(id);
   history.goBack();
   fetch(`http://localhost:3000/addedHistory/${id - 30}`, {method:"DELETE"});
 }

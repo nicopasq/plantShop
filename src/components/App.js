@@ -26,17 +26,22 @@ function App() {
   }
 
   function updateFlowersList(updatedPlant){
-    const updatedDisplayFlowers = displayPlants.map(plant => {
+    const updatedFlowers = displayPlants.map(plant => {
       if(plant.id === updatedPlant.id){
         plant = updatedPlant
       }
       return plant
     })
-    setDisplayPlants(updatedDisplayFlowers);
+    setDisplayPlants(updatedFlowers);
+  }
+
+  function deleteFlower(id){
+    const updatedFlowers = displayPlants.filter(plant => plant.id !== id)
+    setDisplayPlants(updatedFlowers)
   }
 
   const plantIndexes = itemsInCart.filter((id, i) => itemsInCart.indexOf(id) === i);
-console.log(plantIndexes)
+  
   return (
     <div>
       <NavBar />
@@ -48,7 +53,7 @@ console.log(plantIndexes)
           <AddPlant submitForm={addNewPlant} />
         </Route>
         <Route path="/flowers/:id">
-          <FlowerDetails updateFlowers={updateFlowersList} addToCart={addToCart} />
+          <FlowerDetails deleteFromFlowers={deleteFlower} updateFlowers={updateFlowersList} addToCart={addToCart} />
         </Route>
         <Route path="/cart">
           <Cart indexes={plantIndexes} />
