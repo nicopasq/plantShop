@@ -15,19 +15,26 @@ function Cart({ indexes}) {
     });
   }, []);
 
+  function removePlant(){
+    console.log(displayPlants)
+  }
+
   const displayPlants = plantsInCart.filter(plant => plant.id).map((plant) => {
-    const { image, name, price, qty } = plant;
+    const { image, name, price, qty, id } = plant;
     return (
       <div key={plant.id} className="cartItem">
         <img src={image} />
         <p>{name}</p>
         <p>(qty: {qty})</p>
         <p>${price}</p>
+        <p 
+        onClick={removePlant}
+        id="remove">🗑️</p>
       </div>
     );
   });
 
-  let total = 0;
+  let total = 0;  
   plantsInCart.filter(plant => plant.id).forEach((plant) => {
     const finalPlantPrice = plant.price * plant.qty;
     total = total + finalPlantPrice;

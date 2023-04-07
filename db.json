@@ -25,7 +25,7 @@
       "image": "https://viverogarden.com/wp-content/uploads/2022/06/white-with-red-star.jpg",
       "name": "Hibiscus",
       "id": 3,
-      "qty": "7"
+      "qty": 1
     },
     {
       "category": "Shrubs",
@@ -42,7 +42,8 @@
       "instructions": "Slow growing, upright to spreading shrub. Oval, glossy, leaves and profuse winter to spring blooming flowers.",
       "image": "https://cdn.shopify.com/s/files/1/0012/9689/2016/products/Jacks2_1024x1024@2x.jpg?v=1646599582",
       "name": "Camellia Japonica",
-      "id": 5
+      "id": 5,
+      "qty": 1
     },
     {
       "category": "Shrubs",
@@ -60,7 +61,7 @@
       "image": "https://h2.commercev3.net/cdn.springhillnursery.com/images/800/09337A.jpg",
       "name": "Rosa Burgundy",
       "id": 7,
-      "qty": 1
+      "qty": "2"
     },
     {
       "category": "Shrubs",
@@ -142,7 +143,8 @@
       "instructions": "Compact mounds of colorful dainty flowers, good for window boxes. Fertile well drained soil.",
       "image": "https://cdn.shopify.com/s/files/1/0257/4565/3811/products/Yellow-Blotch-Pansy-Bonnieplants.com.jpg?v=1642630183",
       "name": "Pansy Yellow with Blotch",
-      "id": 17
+      "id": 17,
+      "qty": 1
     },
     {
       "category": "Container Plants",
@@ -166,7 +168,8 @@
       "instructions": "Chrysanthemums respond to plenty of food and moisture, and prefer full sun.",
       "image": "https://www.lucasgreenhouses.com/_ccLib/image/plants/DETA-1530.jpg",
       "name": "Chrysanthemum",
-      "id": 20
+      "id": 20,
+      "qty": 1
     },
     {
       "category": "Herbaceous Perennials",
@@ -223,7 +226,8 @@
       "instructions": "Add water until there is half inch of dry soil on the surface. Do not water again until the soil is completely dry.",
       "image": "https://cdn11.bigcommerce.com/s-nqbbuyl3/images/stencil/600w/products/617/1524/grafted_red_large__12502.1435900150.JPG?c=3",
       "name": "Red Cactus",
-      "id": 27
+      "id": 27,
+      "qty": 1
     },
     {
       "category": "Cacti & Succulents",

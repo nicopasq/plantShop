@@ -14,11 +14,12 @@
     width: 200%;
 }
 .cartItem{
-    width: fit-content;
+    border-bottom: 1px solid gray;
+    width: 440px;
     height: 120px;
     margin-top: 5px;
     position: relative;
-    right: 45px;
+    right: 40px;
 }
 .cartItem img{
     border-radius: 100%;
@@ -31,13 +32,16 @@
     font-size: 17px;
     margin-top: -5px;
     position: relative;
-    left: 50%;
+    left: 30%;
     top: -24vh;
 }
-#removeItem{
+#remove{
     position: relative;
-    top: -280%;
-    left: 111%;
+    top: -267%;
+    left: 90%;
+}
+#remove:hover{
+    cursor: pointer;
 }
 #name{
     width: 140px;
