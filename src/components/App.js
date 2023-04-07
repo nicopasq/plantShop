@@ -26,7 +26,13 @@ function App() {
   }
 
   function updateFlowersList(updatedPlant){
-    console.log('Updated Flower from App:', updatedPlant)
+    console.log('Updated Flower from App: \n', updatedPlant)
+    displayPlants.filter(plant => {
+      if(plant.id === updatedPlant.id){
+        console.log('Matching plant to be updated: \n', plant)
+      }
+    })
+    const updatedDisplayFlowers = []
   }
 
   const plantIndexes = itemsInCart.filter((id, i) => itemsInCart.indexOf(id) === i);

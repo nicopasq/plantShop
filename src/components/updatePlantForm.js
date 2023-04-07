@@ -11,6 +11,7 @@ function UpdatePlantForm({display, plant, closeForm, updateFlowers}) {
     instructions: "",
     image: "",
     name: "",
+    id: id
   });
 
   function updatePlant(e){

@@ -22,7 +22,7 @@ function AddPlant({ submitForm }) {
     fetch("http://localhost:3000/addedHistory")
       .then((r) => r.json())
       .then((data) => setAddedPlants(data));
-  }, [addedPlants]);
+  }, []);
 
   function handleSubmit(e) {
     e.preventDefault();
