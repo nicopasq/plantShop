@@ -4,6 +4,7 @@ import "../styles/cart.css";
 
 function Cart({ indexes}) {
   // return null
+  const [displayTotal, setDisplayTotal] = useState('none');
   const [plantsInCart, setPlantsInCart] = useState([]);
   const history = useHistory();
 
@@ -17,13 +18,20 @@ function Cart({ indexes}) {
     });
   }, []);
 
-  function removePlant(){
-    console.log(displayPlants)
+  function removePlant(id){
+    //if id of clicked plant is in plantsInCart, remove it.
+    const updatedCart = plantsInCart.filter(plant => {
+      if (plant.id !== id){
+        return plant
+      }
+    })
+    setPlantsInCart(updatedCart)
   }
 
   const displayPlants = plantsInCart.filter(plant => plant.id).map((plant) => {
     const { image, name, price, qty, id } = plant;
     return (
+      <>
       <div 
       onClick={() => history.push(`/flowers/${id}`)}
       key={plant.id} 
@@ -32,10 +40,12 @@ function Cart({ indexes}) {
         <p>{name}</p>
         <p>(qty: {qty})</p>
         <p>${price}</p>
-        <p 
-        onClick={removePlant}
-        id="remove">🗑️</p>
       </div>
+      <div>
+         <p onClick={() => removePlant(id)}
+        className="remove">🗑️</p>
+      </div>
+        </>
     );
   });
 
@@ -51,9 +61,12 @@ function Cart({ indexes}) {
 
       <div id="cartDisplay">
         <h2>Cart</h2>
-        <ul id="cartContents">{displayPlants}</ul>
+        <ul id="cartContents">{displayPlants}
+         </ul>
+        <div id="checkout">
         <h3>Total: {total.toFixed(2)}</h3>
         <button>Checkout</button>
+        </div>
       </div>
     </div>
   );

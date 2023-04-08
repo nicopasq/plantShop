@@ -5,21 +5,23 @@
 #cartDisplay{
     text-align: left;
     display: inline-block;
-    width: 200px;
+    width: fit-content;
     position: relative;
     left: 40%;
 }
 #cartContents{
+    border: 1px solid blue;
     border: 1px solid black;
-    width: 200%;
+    width: 400px;
 }
 .cartItem{
+    margin: -10px;
     border-bottom: 1px solid gray;
     width: 440px;
-    height: 120px;
-    margin-top: 5px;
+    height: 115px;
     position: relative;
-    right: 40px;
+    top: 16px;
+    right: 30px;
 }
 .cartItem img{
     border-radius: 100%;
@@ -33,16 +35,18 @@
     margin-top: -5px;
     position: relative;
     left: 30%;
-    top: -24vh;
+    top: -25vh;
 }
-#remove{
+.remove{
+    margin: 0;
+    width: fit-content;
     position: relative;
-    top: -267%;
+    top: -80px;
     left: 90%;
 }
-#remove:hover{
+.remove:hover{
     cursor: pointer;
 }
-#name{
-    width: 140px;
+#checkout{
+    margin: 5px;
 }
