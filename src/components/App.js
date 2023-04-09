@@ -40,7 +40,10 @@ function App() {
     setDisplayPlants(updatedFlowers)
   }
 
-  const plantIndexes = itemsInCart.filter((id, i) => itemsInCart.indexOf(id) === i);
+  function deleteFromCart(id){
+    const updatedCartItems = itemsInCart.filter(item => item !== id)
+    setItemsInCart(updatedCartItems)
+  }
   
   return (
     <div>
@@ -56,7 +59,7 @@ function App() {
           <FlowerDetails deleteFromFlowers={deleteFlower} updateFlowers={updateFlowersList} addToCart={addToCart} />
         </Route>
         <Route path="/cart">
-          <Cart indexes={plantIndexes} />
+          <Cart indexes={itemsInCart} deleteFromCart={deleteFromCart} />
         </Route>
       </Switch>
     </div>

@@ -2,39 +2,31 @@ import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import "../styles/cart.css";
 
-function Cart({ indexes}) {
-  // return null
-  const [displayTotal, setDisplayTotal] = useState('none');
+function Cart({ indexes, deleteFromCart}) {
   const [plantsInCart, setPlantsInCart] = useState([]);
+  const [plantIdArr, setPlantIdArr] = useState(indexes.filter((id, i) => indexes.indexOf(id) === i));
   const history = useHistory();
 
   useEffect(() => {
-    indexes.map((i) => {
-      fetch(`http://localhost:3000/flowerlist/${i}`)
-        .then((r) => r.json())
-        .then((data) => {
-            setPlantsInCart((currentPlants) => [...currentPlants, data])
-        });
+    plantIdArr.map(id => {
+      fetch(`http://localhost:3000/flowerlist/${id}`)
+      .then(r => r.json())
+      .then(data => setPlantsInCart((plantsInCart) =>[...plantsInCart, data]))
     });
   }, []);
 
-  function removePlant(id){
-    //if id of clicked plant is in plantsInCart, remove it.
-    const updatedCart = plantsInCart.filter(plant => {
-      if (plant.id !== id){
-        return plant
-      }
-    })
-    setPlantsInCart(updatedCart)
+  function removeItem(id){
+    deleteFromCart(id);
+    const updatedItems = plantsInCart.filter(plant => plant.id !== id);
+      setPlantsInCart(updatedItems);
   }
 
   const displayPlants = plantsInCart.filter(plant => plant.id).map((plant) => {
     const { image, name, price, qty, id } = plant;
     return (
-      <>
+      <div key={plant.id}>
       <div 
-      onClick={() => history.push(`/flowers/${id}`)}
-      key={plant.id} 
+      onClick={() => history.push(`/flowers/${id}`)} 
       className="cartItem">
         <img src={image} />
         <p>{name}</p>
@@ -42,10 +34,10 @@ function Cart({ indexes}) {
         <p>${price}</p>
       </div>
       <div>
-         <p onClick={() => removePlant(id)}
+         <p onClick={() => removeItem(id)}
         className="remove">🗑️</p>
       </div>
-        </>
+        </div>
     );
   });
 
