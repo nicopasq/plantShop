@@ -24,7 +24,7 @@ function Cart({ indexes, deleteFromCart}) {
   const displayPlants = plantsInCart.filter(plant => plant.id).map((plant) => {
     const { image, name, price, qty, id } = plant;
     return (
-      <div key={plant.id}>
+      <div key={plant.id} className="itemContainer">
       <div 
       onClick={() => history.push(`/flowers/${id}`)} 
       className="cartItem">
