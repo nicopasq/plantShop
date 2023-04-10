@@ -44,7 +44,9 @@ function Cart({ indexes, deleteFromCart}) {
   });
 
   function openCloseForm(){
-
+    if(displayCheckout === 'none'){
+      setDisplayCheckout('block')
+    }
   }
 
 
@@ -63,7 +65,7 @@ function Cart({ indexes, deleteFromCart}) {
         <ul id="cartContents">{displayPlants}
          </ul>
         <div id="checkout">
-        <h3>Total: {total.toFixed(2)}</h3>
+        <h3>Total: ${total.toFixed(2)}</h3>
         <button
         onClick={openCloseForm}>Checkout</button>
         </div>
