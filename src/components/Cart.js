@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import "../styles/cart.css";
+import Checkout from "./Checkout";
 
 function Cart({ indexes, deleteFromCart}) {
   const [plantsInCart, setPlantsInCart] = useState([]);
+  const [displayCheckout, setDisplayCheckout] = useState('none')
   const [plantIdArr, setPlantIdArr] = useState(indexes.filter((id, i) => indexes.indexOf(id) === i));
   const history = useHistory();
 
@@ -41,6 +43,11 @@ function Cart({ indexes, deleteFromCart}) {
     );
   });
 
+  function openCloseForm(){
+
+  }
+
+
   let total = 0;  
   plantsInCart.filter(plant => plant.id).forEach((plant) => {
     const finalPlantPrice = plant.price * plant.qty;
@@ -57,9 +64,11 @@ function Cart({ indexes, deleteFromCart}) {
          </ul>
         <div id="checkout">
         <h3>Total: {total.toFixed(2)}</h3>
-        <button>Checkout</button>
+        <button
+        onClick={openCloseForm}>Checkout</button>
         </div>
       </div>
+      <Checkout total={total} display={displayCheckout}/>
     </div>
   );
 }
