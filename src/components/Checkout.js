@@ -8,6 +8,7 @@ function Checkout({total, display}){
             <form id="checkoutForm"
             style={{display: display}}
             onSubmit={() => alert('Payment Successful! \nThank you for your purchase :)')}>
+                <img id="options" src='https://bursar.unl.edu/images/4CCImage.jpg' alt='available_payment_options'/>
                 <p>Card Number:</p>
                 <input id="cardNum" type='number'/>
                 <p>Name of Card Holder:</p>
