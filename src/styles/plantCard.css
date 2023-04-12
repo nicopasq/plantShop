@@ -10,7 +10,7 @@
     scale: 1.1;
 }
 img{
-    border-radius: 10%;
+    border-radius: 20px;
     height: 250px;
     width: 250px;
 }
@@ -20,6 +20,8 @@ p{
 }
 .namePriceContainer{
     background-color: rgba(255, 255, 255, 0.7);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     height: 40px;
     position: relative;
     bottom: 60px;
