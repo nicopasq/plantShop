@@ -1,13 +1,17 @@
 import React from "react";
 import '../styles/checkout.css';
 
-function Checkout({total, display}){
+function Checkout({total, display, closeForm}){
     return (
         <div id="checkoutContainer"
         style={{display: display}}>
             <form id="checkoutForm"
             style={{display: display}}
             onSubmit={() => alert('Payment Successful! \nThank you for your purchase :)')}>
+                <div id="formHeader">
+                <p>Checkout</p> 
+                <p id="xBtn" onClick={closeForm}>x</p>
+                </div>
                 <img id="options" src='https://bursar.unl.edu/images/4CCImage.jpg' alt='available_payment_options'/>
                 <p>Card Number:</p>
                 <input id="cardNum" type='number'/>

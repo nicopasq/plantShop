@@ -46,6 +46,8 @@ function Cart({ indexes, deleteFromCart}) {
   function openCloseForm(){
     if(displayCheckout === 'none'){
       setDisplayCheckout('block')
+    } else {
+      setDisplayCheckout('none')
     }
   }
 
@@ -70,7 +72,7 @@ function Cart({ indexes, deleteFromCart}) {
         onClick={openCloseForm}>Checkout</button>
         </div>
       </div>
-      <Checkout total={total} display={displayCheckout}/>
+      <Checkout total={total} display={displayCheckout} closeForm={openCloseForm}/>
     </div>
   );
 }

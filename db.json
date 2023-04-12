@@ -7,7 +7,7 @@
       "image": "https://cdn.britannica.com/41/93441-050-F58F8EF1/Gardeners-rhododendrons-flowers.jpg",
       "name": "Azalea",
       "id": 1,
-      "qty": 1
+      "qty": "12"
     },
     {
       "category": "Shrubs",
@@ -29,7 +29,7 @@
     },
     {
       "category": "Shrubs",
-      "price": 5.99,
+      "price": "25.00",
       "instructions": "Quick-growing, herbaceous, shrub reaching up to 30 inches in height, forming a rounded, dense bush.",
       "image": "https://images.immediate.co.uk/production/volatile/sites/10/2019/07/2048x1365-Plectranthus-fruticosus-LI3917943-5433d9d.jpg?quality=90&resize=960%2C640",
       "name": "Plectranthus",
@@ -268,7 +268,7 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR96pZmCaUrt5eV1Q6L36NtmxPYNAIz-enmCrSiodrQKSaanaPJoKyPqDeblt5kxZbogCk&usqp=CAU",
       "name": "Blue Lily",
       "id": 31,
-      "qty": 1
+      "qty": "2"
     }
   ],
   "addedHistory": [
