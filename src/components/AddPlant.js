@@ -18,11 +18,13 @@ function AddPlant({ submitForm }) {
     <PlantCard key={plant.id} plant={plant} />
   ));
 
+
   useEffect(() => {
     fetch("http://localhost:3000/addedHistory")
       .then((r) => r.json())
       .then((data) => setAddedPlants(data));
   }, []);
+
 
   function handleSubmit(e) {
     e.preventDefault();

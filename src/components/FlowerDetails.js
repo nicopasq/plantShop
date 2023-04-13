@@ -12,11 +12,13 @@ function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers }) {
   const { name, image, price, category, instructions } = flower;
   const arrow = "<––";
 
+
   useEffect(() => {
     fetch(`http://localhost:3000/flowerlist/${id}`)
       .then((r) => r.json())
       .then((data) => setFlower(data));
-  }, [id, flower]);
+  }, [id]);
+
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -30,50 +32,57 @@ function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers }) {
       .then((r) => r.json())
       .then((data) => {
         addToCart(data.id);
-        alert('Added to Cart')
+        alert("Added to Cart");
       });
   }
 
-  function handleEdit(){
-    if(display === "none"){
+  function handleEdit() {
+    if (display === "none") {
       setDisplay("block");
-    }else if(display === "block"){
+    } else if (display === "block") {
       setDisplay("none");
-    };
+    }
   }
 
-
   if (!flower) return <h1>Loading...</h1>;
+
   return (
     <div id="flowerDetails">
       <div id="content">
         <p className="back" onClick={() => history.goBack()}>
-          {arrow} Back
+          {arrow} Continue Shopping
         </p>
         <img src={image} />
-        <h2>{name}</h2>
-        <h4>{price}</h4>
-        <h4>{category}</h4>
-        <p>{instructions}</p>
-        <div id="buttons">
-          <button onClick={handleEdit} id="edit">
-            Edit Post
-          </button>
-
-          <form onSubmit={handleSubmit} id="addToCartForm">
-            <label>Select Quantity </label>
-            <input
-              value={qty}
-              onChange={(e) => setQty(e.target.value)}
-              type="number"
-            ></input>
-            <button type="submit" id="addToCart">
-              Add To Cart
-            </button>
-          </form>
+        <div className="details">
+          <h2>{name}</h2>
+          <h4>Price:</h4>
+          <p>${price} Each</p>
+          <h4>Category:</h4>
+          <p>{category}</p>
+          <h4>Description:</h4>
+          <p>{instructions}</p>
         </div>
+        <button onClick={handleEdit} className="edit">
+          Edit Post
+        </button>
+        <form onSubmit={handleSubmit} className="addToCartForm">
+          <input
+            value={qty}
+            onChange={(e) => setQty(e.target.value)}
+            type="number"
+          ></input>
+          <button type="submit" id="addToCart">
+            Add To Cart
+          </button>
+        </form>
       </div>
-      <UpdatePlantForm deleteFromFlowers={deleteFromFlowers}updateFlowers={updateFlowers} closeForm={handleEdit} display={display} plant={flower} />
+      <UpdatePlantForm
+        deleteFromFlowers={deleteFromFlowers}
+        updateFlowers={updateFlowers}
+        closeForm={handleEdit}
+        display={display}
+        plant={flower}
+      />
     </div>
   );
 }

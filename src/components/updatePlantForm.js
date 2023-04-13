@@ -1,9 +1,16 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import "../styles/updatePlantForm.css";
 
-function UpdatePlantForm({display, plant, closeForm, updateFlowers, deleteFromFlowers}) {
-  const {name, image, category, instructions, price, id} = plant;
+function UpdatePlantForm({
+  display,
+  plant,
+  closeForm,
+  updateFlowers,
+  deleteFromFlowers,
+}) {
+
+  const { name, image, category, instructions, price, id } = plant;
   const history = useHistory();
   const [newPlantObj, setNewPlantObj] = useState({
     category: "",
@@ -11,65 +18,67 @@ function UpdatePlantForm({display, plant, closeForm, updateFlowers, deleteFromFl
     instructions: "",
     image: "",
     name: "",
-    id: id
+    id: id,
   });
 
-  function updatePlant(e){
+
+  function updatePlant(e) {
     e.preventDefault();
-    for(let key in newPlantObj){
-      if(newPlantObj[key] === ""){
-        newPlantObj[key] = plant[key]
+    for (let key in newPlantObj) {
+      if (newPlantObj[key] === "") {
+        newPlantObj[key] = plant[key];
       }
     }
     fetch(`http://localhost:3000/flowerlist/${id}`, {
-      method:"PATCH",
+      method: "PATCH",
       headers: {
-        "Content-Type":"application/json"
+        "Content-Type": "application/json",
       },
-      body:JSON.stringify(newPlantObj)
-    })
-    closeForm()
+      body: JSON.stringify(newPlantObj),
+    });
+    closeForm();
     updateFlowers(newPlantObj);
-    updateAddedHistory()
+    updateAddedHistory();
   }
-function updateAddedHistory(){
-  if(id > 30){
+
+  function updateAddedHistory() {
+    if (id > 30) {
+      fetch(`http://localhost:3000/addedHistory/${id - 30}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newPlantObj),
+      });
+    }
+  }
+
+  function handleDelete(e) {
+    e.preventDefault();
+    fetch(`http://localhost:3000/flowerlist/${id}`, { method: "DELETE" });
+    deleteFromFlowers(id);
+    history.goBack();
     fetch(`http://localhost:3000/addedHistory/${id - 30}`, {
-      method:"PATCH",
-      headers: {
-        "Content-Type":"application/json"
-      },
-      body:JSON.stringify(newPlantObj)
-    })
+      method: "DELETE",
+    });
   }
-}
 
-function handleDelete(e){
-  e.preventDefault()
-  fetch(`http://localhost:3000/flowerlist/${id}`, {method:"DELETE"});
-  deleteFromFlowers(id);
-  history.goBack();
-  fetch(`http://localhost:3000/addedHistory/${id - 30}`, {method:"DELETE"});
-}
-
-function closeOnly(e){
-  e.preventDefault();
-  closeForm()
-}
+  function closeOnly(e) {
+    e.preventDefault();
+    closeForm();
+  }
 
   return (
-        <div id="updateFormContainer" style={{ display: display }}>
-      <form id='updateForm' 
-      style={{ display: display }}
-      onSubmit={updatePlant}>
+    <div id="updateFormContainer" style={{ display: display }}>
+      <form id="updateForm" style={{ display: display }} onSubmit={updatePlant}>
         <div id="formContent">
-        <button 
-        onClick={closeOnly}
-        id="x">x</button>
-        <h2>Update Plant</h2>
-        Image URL:
-        <br/>
-        <input
+          <button onClick={closeOnly} id="x">
+            x
+          </button>
+          <h2>Update Plant</h2>
+          Image URL:
+          <br />
+          <input
             type="text"
             placeholder={image}
             value={newPlantObj.image}
@@ -77,10 +86,10 @@ function closeOnly(e){
               setNewPlantObj({ ...newPlantObj, image: e.target.value })
             }
           />
-      <br />
-      Category:
-        <br/>
-        <input
+          <br />
+          Category:
+          <br />
+          <input
             type="text"
             placeholder={category}
             value={newPlantObj.category}
@@ -88,19 +97,21 @@ function closeOnly(e){
               setNewPlantObj({ ...newPlantObj, category: e.target.value })
             }
           />
-      <br />
-      Name of Plant:
-        <br/>
-        <input
+          <br />
+          Name of Plant:
+          <br />
+          <input
             type="text"
             placeholder={name}
             value={newPlantObj.name}
-            onChange={(e) => setNewPlantObj({ ...newPlantObj, name: e.target.value })}
+            onChange={(e) =>
+              setNewPlantObj({ ...newPlantObj, name: e.target.value })
+            }
           />
-      <br />
-      Price:
-        <br/>
-        <input
+          <br />
+          Price:
+          <br />
+          <input
             type="number"
             placeholder={price}
             value={newPlantObj.price}
@@ -108,10 +119,10 @@ function closeOnly(e){
               setNewPlantObj({ ...newPlantObj, price: e.target.value })
             }
           />
-      <br />
-      Plant Care:
-        <br/>
-        <textarea
+          <br />
+          Plant Care:
+          <br />
+          <textarea
             id="instructions"
             type="text"
             placeholder={instructions}
@@ -120,13 +131,13 @@ function closeOnly(e){
               setNewPlantObj({ ...newPlantObj, instructions: e.target.value })
             }
           />
-      <br />
-      <button type="submit">Submit</button> 
-      ––– 
-      <button onClick={handleDelete}>Delete Plant</button>
+          <br />
+          <button type="submit">Submit</button>
+          –––
+          <button onClick={handleDelete}>Delete Plant</button>
         </div>
-    </form>
-        </div>
+      </form>
+    </div>
   );
 }
 export default UpdatePlantForm;
