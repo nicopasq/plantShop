@@ -1,7 +1,13 @@
 #listContainer{
     margin: 0;
-    width: 50%;
+    width: 60%;
     list-style: none;
     position: relative;
-    left: 27%;
+    left: 19.5%;
+}
+#centerLine{
+    border: 1px solid orange;
+    text-align: center;
+    position: relative;
+    top: -5vh;
 }

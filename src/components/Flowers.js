@@ -9,6 +9,7 @@ function Flowers({ plantList }) {
   
   return (
     <div>
+      <h1>Available Plants</h1>
       <ul id="listContainer">{cards}</ul>
     </div>
   );
