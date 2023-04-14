@@ -63,3 +63,9 @@
 .back, button, p  :hover{
     cursor: pointer;
 }
+.edit{
+    position: absolute;
+    top: 0vh;
+    left: 10px;
+    scale: 1.1;
+}

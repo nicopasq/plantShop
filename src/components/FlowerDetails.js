@@ -49,7 +49,7 @@ function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers }) {
   return (
     <div id="flowerDetails">
       <div id="content">
-        <p className="back" onClick={() => history.goBack()}>
+        <p className="back" onClick={() => history.push('/')}>
           {arrow} Continue Shopping
         </p>
         <img src={image} />
