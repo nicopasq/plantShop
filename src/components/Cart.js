@@ -6,6 +6,7 @@ import Checkout from "./Checkout";
 function Cart({ indexes, deleteFromCart }) {
   const [plantsInCart, setPlantsInCart] = useState([]);
   const [displayCheckout, setDisplayCheckout] = useState("none");
+  const arrow= '<––'
   let plantIdArr = indexes.filter((id, i) => indexes.indexOf(id) === i);
   const history = useHistory();
   const displayPlants = plantsInCart
@@ -69,7 +70,6 @@ function Cart({ indexes, deleteFromCart }) {
   return (
     <div className="cartComponent">
       <h1 id="title">Plants to be purchased...</h1>
-
       <div id="cartDisplay">
         <h2>Cart</h2>
         <ul id="cartContents">{displayPlants}</ul>
@@ -83,6 +83,9 @@ function Cart({ indexes, deleteFromCart }) {
         display={displayCheckout}
         closeForm={openCloseForm}
       />
+      <p className="back" onClick={() => history.push('/')}>
+          Continue Shopping
+        </p>
     </div>
   );
 }

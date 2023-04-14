@@ -54,10 +54,15 @@
 }
 #checkout{
     height: 60vh;
-    width: 99.5%;
     margin: 5px;
     position: relative;
     top: -19px;
     right: 5px;
     z-index: 100;
+}
+.back{
+    position: relative;
+    top: -59vh;
+    left: 92vh;
+    z-index: 200;
 }
