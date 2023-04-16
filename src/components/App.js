@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
+import "../styles/app.css";
 import NavBar from "./NavBar";
 import Flowers from "./Flowers";
 import FlowerDetails from "./FlowerDetails";
 import AddPlant from "./AddPlant";
 import Cart from "./Cart";
 import { Switch, Route } from "react-router-dom";
+import { Paper } from "@mui/material";
 
 function App() {
   const [displayPlants, setDisplayPlants] = useState([]);
@@ -51,20 +53,28 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path="/flowers">
+        <Paper className="contentContainer">
           <Flowers plantList={displayPlants} />
+        </Paper>
         </Route>
         <Route path="/flowers/new">
+        <Paper className="contentContainer">
           <AddPlant submitForm={addNewPlant} />
+        </Paper>
         </Route>
         <Route path="/flowers/:id">
+        <Paper className="contentContainer">
           <FlowerDetails
             deleteFromFlowers={deleteFlower}
             updateFlowers={updateFlowersList}
             addToCart={addToCart}
           />
+          </Paper>
         </Route>
         <Route path="/cart">
+          <Paper className="contentContainer">
           <Cart indexes={itemsInCart} deleteFromCart={deleteFromCart} />
+          </Paper>
         </Route>
       </Switch>
     </div>
