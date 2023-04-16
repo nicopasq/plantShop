@@ -2,6 +2,7 @@
     height: 92px;
     background-image: linear-gradient(to right,#49c6d6, #70ccdb);
     text-align: center;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.392);
 }
 #header img {
 height: 90px;

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import "../styles/flowerDetails.css";
 import UpdatePlantForm from "./UpdatePlantForm";
+import Header from "./Header";
+import { Button, Grid, Paper } from "@mui/material";
 
 function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers }) {
   const [flower, setFlower] = useState("");
@@ -47,12 +49,12 @@ function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers }) {
   if (!flower) return <h1>Loading...</h1>;
 
   return (
-    <div id="flowerDetails">
-      <div id="content">
-        <p className="back" onClick={() => history.push('/')}>
+    <div className="detailsContent">
+      <Header/>
+      <p className="back" onClick={() => history.push('/flowers')}>
           {arrow} Continue Shopping
         </p>
-        <img src={image} />
+        <img src={image} className="flowerImg"/>
         <div className="details">
           <h2>{name}</h2>
           <h4>Price:</h4>
@@ -62,29 +64,24 @@ function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers }) {
           <h4>Description:</h4>
           <p>{instructions}</p>
         </div>
-        <button onClick={handleEdit} className="edit">
+        <Button onClick={handleEdit} className="edit">
           Edit Post
-        </button>
+        </Button>
         <form onSubmit={handleSubmit} className="addToCartForm">
           <input
             value={qty}
             onChange={(e) => setQty(e.target.value)}
             type="number"
           ></input>
-          <button type="submit" id="addToCart">
+          <Button variant="contained" type="submit" className="addToCart">
             Add To Cart
-          </button>
+          </Button>
         </form>
-      </div>
-      <UpdatePlantForm
-        deleteFromFlowers={deleteFromFlowers}
-        updateFlowers={updateFlowers}
-        closeForm={handleEdit}
-        display={display}
-        plant={flower}
-      />
     </div>
   );
 }
 
 export default FlowerDetails;
+
+      // <div id="content"
+      // </div>

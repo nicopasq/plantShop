@@ -19,7 +19,7 @@ function PlantCard({ plant }) {
     }
   }
     return (
-      <Card sx={{ maxWidth: 275 }}>
+      <Card className="card" sx={{ maxWidth: 275 }}>
         <CardActionArea onClick={handleClick} >
           <CardMedia
             component="img"
@@ -27,7 +27,7 @@ function PlantCard({ plant }) {
             image={image}
             alt={name}
           />
-          <CardContent>
+          <CardContent sx={{height:'120px'}}>
             <Typography gutterBottom variant="h5" component="div">
               {name}
             </Typography>
@@ -36,8 +36,8 @@ function PlantCard({ plant }) {
             </Typography>
           </CardContent>
         </CardActionArea>
-        <CardActions>
-          <Button variant="contained" size="small" color="primary">
+        <CardActions className="btnAction">
+          <Button className="cardBtn" variant="contained" size="small" color="primary">
             Add To Cart
           </Button>
         </CardActions>
