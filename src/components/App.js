@@ -50,7 +50,7 @@ function App() {
     <div>
       <NavBar />
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/flowers">
           <Flowers plantList={displayPlants} />
         </Route>
         <Route path="/flowers/new">

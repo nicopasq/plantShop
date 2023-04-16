@@ -8,7 +8,7 @@ function Flowers({ plantList }) {
   ));
   
   return (
-    <div>
+    <div id="flowersComp">
       <h1>Available Plants</h1>
       <ul id="listContainer">{cards}</ul>
     </div>
