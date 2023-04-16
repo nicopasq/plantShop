@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import "../styles/cart.css";
 import Checkout from "./Checkout";
+import Header from "./Header";
 
 function Cart({ indexes, deleteFromCart }) {
   const [plantsInCart, setPlantsInCart] = useState([]);
@@ -69,6 +70,7 @@ function Cart({ indexes, deleteFromCart }) {
 
   return (
     <div className="cartComponent">
+      <Header/>
       <h1 id="title">Plants to be purchased...</h1>
       <div id="cartDisplay">
         <h2>Cart</h2>
