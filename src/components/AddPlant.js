@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import "../styles/addPlant.css";
 import PlantCard from "./PlantCard";
+import Header from "./Header";
 
 function AddPlant({ submitForm }) {
   const [addedPlants, setAddedPlants] = useState([]);
@@ -56,6 +57,7 @@ function AddPlant({ submitForm }) {
 
   return (
     <div className="addPlantComp">
+      <Header/>
       <h1>Add a plant to sell!</h1>
 
       <div id="addForm">
