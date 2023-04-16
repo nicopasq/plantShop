@@ -1,16 +1,4 @@
-#flowersComp{
-    text-align: center;
-}
-#listContainer{
-    margin: 0;
-    width: 60%;
-    list-style: none;
-    position: relative;
-    left: 19.5%;
-}
-#centerLine{
-    border: 1px solid orange;
-    text-align: center;
-    position: relative;
-    top: -5vh;
+#flowerContainer{
+    width: 95%;
+    margin-left: 2.5%;
 }

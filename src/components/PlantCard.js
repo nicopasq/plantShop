@@ -19,11 +19,9 @@ function PlantCard({ plant }) {
     }
   }
     return (
-      
       <Card sx={{ maxWidth: 275 }}>
-        <CardActionArea>
+        <CardActionArea onClick={handleClick} >
           <CardMedia
-            onClick={handleClick} 
             component="img"
             height="200"
             image={image}
