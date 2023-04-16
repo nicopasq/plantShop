@@ -36,7 +36,7 @@ function NavBar(){
         if(open === true){
             setOpen(false);
         };
-    }
+    } 
 
     return(
     <div>
