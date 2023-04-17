@@ -57,34 +57,7 @@ function NavBar({enableEditor}){
         variant="permanent"
         anchor="left"
       >
-        <Toolbar>
-        <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            onClick={e => handleOpen(e)}
-            sx={{ mr: 2 }}
-          >
-          <MenuIcon/>
-          </IconButton>
-          <Menu
-          id="basic-menu"
-          open={open}
-          anchorEl={anchorEl}>
-            <MenuItem onClick={handleClose}>
-            <FormControlLabel 
-            control={
-            <Switch 
-                color="secondary"
-                checked={checked}
-                onChange={() => toggle()}
-                />} 
-            label="Editor Mode"/>
-            </MenuItem>
-          </Menu>
-          
-        </Toolbar>
+        <Toolbar/>
         <Divider />
         <List>
           {links.map((text) => (
@@ -98,6 +71,16 @@ function NavBar({enableEditor}){
             <ListItemButton disabled={!checked} onClick={() => history.push('/flowers/new')}>
             <Link id="addPlant" to='/flowers/new'>Add New Plant</Link>
             </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+          <FormControlLabel 
+            control={
+            <Switch 
+                color="secondary"
+                checked={checked}
+                onChange={() => toggle()}
+                />} 
+            label="Editor Mode"/>
           </ListItem>
         </List>
       </Drawer>
