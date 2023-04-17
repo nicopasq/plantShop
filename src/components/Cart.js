@@ -7,7 +7,6 @@ import Header from "./Header";
 function Cart({ indexes, deleteFromCart }) {
   const [plantsInCart, setPlantsInCart] = useState([]);
   const [displayCheckout, setDisplayCheckout] = useState("none");
-  const arrow= '<––'
   let plantIdArr = indexes.filter((id, i) => indexes.indexOf(id) === i);
   const history = useHistory();
   const displayPlants = plantsInCart

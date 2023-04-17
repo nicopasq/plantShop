@@ -3,7 +3,7 @@ import { useHistory, useParams } from "react-router-dom";
 import "../styles/flowerDetails.css";
 import UpdatePlantForm from "./UpdatePlantForm";
 import Header from "./Header";
-import { Button, Typography } from "@mui/material";
+import { Alert, AlertTitle, Button, Typography } from "@mui/material";
 
 function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers, disabled }) {
   const [flower, setFlower] = useState("");
@@ -34,8 +34,13 @@ function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers, disabled }
       .then((r) => r.json())
       .then((data) => {
         addToCart(data.id);
-        alert("Added to Cart");
       });
+        return (
+          <Alert severity="success" sx={{border:"1px solid black"}}>
+             <AlertTitle>Success</AlertTitle>
+             This is a success alert — <strong>check it out!</strong>
+             </Alert>
+        )
   }
 
   function handleEdit() {

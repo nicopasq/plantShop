@@ -44,5 +44,3 @@ function PlantCard({ plant }) {
 }
 
 export default PlantCard;
-
-        // <div onClick={handleClick} className="card">

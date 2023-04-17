@@ -9,7 +9,6 @@ function UpdatePlantForm({
   updateFlowers,
   deleteFromFlowers,
 }) {
-
   const { name, image, category, instructions, price, id } = plant;
   const history = useHistory();
   const [newPlantObj, setNewPlantObj] = useState({

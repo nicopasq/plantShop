@@ -29,13 +29,10 @@ function App() {
   }
 
   function updateFlowersList(updatedPlant) {
-    const updatedFlowers = displayPlants.map((plant) => {
-      if (plant.id === updatedPlant.id) {
-        plant = updatedPlant;
-      }
-      return plant;
-    });
-    setDisplayPlants(updatedFlowers);
+    const updatedList = displayPlants.map(plant => {
+      return plant.id === updatedPlant.id? updatedPlant : plant;
+    })
+    setDisplayPlants(updatedList)
   }
 
   function deleteFlower(id) {
