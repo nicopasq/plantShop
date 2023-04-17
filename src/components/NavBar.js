@@ -21,7 +21,6 @@ function NavBar({enableEditor}){
     const links= [
       <Link id="flowers" to="/flowers">Shop</Link>,
       <Link id="cart" to="/cart">Cart</Link>,
-      <Link id="addPlant" to="/flowers/new">Add Flower</Link>
     ];
 
     function toggle(){
@@ -95,6 +94,11 @@ function NavBar({enableEditor}){
               </ListItemButton>
             </ListItem>
           ))}
+          <ListItem disablePadding>
+            <ListItemButton disabled={!checked} onClick={() => history.push('/flowers/new')}>
+            <Link id="addPlant" to='/flowers/new'>Add New Plant</Link>
+            </ListItemButton>
+          </ListItem>
         </List>
       </Drawer>
         </Box>
