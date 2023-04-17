@@ -3,9 +3,9 @@ import { useHistory, useParams } from "react-router-dom";
 import "../styles/flowerDetails.css";
 import UpdatePlantForm from "./UpdatePlantForm";
 import Header from "./Header";
-import { Button, Grid, Paper, Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 
-function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers }) {
+function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers, disabled }) {
   const [flower, setFlower] = useState("");
   const [qty, setQty] = useState(1);
   const [display, setDisplay] = useState("none");
@@ -64,7 +64,7 @@ function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers }) {
           <Typography variant="h4">Description:</Typography>
           <Typography variant="h6">{instructions}</Typography>
         </div>
-        <Button onClick={handleEdit} variant="contained" className="edit">
+        <Button onClick={handleEdit} variant="contained" disabled={disabled} className="edit">
           Edit Post
         </Button>
         <form onSubmit={handleSubmit} className="addToCartForm">

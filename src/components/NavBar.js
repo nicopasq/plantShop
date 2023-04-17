@@ -13,7 +13,7 @@ import {FormControlLabel, IconButton, Menu, MenuItem, Switch, Toolbar } from "@m
 
 const drawerWidth = 240;
 
-function NavBar(){
+function NavBar({enableEditor}){
     const [anchorEl, setAnchorEl]= useState(null);
     const [open, setOpen] = useState(false);
     const [checked, setChecked] = useState(false);
@@ -23,6 +23,11 @@ function NavBar(){
       <Link id="cart" to="/cart">Cart</Link>,
       <Link id="addPlant" to="/flowers/new">Add Flower</Link>
     ];
+
+    function toggle(){
+      setChecked(!checked)
+      enableEditor()
+    }
 
     function handleOpen(e){
         if(open === false){
@@ -74,7 +79,7 @@ function NavBar(){
             <Switch 
                 color="secondary"
                 checked={checked}
-                onChange={() => setChecked(!checked)}
+                onChange={() => toggle()}
                 />} 
             label="Editor Mode"/>
             </MenuItem>

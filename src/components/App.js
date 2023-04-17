@@ -11,7 +11,7 @@ import { Paper } from "@mui/material";
 function App() {
   const [displayPlants, setDisplayPlants] = useState([]);
   const [itemsInCart, setItemsInCart] = useState([]);
-
+  const [disabled, setDisabled] = useState(true);
 
   useEffect(() => {
     fetch("http://localhost:3000/flowerlist")
@@ -48,9 +48,13 @@ function App() {
     setItemsInCart(updatedCartItems);
   }
 
+  function enableEditor(){
+    setDisabled(!disabled)
+  }
+
   return (
     <div>
-      <NavBar />
+      <NavBar enableEditor={enableEditor}/>
       <Switch>
         <Route exact path="/flowers">
         <Paper className="contentContainer">
@@ -68,6 +72,7 @@ function App() {
             deleteFromFlowers={deleteFlower}
             updateFlowers={updateFlowersList}
             addToCart={addToCart}
+            disabled={disabled}
           />
           </Paper>
         </Route>
