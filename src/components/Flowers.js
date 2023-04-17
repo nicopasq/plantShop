@@ -2,7 +2,7 @@ import React from "react";
 import PlantCard from "./PlantCard";
 import "../styles/flowers.css";
 import Header from "./Header";
-import { Grid } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 
 function Flowers({ plantList }) {
   const cards = plantList.map((plant) => (
@@ -12,7 +12,7 @@ function Flowers({ plantList }) {
   return (
     <div id="flowersComp">
       <Header/>
-      <h1>Available Plants</h1>
+      <Typography variant="h2" sx={{textDecoration:"underline"}}>Available Plants</Typography>
       <Grid container spacing={3} id="flowerContainer">
         {cards.map(card => <Grid item xs={2}>{card}</Grid>)}
       </Grid>

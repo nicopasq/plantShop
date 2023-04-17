@@ -85,7 +85,7 @@ function Cart({ indexes, deleteFromCart }) {
         display={displayCheckout}
         closeForm={openCloseForm}
       />
-      <p className="back" onClick={() => history.push('/')}>
+      <p className="back" onClick={() => history.push('/flowers')}>
           Continue Shopping
         </p>
     </div>

@@ -51,9 +51,7 @@ function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers }) {
   return (
     <div className="detailsContent">
       <Header/>
-      <p className="back" onClick={() => history.push('/flowers')}>
-          {arrow} Continue Shopping
-        </p>
+      <Button variant="text" onClick={() => history.push('/flowers')} className="backBtn">{arrow} Continue Shopping</Button>
         <img src={image} className="flowerImg"/>
         <div className="details">
           <Typography variant="h2" sx={{textDecoration:"underline"}}>{name}</Typography>
