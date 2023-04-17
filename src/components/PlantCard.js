@@ -5,10 +5,10 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions } from '@mui/material';
+import { CardActionArea} from '@mui/material';
 
 function PlantCard({ plant }) {
-  const { name, image, price, id } = plant;
+  const { name, image, price, id, category } = plant;
   const history = useHistory();
 
   function handleClick() {
@@ -34,9 +34,11 @@ function PlantCard({ plant }) {
             <Typography variant="body1" color="text.secondary">
               Price: ${price}
             </Typography>
+            <Typography variant="body1" color="text.secondary">
+              {category}
+            </Typography>
           </CardContent>
         </CardActionArea>
-      
       </Card>
     );
 }

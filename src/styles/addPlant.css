@@ -1,4 +1,6 @@
 .addPlantComp{
+    background-color: rgba(11, 181, 11, 0.315);
+    height: 100vh;
     text-align: center;
 }
 
