@@ -1,0 +1,16 @@
+.cartCards{
+    position: relative;
+    right: 4.2vh;
+    height: 14vh;
+    width: 400px;
+}
+.cardContent{
+    position: relative;
+    left: 15vh;
+    top: -11vh;
+}
+.plantImg{
+    position: relative;
+    top: 1vh;
+    left: 1vh;
+}

@@ -1,8 +1,7 @@
 .cartComponent{
-    background-color: rgba(11, 181, 11, 0.315);
+    background-color: lightGreen;
     padding: 0;
-    margin: 0;
-    height: 100vh;   
+    margin: 0; 
 }
 #title{
     text-align: left;
@@ -15,7 +14,8 @@
     left: 40%;
 }
 #cartContents{
-    border: 1px solid black;
+    background-color: black;
+    border-radius: 5px;
     width: 400px;
 }
 .itemContainer{

@@ -3,6 +3,8 @@ import { useHistory } from "react-router-dom";
 import "../styles/cart.css";
 import Checkout from "./Checkout";
 import Header from "./Header";
+import CartPlantCard from "./CartPlantCard";
+import { Button, Paper, Typography } from "@mui/material";
 
 function Cart({ indexes, deleteFromCart }) {
   const [plantsInCart, setPlantsInCart] = useState([]);
@@ -11,27 +13,7 @@ function Cart({ indexes, deleteFromCart }) {
   const history = useHistory();
   const displayPlants = plantsInCart
     .filter((plant) => plant.id)
-    .map((plant) => {
-      const { image, name, price, qty, id } = plant;
-      return (
-        <div key={plant.id} className="itemContainer">
-          <div
-            onClick={() => history.push(`/flowers/${id}`)}
-            className="cartItem"
-          >
-            <img src={image} />
-            <p>{name}</p>
-            <p>(qty: {qty})</p>
-            <p>${price}</p>
-          </div>
-          <div>
-            <p onClick={() => removeItem(id)} className="remove">
-              🗑️
-            </p>
-          </div>
-        </div>
-      );
-    });
+    .map((plant) => <CartPlantCard plant={plant} removeItem={removeItem}/>);
 
   let total = 0;
   plantsInCart
@@ -70,13 +52,19 @@ function Cart({ indexes, deleteFromCart }) {
   return (
     <div className="cartComponent">
       <Header/>
-      <h1 id="title">Plants to be purchased...</h1>
+      <Typography variant="h2" id="title">Cart</Typography>
       <div id="cartDisplay">
-        <h2>Cart</h2>
         <ul id="cartContents">{displayPlants}</ul>
         <div id="checkout">
-          <h3>Total: ${total.toFixed(2)}</h3>
-          <button onClick={openCloseForm}>Checkout</button>
+          <Typography variant="h5">Total: ${total.toFixed(2)}</Typography>
+          <Button 
+          variant="contained" 
+          sx={{
+            color:"yellow",
+            bgcolor:"darkBlue",
+            fontSize:"15px"
+          }}
+          onClick={openCloseForm}><strong>Checkout</strong></Button>
         </div>
       </div>
       <Checkout
@@ -84,9 +72,9 @@ function Cart({ indexes, deleteFromCart }) {
         display={displayCheckout}
         closeForm={openCloseForm}
       />
-      <p className="back" onClick={() => history.push('/flowers')}>
-          Continue Shopping
-        </p>
+      <Button className="back" onClick={() => history.push('/flowers')}>
+          <strong>Continue Shopping</strong>
+        </Button>
     </div>
   );
 }

@@ -61,7 +61,7 @@
       "image": "https://h2.commercev3.net/cdn.springhillnursery.com/images/800/09337A.jpg",
       "name": "Rosa Burgundy",
       "id": 7,
-      "qty": "2"
+      "qty": 1
     },
     {
       "category": "Shrubs",
@@ -122,7 +122,8 @@
       "instructions": "Cotula have very fragrant orange flowers that bloom in the middle of summer.",
       "image": "https://www.anniesannuals.com/signs/b%20-%20c/images/cotula_lineariloba_habit_wide.jpg",
       "name": "Cotula",
-      "id": 14
+      "id": 14,
+      "qty": 1
     },
     {
       "category": "Container Plants",
@@ -130,7 +131,8 @@
       "instructions": "Well drained neutral to slightly acid soil, bright light. Do not over-fertilize or these flowers will lose scent.",
       "image": "https://www.gardenia.net/storage/app/public/uploads/images/detail/Pelargonium%20peltatum.webp",
       "name": "Pelargonium Peltatum",
-      "id": 15
+      "id": 15,
+      "qty": 1
     },
     {
       "category": "Container Plants",
@@ -223,7 +225,8 @@
       "instructions": "Grown primarily for its attractive silvergray foliage rather than its yellow flowers. Drought tolerant.",
       "image": "https://s3.amazonaws.com/eit-planttoolbox-prod/media/images/Senecio-cineraria-bloom--Jon-Sullivan--CC-BY-NC.jpg",
       "name": "Senecio Cineraria",
-      "id": 26
+      "id": 26,
+      "qty": 1
     },
     {
       "category": "Cacti & Succulents",
@@ -268,7 +271,7 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR96pZmCaUrt5eV1Q6L36NtmxPYNAIz-enmCrSiodrQKSaanaPJoKyPqDeblt5kxZbogCk&usqp=CAU",
       "name": "Blue Lily",
       "id": 31,
-      "qty": "2"
+      "qty": 1
     }
   ],
   "addedHistory": [
