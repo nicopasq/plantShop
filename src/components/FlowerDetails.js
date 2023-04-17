@@ -3,7 +3,7 @@ import { useHistory, useParams } from "react-router-dom";
 import "../styles/flowerDetails.css";
 import UpdatePlantForm from "./UpdatePlantForm";
 import Header from "./Header";
-import { Button, Grid, Paper } from "@mui/material";
+import { Button, Grid, Paper, Typography } from "@mui/material";
 
 function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers }) {
   const [flower, setFlower] = useState("");
@@ -56,15 +56,17 @@ function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers }) {
         </p>
         <img src={image} className="flowerImg"/>
         <div className="details">
-          <h2>{name}</h2>
-          <h4>Price:</h4>
-          <p>${price} Each</p>
-          <h4>Category:</h4>
-          <p>{category}</p>
-          <h4>Description:</h4>
-          <p>{instructions}</p>
+          <Typography variant="h2" sx={{textDecoration:"underline"}}>{name}</Typography>
+          <Typography variant="h4">Price:</Typography>
+          <Typography variant="h5">${price}</Typography>
+          <br/>
+          <Typography variant="h4">Category:</Typography>
+          <Typography variant="h5">{category}</Typography>
+          <br/>
+          <Typography variant="h4">Description:</Typography>
+          <Typography variant="h6">{instructions}</Typography>
         </div>
-        <Button onClick={handleEdit} className="edit">
+        <Button onClick={handleEdit} variant="contained" className="edit">
           Edit Post
         </Button>
         <form onSubmit={handleSubmit} className="addToCartForm">
@@ -77,11 +79,15 @@ function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers }) {
             Add To Cart
           </Button>
         </form>
+        <UpdatePlantForm
+        deleteFromFlowers={deleteFromFlowers}
+        updateFlowers={updateFlowers}
+        closeForm={handleEdit}
+        display={display}
+        plant={flower}
+      />
     </div>
   );
 }
 
 export default FlowerDetails;
-
-      // <div id="content"
-      // </div>

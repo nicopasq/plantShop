@@ -1,50 +1,53 @@
 .flowerImg{
-    scale: .7;
+    width: 400px;
+    height: 400px;
     padding: 7px;
+    border: 1px solid black;
     border-radius: 20px;
-    border: 1px solid black;
     position: relative;
-    top: -10vh;
-    left: -5vh;
+    left: 3%;
 }
-.details, .addToCartForm{
+.details{
     position: relative;
-    top: -60vh;
-    left: 50vh;
+    width: 30%;
 }
-.addToCart{
-    width: fit-content;
-    color: rgba(255, 255, 255, 0.816);
-    height: 30px;
-    text-align: center;
-    border: 1px solid black;
+.addToCartForm, .details{
+    position: relative;
+    top: -44vh;
+    left: 60vh;
 }
 .addToCartForm input{
     width: 50px;
     height: 30px;
     text-align: center;
     border: 1px solid black;
-    margin-right: 15px;
+    margin-right: 3%;
+    font-size: larger;
+}
+.addToCartForm button{
+    width: fit-content;
+    color: rgba(255, 255, 255, 0.816);
+    background: black;
+    height: 30px;
+    text-align: center;
+    border: 1px solid black;
+    font-size: large;
 }
 .back{
     width: fit-content;
     text-decoration: underline;
     position: relative;
-    left: 3%;
-    top: -.5vh;
+    left: 4%;
+    top: 0vh;
 }
 .back, button, p  :hover{
     cursor: pointer;
 }
 .edit{
     position: relative;
-    top: -56.25vh;
-    left: 45%;
-    background-color: yellow;
-    color: black;
-    border: 1px solid black;
+    top: -10vh;
+    left: 90%;
 } 
-
 /* #flowerDetails{
     margin: 0;
     height: 100%;
