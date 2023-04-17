@@ -36,6 +36,7 @@ function Cart({ indexes, deleteFromCart }) {
 
 
   function removeItem(id) {
+    console.log('clicked')
     deleteFromCart(id);
     const updatedItems = plantsInCart.filter((plant) => plant.id !== id);
     setPlantsInCart(updatedItems);

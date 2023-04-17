@@ -5,12 +5,19 @@
     width: 400px;
 }
 .cardContent{
+    width: 180px;
     position: relative;
     left: 15vh;
-    top: -11vh;
+    top: -12vh;
 }
 .plantImg{
     position: relative;
     top: 1vh;
     left: 1vh;
+}
+.deleteBtn{
+    scale: 1.2;
+    position: relative;
+    top: -25vh;
+    left: 33vh;
 }

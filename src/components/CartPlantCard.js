@@ -1,4 +1,4 @@
-import { Avatar, Card, CardActionArea, CardContent, CardMedia, Typography } from "@mui/material";
+import { Avatar, Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Typography } from "@mui/material";
 import React from "react";
 import "../styles/cartPlantCard.css";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
@@ -11,9 +11,8 @@ function CartPlantCard({plant, removeItem}){
         key={id}
         className="cartCards" 
         variant="outlined"
-        onClick={() => history.push(`/flowers/${id}`)}
         sx={{marginBottom:"3px"}}>
-            <CardActionArea>
+            <CardActionArea onClick={() => history.push(`/flowers/${id}`)}>
                 <CardMedia>
                     <Avatar className="plantImg" alt={name} src={image} sx={{height:"110px", width:"110px"}} />
                 </CardMedia>
@@ -23,6 +22,12 @@ function CartPlantCard({plant, removeItem}){
                     <Typography variant="body1">qty: [{qty}]</Typography>
                 </CardContent>
             </CardActionArea>
+            <CardActions>
+                    <Button 
+                    className="deleteBtn"
+                    variant="text" 
+                    onClick={()=> removeItem(id)}>🗑️</Button>
+            </CardActions>
         </Card>
     );
 }

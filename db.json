@@ -113,8 +113,9 @@
       "price": 4.99,
       "instructions": "Compact mounds of colorful dainty flowers, good for window boxes. Fertile well drained soil.",
       "image": "https://mullerseeds.de/app/uploads/2021/04/viola_cornuta_penny_orange_jump_up51.jpg",
-      "name": "Viola Penny Orange Jump Up",
-      "id": 13
+      "name": " Viola Penny Orange Jump Up",
+      "id": 13,
+      "qty": 1
     },
     {
       "category": "Container Plants",
@@ -157,7 +158,8 @@
       "instructions": "Choose the brightest windows in your house for your orchids, place on an humidity tray and spray regularly.",
       "image": "https://millefioriflorist.com/wp-content/uploads/2021/03/7C5DF741-B57F-4F22-B6D3-FB1C73904FE5-rotated.jpeg",
       "name": "Phalaenopsis Purple",
-      "id": 18
+      "id": 18,
+      "qty": 1
     },
     {
       "category": "Herbaceous Perennials",
