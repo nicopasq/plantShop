@@ -36,11 +36,7 @@ function PlantCard({ plant }) {
             </Typography>
           </CardContent>
         </CardActionArea>
-        <CardActions className="btnAction">
-          <Button className="cardBtn" variant="contained" size="small" color="primary">
-            Add To Cart
-          </Button>
-        </CardActions>
+      
       </Card>
     );
 }
