@@ -12,7 +12,7 @@ function App() {
   const [displayPlants, setDisplayPlants] = useState([]);
   const [itemsInCart, setItemsInCart] = useState([]);
   const [disabled, setDisabled] = useState(true);
-
+  const cartItemIndexes = itemsInCart.filter((id, index) => itemsInCart.indexOf(id) === index)
   useEffect(() => {
     fetch("http://localhost:3000/flowerlist")
       .then((r) => r.json())
@@ -75,7 +75,7 @@ function App() {
         </Route>
         <Route path="/cart">
           <Paper className="contentContainer">
-          <Cart indexes={itemsInCart} deleteFromCart={deleteFromCart} />
+          <Cart cartItemIndexes={cartItemIndexes} deleteFromCart={deleteFromCart} />
           </Paper>
         </Route>
       </Switch>
