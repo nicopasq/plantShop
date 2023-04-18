@@ -19,7 +19,6 @@ function App() {
       .then((data) => setDisplayPlants(data));
   }, []);
 
-
   function addNewPlant(plant) {
     setDisplayPlants([...displayPlants, plant]);
   }
@@ -41,8 +40,8 @@ function App() {
   }
 
   function deleteFromCart(id) {
-    const updatedCartItems = itemsInCart.filter((item) => item !== id);
-    setItemsInCart(updatedCartItems);
+   const updatedCart= itemsInCart.filter((item) => item !== id);
+   setItemsInCart(updatedCart)
   }
 
   function enableEditor(){

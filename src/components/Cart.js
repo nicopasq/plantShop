@@ -6,17 +6,20 @@ import Header from "./Header";
 import CartPlantCard from "./CartPlantCard";
 import { Button, List, Typography } from "@mui/material";
 
-function Cart({ cartItemIndexes, removeItem }) {
+function Cart({ cartItemIndexes, deleteFromCart }) {
   const [plantDataArr, setPlantDataArr] = useState([]);
   const [displayCheckout, setDisplayCheckout] = useState("none");
   const history = useHistory();
   const displayPlants = plantDataArr
     .filter((plant) => plant.id)
-    .map((plant) => (
-      <li>
+    .map((plant, index) => {
+      index = cartItemIndexes.indexOf(plant.id);
+      return (
+        <li>
         <CartPlantCard plant={plant} removeItem={removeItem} />
       </li>
-    ));
+        )
+});
 
   let total = 0;
   plantDataArr
@@ -35,6 +38,8 @@ function Cart({ cartItemIndexes, removeItem }) {
         );
     });
   }, []);
+console.log(plantDataArr)
+console.log(cartItemIndexes)
 
   function openCloseForm() {
     if (displayCheckout === "none") {
@@ -44,11 +49,10 @@ function Cart({ cartItemIndexes, removeItem }) {
     }
   }
 
-  function removeItem(id) {
-    console.log("clicked");
-    // deleteFromCart(id);
-    // const updatedItems = plantsInCart.filter((plant) => plant.id !== id);
-    // setPlantsInCart(updatedItems);
+  function removeItem(id){
+    deleteFromCart(id)
+    const updatedPlantData = plantDataArr.filter(plant => plant.id !== id);
+    setPlantDataArr(updatedPlantData);
   }
 
   return (
