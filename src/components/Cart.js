@@ -13,14 +13,14 @@ function Cart({ cartItemIndexes, deleteFromCart }) {
   const displayPlants = plantDataArr
     .filter((plant) => plant.id)
     .map((plant, index) => {
-      index = cartItemIndexes.indexOf(plant.id);
+console.log(plantDataArr[index] = cartItemIndexes.indexOf(plant.id))
       return (
-        <li>
+        <li key={plant.id}>
         <CartPlantCard plant={plant} removeItem={removeItem} />
       </li>
         )
 });
-
+console.log('cart indexes', cartItemIndexes)
   let total = 0;
   plantDataArr
     .filter((plant) => plant.id)
@@ -38,8 +38,6 @@ function Cart({ cartItemIndexes, deleteFromCart }) {
         );
     });
   }, []);
-console.log(plantDataArr)
-console.log(cartItemIndexes)
 
   function openCloseForm() {
     if (displayCheckout === "none") {

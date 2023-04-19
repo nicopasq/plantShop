@@ -19,7 +19,7 @@ function PlantCard({ plant }) {
     }
   }
     return (
-      <Card className="card" sx={{ maxWidth: 275 }}>
+      <Card key={id} className="card" sx={{ maxWidth: 275 }}>
         <CardActionArea onClick={handleClick} >
           <CardMedia
             component="img"
