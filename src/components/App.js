@@ -10,9 +10,12 @@ import { Paper } from "@mui/material";
 
 function App() {
   const [displayPlants, setDisplayPlants] = useState([]);
-  const [itemsInCart, setItemsInCart] = useState([]);
+  const [cartIndexes, setCartIndexes] = useState([]);
   const [disabled, setDisabled] = useState(true);
-  const cartItemIndexes = itemsInCart.filter((id, index) => itemsInCart.indexOf(id) === index)
+  const cartItems = cartIndexes
+  .filter((item, index) => cartIndexes.indexOf(item) === index)
+  .map(index => displayPlants[index]);
+
   useEffect(() => {
     fetch("http://localhost:3000/flowerlist")
       .then((r) => r.json())
@@ -23,9 +26,10 @@ function App() {
     setDisplayPlants([...displayPlants, plant]);
   }
 
-  function addToCart(newItem) {
-    setItemsInCart([...itemsInCart, newItem]);
+  function addToCart(newIndex) {
+    setCartIndexes([...cartIndexes, newIndex-1]);
   }
+
 
   function updateFlowersList(updatedPlant) {
     const updatedList = displayPlants.map(plant => {
@@ -40,8 +44,9 @@ function App() {
   }
 
   function deleteFromCart(id) {
-   const updatedCart= itemsInCart.filter((item) => item !== id);
-   setItemsInCart(updatedCart)
+    console.log('deleteFromCart func in App')
+  //  const updatedCart= itemsInCart.filter((item) => item !== id);
+  //  setItemsInCart(updatedCart)
   }
 
   function enableEditor(){
@@ -74,7 +79,7 @@ function App() {
         </Route>
         <Route path="/cart">
           <Paper className="contentContainer">
-          <Cart cartItemIndexes={cartItemIndexes} deleteFromCart={deleteFromCart} />
+          <Cart cartItems={cartItems} deleteFromCart={deleteFromCart} />
           </Paper>
         </Route>
       </Switch>

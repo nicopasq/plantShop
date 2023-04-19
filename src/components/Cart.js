@@ -6,38 +6,28 @@ import Header from "./Header";
 import CartPlantCard from "./CartPlantCard";
 import { Button, List, Typography } from "@mui/material";
 
-function Cart({ cartItemIndexes, deleteFromCart }) {
-  const [plantDataArr, setPlantDataArr] = useState([]);
+function Cart({ cartItems, deleteFromCart }) {
   const [displayCheckout, setDisplayCheckout] = useState("none");
   const history = useHistory();
-  const displayPlants = plantDataArr
-    .filter((plant) => plant.id)
-    .map((plant, index) => {
-console.log(plantDataArr[index] = cartItemIndexes.indexOf(plant.id))
-      return (
-        <li key={plant.id}>
-        <CartPlantCard plant={plant} removeItem={removeItem} />
-      </li>
-        )
-});
-console.log('cart indexes', cartItemIndexes)
-  let total = 0;
-  plantDataArr
-    .filter((plant) => plant.id)
-    .forEach((plant) => {
-      const finalPlantPrice = plant.price * plant.qty;
-      total = total + finalPlantPrice;
-    });
+  const displayPlants = cartItems.map(item => <CartPlantCard plant={item}/>)
 
-  useEffect(() => {
-    cartItemIndexes.map((index) => {
-      fetch(`http://localhost:3000/flowerlist/${index}`)
-        .then((r) => r.json())
-        .then((data) =>
-          setPlantDataArr((plantDataArr) => [...plantDataArr, data])
-        );
-    });
-  }, []);
+  let total = 0;
+  // plantDataArr
+  //   .filter((plant) => plant.id)
+  //   .forEach((plant) => {
+  //     const finalPlantPrice = plant.price * plant.qty;
+  //     total = total + finalPlantPrice;
+  //   });
+
+  // useEffect(() => {
+  //   cartItemIndexes.map((index) => {
+  //     fetch(`http://localhost:3000/flowerlist/${index}`)
+  //       .then((r) => r.json())
+  //       .then((data) =>
+  //         setPlantDataArr((plantDataArr) => [...plantDataArr, data])
+  //       );
+  //   });
+  // }, []);
 
   function openCloseForm() {
     if (displayCheckout === "none") {
@@ -47,11 +37,11 @@ console.log('cart indexes', cartItemIndexes)
     }
   }
 
-  function removeItem(id){
-    deleteFromCart(id)
-    const updatedPlantData = plantDataArr.filter(plant => plant.id !== id);
-    setPlantDataArr(updatedPlantData);
-  }
+  // function removeItem(id){
+  //   deleteFromCart(id)
+  //   const updatedPlantData = plantDataArr.filter(plant => plant.id !== id);
+  //   setPlantDataArr(updatedPlantData);
+  // }
 
   return (
     <div className="cartComponent">
@@ -70,17 +60,17 @@ console.log('cart indexes', cartItemIndexes)
               bgcolor: "darkBlue",
               fontSize: "15px",
             }}
-            onClick={openCloseForm}
+            /*onClick={openCloseForm}*/
           >
             <strong>Checkout</strong>
           </Button>
         </div>
       </div>
-      <Checkout
+      {/* <Checkout
         total={total}
         display={displayCheckout}
         closeForm={openCloseForm}
-      />
+      /> */}
       <Button className="back" onClick={() => history.push("/flowers")}>
         <strong>Continue Shopping</strong>
       </Button>
