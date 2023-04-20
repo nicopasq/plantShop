@@ -4,16 +4,23 @@ import "../styles/flowerDetails.css";
 import UpdatePlantForm from "./UpdatePlantForm";
 import Header from "./Header";
 import { Button, Typography } from "@mui/material";
+import SpeedDial from '@mui/material/SpeedDial';
+import SpeedDialIcon from '@mui/material/SpeedDialIcon';
+import SpeedDialAction from '@mui/material/SpeedDialAction';
+import DeleteForeverRoundedIcon from '@mui/icons-material/DeleteForeverRounded';
+import EditRoundedIcon from '@mui/icons-material/EditRounded';
 
 function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers, disabled }) {
   const [flower, setFlower] = useState("");
   const [qty, setQty] = useState('');
   const [display, setDisplay] = useState("none");
+  const [open, setOpen] = useState(false)
   const { id } = useParams();
   const history = useHistory();
   const { name, image, price, category, instructions } = flower;
   const arrow = "<––";
 
+  const actions = [{ icon: <EditRoundedIcon onClick={handleEdit}/>, name: 'Edit Plant' }]
 
   useEffect(() => {
     fetch(`http://localhost:3000/flowerlist/${id}`)
@@ -64,9 +71,30 @@ function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers, disabled }
           <Typography variant="h4">Description:</Typography>
           <Typography variant="h6">{instructions}</Typography>
         </div>
-        <Button onClick={handleEdit} variant="contained" disabled={disabled} className="edit">
+
+        <SpeedDial
+        hidden={disabled}
+        ariaLabel="SpeedDial controlled open example"
+        sx={{ position: 'absolute', bottom: 40, right: 40 }}
+        icon={<SpeedDialIcon />}
+        onClose={() => setOpen(false)}
+        onOpen={() =>setOpen(true)}
+        open={open}
+      >
+        {actions.map((action) => (
+          <SpeedDialAction
+            key={action.name}
+            icon={action.icon}
+            tooltipTitle={action.name}
+            onClick={() =>setOpen(false)}
+          />
+        ))}
+      </SpeedDial>
+
+        
+        {/* <Button onClick={handleEdit} disabled={disabled} className="edit">
           Edit Post
-        </Button>
+        </Button> */}
         <form onSubmit={handleSubmit} className="addToCartForm">
           <input
             value={qty}
