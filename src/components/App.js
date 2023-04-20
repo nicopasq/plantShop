@@ -13,9 +13,14 @@ function App() {
   const [cartData, setCartData] = useState([]);
   const [disabled, setDisabled] = useState(true);
   const updatedItems = cartData.map(obj => {
-    const currentPlant = displayPlants[obj.index];
-    currentPlant.qty = obj.qty;
-    return currentPlant
+    let currentPlant;
+      for(let plant of displayPlants){
+        if(plant.id === obj.index){
+          currentPlant = plant
+          currentPlant.qty = obj.qty
+          return currentPlant
+        }
+      }
   })  
   const cartItems = [...new Set(updatedItems)];
 
@@ -44,10 +49,12 @@ function App() {
   function deleteFlower(id) {
     const updatedFlowers = displayPlants.filter((plant) => plant.id !== id);
     setDisplayPlants(updatedFlowers);
+    deleteFromCart(id)
   }
 
+
   function deleteFromCart(id) {
-   const updatedCart= cartData.filter((obj) => obj.index !== id-1);
+   const updatedCart= cartData.filter((obj) => obj.index !== id);
    setCartData(updatedCart);
   }
 

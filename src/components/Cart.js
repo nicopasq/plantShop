@@ -9,15 +9,12 @@ import { Button, Typography } from "@mui/material";
 function Cart({ cartItems, deleteFromCart }) {
   const [displayCheckout, setDisplayCheckout] = useState("none");
   const history = useHistory();
-  const displayPlants = cartItems.map(item => { return <CartPlantCard plant={item} removeItem={removeItem}/>})
-
-  let total = 0;
-  cartItems
-    .filter((plant) => plant.id)
-    .forEach((plant) => {
-      const finalPlantPrice = plant.price * plant.qty;
-      total = total + finalPlantPrice;
-    });
+  const displayPlants = cartItems.map(item => { return <CartPlantCard key={item.id} plant={item} removeItem={deleteFromCart}/>})
+  let total = 0
+cartItems.map(item => {
+  const price = item.qty * item.price;
+  total += price
+})
 
   function openCloseForm() {
     if (displayCheckout === "none") {
@@ -25,10 +22,6 @@ function Cart({ cartItems, deleteFromCart }) {
     } else {
       setDisplayCheckout("none");
     }
-  }
-
-  function removeItem(id){
-    deleteFromCart(id)
   }
 
   return (

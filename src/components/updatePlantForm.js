@@ -9,7 +9,7 @@ function UpdatePlantForm({
   updateFlowers,
   deleteFromFlowers,
 }) {
-  const { name, image, category, instructions, price, id, qty } = plant;
+  const { name, image, category, instructions, price, id} = plant;
   const history = useHistory();
   const [newPlantObj, setNewPlantObj] = useState({
     category: "",
@@ -56,9 +56,11 @@ function UpdatePlantForm({
     fetch(`http://localhost:3000/flowerlist/${id}`, { method: "DELETE" });
     deleteFromFlowers(id);
     history.goBack();
-    fetch(`http://localhost:3000/addedHistory/${id - 30}`, {
-      method: "DELETE",
-    });
+    if(id > 30){
+      fetch(`http://localhost:3000/addedHistory/${id - 30}`, {
+        method: "DELETE",
+      });
+    }
   }
 
   function closeOnly(e) {

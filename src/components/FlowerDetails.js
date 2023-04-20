@@ -33,7 +33,7 @@ function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers, disabled }
     })
       .then((r) => r.json())
       .then((data) => {
-        addToCart({index: data.id-1, qty:qty});
+        addToCart({index: data.id, qty:qty});
       });
   }
 
