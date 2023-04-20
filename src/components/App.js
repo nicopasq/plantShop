@@ -9,12 +9,12 @@ import { Switch, Route } from "react-router-dom";
 import { Paper } from "@mui/material";
 
 function App() {
+  const [qty, setQty] = useState('');
   const [displayPlants, setDisplayPlants] = useState([]);
   const [cartIndexes, setCartIndexes] = useState([]);
   const [disabled, setDisabled] = useState(true);
-  const cartItems = cartIndexes
-  .filter((item, index) => cartIndexes.indexOf(item) === index)
-  .map(index => displayPlants[index]);
+  const cartItems = cartIndexes.filter((item, index) => cartIndexes.indexOf(item) === index)
+  .map(index => displayPlants[index])
 
   useEffect(() => {
     fetch("http://localhost:3000/flowerlist")
@@ -26,8 +26,8 @@ function App() {
     setDisplayPlants([...displayPlants, plant]);
   }
 
-  function addToCart(newIndex) {
-    setCartIndexes([...cartIndexes, newIndex-1]);
+  function addToCart(plantId) {
+    setCartIndexes([...cartIndexes, plantId-1]);
   }
 
 
@@ -44,9 +44,12 @@ function App() {
   }
 
   function deleteFromCart(id) {
-    console.log('deleteFromCart func in App')
-  //  const updatedCart= itemsInCart.filter((item) => item !== id);
-  //  setItemsInCart(updatedCart)
+   const updatedCart= cartIndexes.filter((item) => item !== id-1);
+   setCartIndexes(updatedCart);
+  }
+
+  function updateCartQty(qty){
+    setQty(qty)
   }
 
   function enableEditor(){
@@ -72,6 +75,7 @@ function App() {
           <FlowerDetails
             deleteFromFlowers={deleteFlower}
             updateFlowers={updateFlowersList}
+            updateCartQty={updateCartQty}
             addToCart={addToCart}
             disabled={disabled}
           />
@@ -79,7 +83,7 @@ function App() {
         </Route>
         <Route path="/cart">
           <Paper className="contentContainer">
-          <Cart cartItems={cartItems} deleteFromCart={deleteFromCart} />
+          <Cart qty={qty} cartItems={cartItems} deleteFromCart={deleteFromCart} />
           </Paper>
         </Route>
       </Switch>

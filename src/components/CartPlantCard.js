@@ -3,9 +3,9 @@ import React from "react";
 import "../styles/cartPlantCard.css";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
-function CartPlantCard({plant, removeItem}){
+function CartPlantCard({plant, qty, removeItem}){
     const history = useHistory();
-    const { image, name, price, qty, id } = plant;
+    const { image, name, price, id } = plant;
     return (
         <Card 
         key={id}

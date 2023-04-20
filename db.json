@@ -5,9 +5,9 @@
       "price": "15.99",
       "instructions": "Large double. Good grower, heavy bloomer. Early to mid-season, acid loving plants. Plant in moist well drained soil with pH of 4.0-5.5.",
       "image": "https://cdn.britannica.com/41/93441-050-F58F8EF1/Gardeners-rhododendrons-flowers.jpg",
-      "name": "Azalea",
+      "name": "Bob",
       "id": 1,
-      "qty": 1
+      "qty": "1"
     },
     {
       "category": "Shrubs",
@@ -16,7 +16,7 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Tibouchina_semidecandra.jpg?20050507130046",
       "name": " Tibouchina Semidecandra",
       "id": 2,
-      "qty": 1
+      "qty": "2"
     },
     {
       "category": "Shrubs",
@@ -61,7 +61,7 @@
       "image": "https://h2.commercev3.net/cdn.springhillnursery.com/images/800/09337A.jpg",
       "name": "Rosa Burgundy",
       "id": 7,
-      "qty": 1
+      "qty": ""
     },
     {
       "category": "Shrubs",
@@ -70,7 +70,7 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Rosa_Iceberg_1.jpg/1200px-Rosa_Iceberg_1.jpg",
       "name": "Rosa Iceberg",
       "id": 8,
-      "qty": 1
+      "qty": "1"
     },
     {
       "category": "Container Plants",
@@ -79,7 +79,7 @@
       "image": "https://i.etsystatic.com/17057214/r/il/3fb9ff/2570987170/il_fullxfull.2570987170_5a2x.jpg",
       "name": "Bonsai Tree",
       "id": 9,
-      "qty": 1
+      "qty": ""
     },
     {
       "category": "Container Plants",
@@ -88,7 +88,7 @@
       "image": "https://ncfarmsinc.com/products_images/Calibrachoa-Noa-Mega-Pink.jpg",
       "name": "Calibrachoa Noa",
       "id": 10,
-      "qty": 1
+      "qty": ""
     },
     {
       "category": "Container Plants",

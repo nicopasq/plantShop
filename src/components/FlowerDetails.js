@@ -5,9 +5,9 @@ import UpdatePlantForm from "./UpdatePlantForm";
 import Header from "./Header";
 import { Alert, AlertTitle, Button, Typography } from "@mui/material";
 
-function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers, disabled }) {
+function FlowerDetails({ updateCartQty, addToCart, updateFlowers, deleteFromFlowers, disabled }) {
   const [flower, setFlower] = useState("");
-  const [qty, setQty] = useState(1);
+  const [qty, setQty] = useState('');
   const [display, setDisplay] = useState("none");
   const { id } = useParams();
   const history = useHistory();
@@ -51,6 +51,11 @@ function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers, disabled }
     }
   }
 
+  function handleQtyChange(e){
+    setQty(e.target.value);
+    updateCartQty(e.target.value)
+  }
+
   if (!flower) return <h1>Loading...</h1>;
 
   return (
@@ -75,7 +80,7 @@ function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers, disabled }
         <form onSubmit={handleSubmit} className="addToCartForm">
           <input
             value={qty}
-            onChange={(e) => setQty(e.target.value)}
+            onChange={(e) => handleQtyChange(e)}
             type="number"
           ></input>
           <Button variant="contained" type="submit" className="addToCart">

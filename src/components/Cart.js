@@ -6,28 +6,18 @@ import Header from "./Header";
 import CartPlantCard from "./CartPlantCard";
 import { Button, List, Typography } from "@mui/material";
 
-function Cart({ cartItems, deleteFromCart }) {
+function Cart({ cartItems, qty, deleteFromCart }) {
   const [displayCheckout, setDisplayCheckout] = useState("none");
   const history = useHistory();
-  const displayPlants = cartItems.map(item => <CartPlantCard plant={item}/>)
+  const displayPlants = cartItems.map(item => {if(qty>0) return <CartPlantCard qty={qty} plant={item} removeItem={removeItem}/>})
 
   let total = 0;
-  // plantDataArr
-  //   .filter((plant) => plant.id)
-  //   .forEach((plant) => {
-  //     const finalPlantPrice = plant.price * plant.qty;
-  //     total = total + finalPlantPrice;
-  //   });
-
-  // useEffect(() => {
-  //   cartItemIndexes.map((index) => {
-  //     fetch(`http://localhost:3000/flowerlist/${index}`)
-  //       .then((r) => r.json())
-  //       .then((data) =>
-  //         setPlantDataArr((plantDataArr) => [...plantDataArr, data])
-  //       );
-  //   });
-  // }, []);
+  cartItems
+    .filter((plant) => plant.id)
+    .forEach((plant) => {
+      const finalPlantPrice = plant.price * qty;
+      total = total + finalPlantPrice;
+    });
 
   function openCloseForm() {
     if (displayCheckout === "none") {
@@ -37,11 +27,9 @@ function Cart({ cartItems, deleteFromCart }) {
     }
   }
 
-  // function removeItem(id){
-  //   deleteFromCart(id)
-  //   const updatedPlantData = plantDataArr.filter(plant => plant.id !== id);
-  //   setPlantDataArr(updatedPlantData);
-  // }
+  function removeItem(id){
+    deleteFromCart(id)
+  }
 
   return (
     <div className="cartComponent">
@@ -60,17 +48,17 @@ function Cart({ cartItems, deleteFromCart }) {
               bgcolor: "darkBlue",
               fontSize: "15px",
             }}
-            /*onClick={openCloseForm}*/
+            onClick={openCloseForm}
           >
             <strong>Checkout</strong>
           </Button>
         </div>
       </div>
-      {/* <Checkout
+      <Checkout
         total={total}
         display={displayCheckout}
         closeForm={openCloseForm}
-      /> */}
+      />
       <Button className="back" onClick={() => history.push("/flowers")}>
         <strong>Continue Shopping</strong>
       </Button>
