@@ -3,9 +3,9 @@ import { useHistory, useParams } from "react-router-dom";
 import "../styles/flowerDetails.css";
 import UpdatePlantForm from "./UpdatePlantForm";
 import Header from "./Header";
-import { Alert, AlertTitle, Button, Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 
-function FlowerDetails({ updateCartQty, addToCart, updateFlowers, deleteFromFlowers, disabled }) {
+function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers, disabled }) {
   const [flower, setFlower] = useState("");
   const [qty, setQty] = useState('');
   const [display, setDisplay] = useState("none");
@@ -33,14 +33,8 @@ function FlowerDetails({ updateCartQty, addToCart, updateFlowers, deleteFromFlow
     })
       .then((r) => r.json())
       .then((data) => {
-        addToCart(data.id);
+        addToCart({index: data.id-1, qty:qty});
       });
-        return (
-          <Alert severity="success" sx={{border:"1px solid black"}}>
-             <AlertTitle>Success</AlertTitle>
-             This is a success alert — <strong>check it out!</strong>
-             </Alert>
-        )
   }
 
   function handleEdit() {
@@ -51,10 +45,6 @@ function FlowerDetails({ updateCartQty, addToCart, updateFlowers, deleteFromFlow
     }
   }
 
-  function handleQtyChange(e){
-    setQty(e.target.value);
-    updateCartQty(e.target.value)
-  }
 
   if (!flower) return <h1>Loading...</h1>;
 
@@ -80,7 +70,7 @@ function FlowerDetails({ updateCartQty, addToCart, updateFlowers, deleteFromFlow
         <form onSubmit={handleSubmit} className="addToCartForm">
           <input
             value={qty}
-            onChange={(e) => handleQtyChange(e)}
+            onChange={(e) => setQty(e.target.value)}
             type="number"
           ></input>
           <Button variant="contained" type="submit" className="addToCart">

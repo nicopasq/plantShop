@@ -4,18 +4,18 @@ import "../styles/cart.css";
 import Checkout from "./Checkout";
 import Header from "./Header";
 import CartPlantCard from "./CartPlantCard";
-import { Button, List, Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 
-function Cart({ cartItems, qty, deleteFromCart }) {
+function Cart({ cartItems, deleteFromCart }) {
   const [displayCheckout, setDisplayCheckout] = useState("none");
   const history = useHistory();
-  const displayPlants = cartItems.map(item => {if(qty>0) return <CartPlantCard qty={qty} plant={item} removeItem={removeItem}/>})
+  const displayPlants = cartItems.map(item => { return <CartPlantCard plant={item} removeItem={removeItem}/>})
 
   let total = 0;
   cartItems
     .filter((plant) => plant.id)
     .forEach((plant) => {
-      const finalPlantPrice = plant.price * qty;
+      const finalPlantPrice = plant.price * plant.qty;
       total = total + finalPlantPrice;
     });
 
