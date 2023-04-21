@@ -47,11 +47,12 @@ function App() {
   }
 
   function deleteFlower(id) {
-    const updatedFlowers = displayPlants.filter((plant) => plant.id !== id);
+    const updatedFlowers = displayPlants.filter((plant) => plant.id !== parseFloat(id));
+    console.log(updatedFlowers)
     setDisplayPlants(updatedFlowers);
-    deleteFromCart(id)
+    deleteFromCart(parseFloat(id))
   }
-
+// console.log(displayPlants)
 
   function deleteFromCart(id) {
    const updatedCart= cartData.filter((obj) => obj.index !== id);

@@ -7,7 +7,6 @@ function UpdatePlantForm({
   plant,
   closeForm,
   updateFlowers,
-  deleteFromFlowers,
 }) {
   const { name, image, category, instructions, price, id} = plant;
   const history = useHistory();
@@ -47,18 +46,6 @@ function UpdatePlantForm({
           "Content-Type": "application/json",
         },
         body: JSON.stringify(newPlantObj),
-      });
-    }
-  }
-
-  function handleDelete(e) {
-    e.preventDefault();
-    fetch(`http://localhost:3000/flowerlist/${id}`, { method: "DELETE" });
-    deleteFromFlowers(id);
-    history.goBack();
-    if(id > 30){
-      fetch(`http://localhost:3000/addedHistory/${id - 30}`, {
-        method: "DELETE",
       });
     }
   }
@@ -133,8 +120,6 @@ function UpdatePlantForm({
           />
           <br />
           <button type="submit">Submit</button>
-          –––
-          <button onClick={handleDelete}>Delete Plant</button>
         </div>
       </form>
     </div>

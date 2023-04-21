@@ -20,7 +20,10 @@ function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers, disabled }
   const { name, image, price, category, instructions } = flower;
   const arrow = "<––";
 
-  const actions = [{ icon: <EditRoundedIcon onClick={handleEdit}/>, name: 'Edit Plant' }]
+  const actions = [
+    { icon: <DeleteForeverRoundedIcon onClick={handleDelete}/>, name: 'Delete Plant' },
+    { icon: <EditRoundedIcon onClick={handleEdit}/>, name: 'Edit Plant' }
+  ]
 
   useEffect(() => {
     fetch(`http://localhost:3000/flowerlist/${id}`)
@@ -52,6 +55,16 @@ function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers, disabled }
     }
   }
 
+  function handleDelete(e) {
+    fetch(`http://localhost:3000/flowerlist/${id}`, { method: "DELETE" });
+    deleteFromFlowers(id);
+    history.goBack();
+    if(id > 30){
+      fetch(`http://localhost:3000/addedHistory/${id - 30}`, {
+        method: "DELETE",
+      });
+    }
+  }
 
   if (!flower) return <h1>Loading...</h1>;
 
@@ -91,10 +104,6 @@ function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers, disabled }
         ))}
       </SpeedDial>
 
-        
-        {/* <Button onClick={handleEdit} disabled={disabled} className="edit">
-          Edit Post
-        </Button> */}
         <form onSubmit={handleSubmit} className="addToCartForm">
           <input
             value={qty}
@@ -106,7 +115,6 @@ function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers, disabled }
           </Button>
         </form>
         <UpdatePlantForm
-        deleteFromFlowers={deleteFromFlowers}
         updateFlowers={updateFlowers}
         closeForm={handleEdit}
         display={display}
