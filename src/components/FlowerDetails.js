@@ -83,7 +83,7 @@ function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers, disabled }
         <Alert onClose={handleClose} severity="success" variant="filled">Added {name} to Cart</Alert>
       </Snackbar>
 
-      <Button variant="text" onClick={() => history.push('/flowers')} className="backBtn">{arrow} Continue Shopping</Button>
+      <Button variant="text" onClick={() => history.push('/')} className="backBtn">{arrow} Continue Shopping</Button>
         <img src={image} alt={name} className="flowerImg"/>
         <div className="details">
           <Typography variant="h2" sx={{textDecoration:"underline"}}>{name}</Typography>

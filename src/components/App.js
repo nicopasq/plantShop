@@ -67,7 +67,7 @@ function App() {
     <div>
       <NavBar enableEditor={enableEditor}/>
       <Switch>
-        <Route exact path="/flowers">
+        <Route exact path="/">
         <Paper className="contentContainer">
           <Flowers plantList={displayPlants} />
         </Paper>

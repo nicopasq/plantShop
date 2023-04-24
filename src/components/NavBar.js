@@ -16,7 +16,7 @@ function NavBar({enableEditor}){
     const [checked, setChecked] = useState(false);
     const history = useHistory();
     const links= [
-      <Link id="flowers" to="/flowers">Shop</Link>,
+      <Link id="flowers" to="/">Shop</Link>,
       <Link id="cart" to="/cart">Cart</Link>,
     ];
 

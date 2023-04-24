@@ -52,7 +52,7 @@ cartItems.map(item => {
         display={displayCheckout}
         closeForm={openCloseForm}
       />
-      <Button className="back" onClick={() => history.push("/flowers")}>
+      <Button className="back" onClick={() => history.push("/")}>
         <strong>Continue Shopping</strong>
       </Button>
     </div>
