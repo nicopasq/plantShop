@@ -7,7 +7,7 @@
       "image": "https://cdn.britannica.com/41/93441-050-F58F8EF1/Gardeners-rhododendrons-flowers.jpg",
       "name": "Azalea",
       "id": 1,
-      "qty": ""
+      "qty": "4"
     },
     {
       "category": "Shrubs",
@@ -16,7 +16,7 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Tibouchina_semidecandra.jpg?20050507130046",
       "name": " Tibouchina Semidecandra",
       "id": 2,
-      "qty": "1"
+      "qty": "10"
     },
     {
       "category": "Shrubs",
@@ -79,7 +79,7 @@
       "image": "https://i.etsystatic.com/17057214/r/il/3fb9ff/2570987170/il_fullxfull.2570987170_5a2x.jpg",
       "name": "Bonsai Tree",
       "id": 9,
-      "qty": ""
+      "qty": "2"
     },
     {
       "category": "Container Plants",
@@ -88,7 +88,7 @@
       "image": "https://ncfarmsinc.com/products_images/Calibrachoa-Noa-Mega-Pink.jpg",
       "name": "Calibrachoa Noa",
       "id": 10,
-      "qty": ""
+      "qty": "8"
     },
     {
       "category": "Container Plants",
@@ -273,7 +273,7 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR96pZmCaUrt5eV1Q6L36NtmxPYNAIz-enmCrSiodrQKSaanaPJoKyPqDeblt5kxZbogCk&usqp=CAU",
       "name": "Blue Lily",
       "id": 31,
-      "qty": "12"
+      "qty": "-1"
     }
   ],
   "addedHistory": [

@@ -12,7 +12,7 @@ import EditRoundedIcon from '@mui/icons-material/EditRounded';
 
 function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers, disabled }) {
   const [flower, setFlower] = useState("");
-  const [qty, setQty] = useState('');
+  const [qty, setQty] = useState(1);
   const [display, setDisplay] = useState("none");
   const [open, setOpen] = useState(false)
   const { id } = useParams();
@@ -72,7 +72,7 @@ function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers, disabled }
     <div className="detailsContent">
       <Header/>
       <Button variant="text" onClick={() => history.push('/flowers')} className="backBtn">{arrow} Continue Shopping</Button>
-        <img src={image} className="flowerImg"/>
+        <img src={image} alt={name} className="flowerImg"/>
         <div className="details">
           <Typography variant="h2" sx={{textDecoration:"underline"}}>{name}</Typography>
           <Typography variant="h4">Price:</Typography>
