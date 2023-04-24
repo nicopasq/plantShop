@@ -3,7 +3,7 @@ import { useHistory, useParams } from "react-router-dom";
 import "../styles/flowerDetails.css";
 import UpdatePlantForm from "./UpdatePlantForm";
 import Header from "./Header";
-import { Button, Typography } from "@mui/material";
+import { Alert, Button, Snackbar, Typography } from "@mui/material";
 import SpeedDial from '@mui/material/SpeedDial';
 import SpeedDialIcon from '@mui/material/SpeedDialIcon';
 import SpeedDialAction from '@mui/material/SpeedDialAction';
@@ -15,6 +15,7 @@ function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers, disabled }
   const [qty, setQty] = useState(1);
   const [display, setDisplay] = useState("none");
   const [open, setOpen] = useState(false)
+  const [openAlert, setOpenAlert] = useState(false);
   const { id } = useParams();
   const history = useHistory();
   const { name, image, price, category, instructions } = flower;
@@ -31,6 +32,11 @@ function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers, disabled }
       .then((data) => setFlower(data));
   }, [id, flower]);
 
+  function handleClose(){
+    if(openAlert){
+      setOpenAlert(false)
+    }
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -45,6 +51,7 @@ function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers, disabled }
       .then((data) => {
         addToCart({index: data.id, qty:qty});
       });
+      setOpenAlert(true)
   }
 
   function handleEdit() {
@@ -71,6 +78,11 @@ function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers, disabled }
   return (
     <div className="detailsContent">
       <Header/>
+      
+      <Snackbar open={openAlert} autoHideDuration={3000} onClose={handleClose} anchorOrigin={{vertical:"top", horizontal:"center"}}>
+        <Alert onClose={handleClose} severity="success" variant="filled">Added {name} to Cart</Alert>
+      </Snackbar>
+
       <Button variant="text" onClick={() => history.push('/flowers')} className="backBtn">{arrow} Continue Shopping</Button>
         <img src={image} alt={name} className="flowerImg"/>
         <div className="details">

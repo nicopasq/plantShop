@@ -7,7 +7,7 @@
       "image": "https://cdn.britannica.com/41/93441-050-F58F8EF1/Gardeners-rhododendrons-flowers.jpg",
       "name": "Azalea",
       "id": 1,
-      "qty": "4"
+      "qty": 1
     },
     {
       "category": "Shrubs",
@@ -34,7 +34,7 @@
       "image": "https://images.immediate.co.uk/production/volatile/sites/10/2019/07/2048x1365-Plectranthus-fruticosus-LI3917943-5433d9d.jpg?quality=90&resize=960%2C640",
       "name": "Plectranthus",
       "id": 4,
-      "qty": ""
+      "qty": 1
     },
     {
       "category": "Shrubs",
@@ -70,7 +70,7 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Rosa_Iceberg_1.jpg/1200px-Rosa_Iceberg_1.jpg",
       "name": "Rosa Iceberg",
       "id": 8,
-      "qty": "1"
+      "qty": 1
     },
     {
       "category": "Container Plants",
@@ -79,7 +79,7 @@
       "image": "https://i.etsystatic.com/17057214/r/il/3fb9ff/2570987170/il_fullxfull.2570987170_5a2x.jpg",
       "name": "Bonsai Tree",
       "id": 9,
-      "qty": "2"
+      "qty": 1
     },
     {
       "category": "Container Plants",
@@ -105,7 +105,7 @@
       "instructions": "Creamy-white centers, medium green outer foliage with flattened outer foliage.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Brassica_oleracea_var._laciniata_flower.jpg/768px-Brassica_oleracea_var._laciniata_flower.jpg",
       "name": "Brassica Oleracea",
-      "qty": 0,
+      "qty": 1,
       "id": 12
     },
     {
@@ -273,7 +273,7 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR96pZmCaUrt5eV1Q6L36NtmxPYNAIz-enmCrSiodrQKSaanaPJoKyPqDeblt5kxZbogCk&usqp=CAU",
       "name": "Blue Lily",
       "id": 31,
-      "qty": "-1"
+      "qty": 1
     }
   ],
   "addedHistory": [
