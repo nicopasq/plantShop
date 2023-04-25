@@ -49,7 +49,7 @@ function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers, disabled }
     })
       .then((r) => r.json())
       .then((data) => {
-        addToCart({index: data.id, qty:qty});
+        addToCart({id: data.id, qty:qty});
       });
       setOpenAlert(true)
   }

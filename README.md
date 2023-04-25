@@ -1,5 +1,21 @@
 # Plant Shop
+## Project Description
+For the phase-2 React project I decided to make a mock e-commerce website that uses a seller's point of view. The main navigable components are AddPlant, Flowers, and Cart.
+When viewing the website the links for these components are, "Add a New Plant", "Shop", and "Cart" respectively. In order to use the "Add a New Plant" link the "Editor Mode" needs to be switched on.
+### Description of Components
+1. AddPlant
 
+        AddPlant consists of a form, and a grid that contains newly created products. The grid is populated with the objects from the "addedHistory" resource. When a submit event happens the "handleSubmit()" function is called, it will create a new plant object from state ([plantObj, setPlantObj]) and persist the object to the "flowerList" resource. At the same time "addToHistory()" is called by "handleSubmit()", "addToHistory()" persists the new plant object to the "addedHistory" resource.
+2. App
+3. Cart
+4. CartPlantCard
+5. Checkout
+6. FlowerDetails
+7. Flowers
+8. Header
+9. NavBar
+10. PlantCard
+11. UpdatePlantForm 
 ## Sources
 ### Images
 • https://cdn.britannica.com/41/93441-050-F58F8EF1/Gardeners-rhododendrons-flowers.jpg

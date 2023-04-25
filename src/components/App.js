@@ -13,12 +13,10 @@ function App() {
   const [cartData, setCartData] = useState([]);
   const [disabled, setDisabled] = useState(true);
   const updatedItems = cartData.map(obj => {
-    let currentPlant;
       for(let plant of displayPlants){
-        if(plant.id === obj.index){
-          currentPlant = plant
-          currentPlant.qty = obj.qty
-          return currentPlant
+        if(plant.id === obj.id){
+          plant.qty = obj.qty
+          return plant
         }
       }
   })  
@@ -33,6 +31,7 @@ function App() {
   function addNewPlant(plant) {
     setDisplayPlants([...displayPlants, plant]);
   }
+
 
   function addToCart(dataObj) {
     setCartData([...cartData, dataObj]);
@@ -52,7 +51,7 @@ function App() {
     setDisplayPlants(updatedFlowers);
     deleteFromCart(parseFloat(id))
   }
-// console.log(displayPlants)
+
 
   function deleteFromCart(id) {
    const updatedCart= cartData.filter((obj) => obj.index !== id);
