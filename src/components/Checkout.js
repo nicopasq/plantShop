@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/checkout.css";
-import { Paper } from "@mui/material";
 
 function Checkout({ total, display, closeForm }) {
 
@@ -9,9 +8,9 @@ function Checkout({ total, display, closeForm }) {
             <form
                 id="checkoutForm"
                 style={{ display: display }}
-                onSubmit={() =>
-                    alert("Payment Successful! \nThank you for your purchase :)")
-                }
+                onSubmit={() => {
+                    alert("Payment successful. Thank you!")
+                }}
             >
                 <div id="formHeader">
                     <p>Checkout</p>

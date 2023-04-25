@@ -14,9 +14,9 @@
       "price": 33.99,
       "instructions": "Beautiful large royal purple flowers adorn attractive satiny green leaves that turn orange\\/red in cold weather. Grows to up to 18 feet, or prune annually to shorten.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Tibouchina_semidecandra.jpg?20050507130046",
-      "name": " Tibouchina Semidecandra",
+      "name": "Tibouchina Semidecandra",
       "id": 2,
-      "qty": 1
+      "qty": "3"
     },
     {
       "category": "Shrubs",
@@ -43,7 +43,7 @@
       "image": "https://cdn.shopify.com/s/files/1/0012/9689/2016/products/Jacks2_1024x1024@2x.jpg?v=1646599582",
       "name": "Camellia Japonica",
       "id": 5,
-      "qty": ""
+      "qty": "2"
     },
     {
       "category": "Shrubs",
@@ -115,7 +115,7 @@
       "image": "https://mullerseeds.de/app/uploads/2021/04/viola_cornuta_penny_orange_jump_up51.jpg",
       "name": " Viola Penny Orange Jump Up",
       "id": 13,
-      "qty": 1
+      "qty": "5"
     },
     {
       "category": "Container Plants",
@@ -274,14 +274,6 @@
       "name": "Blue Lily",
       "id": 31,
       "qty": "2"
-    },
-    {
-      "category": "TEST 2",
-      "price": "87",
-      "instructions": "HP: 360\nSp.Atck: 458 ",
-      "image": "https://freesvgs.com/wp-content/uploads/2021/06/Charizard-SVG-File-FREE.png",
-      "name": "Charizard",
-      "id": 32
     }
   ],
   "addedHistory": [
@@ -292,14 +284,6 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR96pZmCaUrt5eV1Q6L36NtmxPYNAIz-enmCrSiodrQKSaanaPJoKyPqDeblt5kxZbogCk&usqp=CAU",
       "name": "Blue Lily",
       "id": 31
-    },
-    {
-      "category": "TEST 2",
-      "price": "87",
-      "instructions": "HP: 360\nSp.Atck: 458 ",
-      "image": "https://freesvgs.com/wp-content/uploads/2021/06/Charizard-SVG-File-FREE.png",
-      "name": "Charizard",
-      "id": 32
     }
   ]
 }
