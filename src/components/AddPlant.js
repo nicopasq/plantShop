@@ -40,20 +40,25 @@ function AddPlant({ submitForm }) {
       .then((r) => r.json())
       .then((data) => {
         submitForm(data);
+        addToHistory(data);
       });
-    addToHistory();
   }
 
-  function addToHistory() {
+  
+  function addToHistory(data) {
     fetch("http://localhost:3000/addedHistory", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ ...plantObj, new: "true" }),
+      body: JSON.stringify(data),
     })
       .then((r) => r.json())
       .then((data) => history.push(`/flowers/${data.id + 30}`));
+  }
+
+  function handleChange(event){
+    setPlantObj({ ...plantObj, [event.target.name]: event.target.value })
   }
 
   return (
@@ -67,34 +72,32 @@ function AddPlant({ submitForm }) {
             type="text"
             placeholder="Image URL"
             value={image}
-            onChange={(e) =>
-              setPlantObj({ ...plantObj, image: e.target.value })
-            }
+            onChange={handleChange}
+            name="image"
           />
           <br />
           <input
             type="text"
             placeholder="Category"
             value={category}
-            onChange={(e) =>
-              setPlantObj({ ...plantObj, category: e.target.value })
-            }
+            onChange={handleChange}
+            name="category"
           />
           <br />
           <input
             type="text"
             placeholder="Plant Name"
             value={name}
-            onChange={(e) => setPlantObj({ ...plantObj, name: e.target.value })}
+            onChange={handleChange}
+            name="name"
           />
           <br />
           <input
             type="number"
             placeholder="Price"
             value={price}
-            onChange={(e) =>
-              setPlantObj({ ...plantObj, price: e.target.value })
-            }
+            onChange={handleChange}
+            name="price"
           />
           <br />
           <textarea
@@ -102,9 +105,8 @@ function AddPlant({ submitForm }) {
             type="text"
             placeholder="Care Instructions"
             value={instructions}
-            onChange={(e) =>
-              setPlantObj({ ...plantObj, instructions: e.target.value })
-            }
+            onChange={handleChange}
+            name="instructions"
           />
           <br />
           <button type="submit">Submit</button>

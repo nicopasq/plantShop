@@ -7,7 +7,7 @@
       "image": "https://cdn.britannica.com/41/93441-050-F58F8EF1/Gardeners-rhododendrons-flowers.jpg",
       "name": "Azalea",
       "id": 1,
-      "qty": "4"
+      "qty": 1
     },
     {
       "category": "Shrubs",
@@ -70,7 +70,7 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Rosa_Iceberg_1.jpg/1200px-Rosa_Iceberg_1.jpg",
       "name": "Rosa Iceberg",
       "id": 8,
-      "qty": "-1"
+      "qty": 1
     },
     {
       "category": "Container Plants",
@@ -285,6 +285,22 @@
       "name": "Blue Lily",
       "new": "true",
       "id": 1
+    },
+    {
+      "category": "",
+      "price": "",
+      "instructions": "",
+      "image": "",
+      "name": "",
+      "id": 32
+    },
+    {
+      "category": "",
+      "price": "",
+      "instructions": "",
+      "image": "",
+      "name": "",
+      "id": 33
     }
   ]
 }

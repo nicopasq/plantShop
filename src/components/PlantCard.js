@@ -5,7 +5,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { CardActionArea} from '@mui/material';
+import { CardActionArea, Grid} from '@mui/material';
 
 function PlantCard({ plant }) {
   const { name, image, price, id, category } = plant;
@@ -19,7 +19,8 @@ function PlantCard({ plant }) {
     }
   }
     return (
-      <Card key={id} className="card" sx={{ maxWidth: 275 }}>
+      <Grid key={id} item xs={2} >
+      <Card  className="card" sx={{ maxWidth: 275 }}>
         <CardActionArea onClick={handleClick} >
           <CardMedia
             component="img"
@@ -41,6 +42,7 @@ function PlantCard({ plant }) {
           </CardContent>
         </CardActionArea>
       </Card>
+      </Grid>
     );
 }
 

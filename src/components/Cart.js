@@ -27,7 +27,6 @@ cartItems.map(item => {
   return (
     <div className="cartComponent">
       <Header />
-      <Typography variant="h1" sx={{color:'red'}}>STYLE THE CHECKOUT FORM!!</Typography>
       <Typography variant="h2" id="title">
         Cart
       </Typography>
