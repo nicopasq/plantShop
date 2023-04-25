@@ -5,9 +5,10 @@
 .flowerImg{
     width: 400px;
     height: 400px;
-    padding: 7px;
-    border: 1px solid black;
-    border-radius: 20px;
+    border-style:outset;
+    border-width: 5px;
+    border-color: black;
+    border-radius: 10px;
     position: relative;
     top: 5vh;
     left: -8%;

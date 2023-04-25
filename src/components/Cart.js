@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import "../styles/cart.css";
 import Checkout from "./Checkout";
 import Header from "./Header";
 import CartPlantCard from "./CartPlantCard";
-import { Button, Typography } from "@mui/material";
+import { Button, Paper, Typography } from "@mui/material";
 
 function Cart({ cartItems, deleteFromCart }) {
-  const [displayCheckout, setDisplayCheckout] = useState("none");
+  const [displayCheckout, setDisplayCheckout] = useState('none');
   const history = useHistory();
   const displayPlants = cartItems.map(item => { return <CartPlantCard key={item.id} plant={item} removeItem={deleteFromCart}/>})
   let total = 0
@@ -19,7 +19,7 @@ cartItems.map(item => {
   function openCloseForm() {
     if (displayCheckout === "none") {
       setDisplayCheckout("block");
-    } else {
+    } else if(displayCheckout === "block") {
       setDisplayCheckout("none");
     }
   }
@@ -27,6 +27,7 @@ cartItems.map(item => {
   return (
     <div className="cartComponent">
       <Header />
+      <Typography variant="h1" sx={{color:'red'}}>STYLE THE CHECKOUT FORM!!</Typography>
       <Typography variant="h2" id="title">
         Cart
       </Typography>
@@ -51,7 +52,7 @@ cartItems.map(item => {
         total={total}
         display={displayCheckout}
         closeForm={openCloseForm}
-      />
+        />
       <Button className="back" onClick={() => history.push("/")}>
         <strong>Continue Shopping</strong>
       </Button>

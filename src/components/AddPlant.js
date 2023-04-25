@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import "../styles/addPlant.css";
 import PlantCard from "./PlantCard";
 import Header from "./Header";
+import { Box, Grid, Typography } from "@mui/material";
 
 function AddPlant({ submitForm }) {
   const [addedPlants, setAddedPlants] = useState([]);
@@ -111,7 +112,10 @@ function AddPlant({ submitForm }) {
       </div>
 
       <h1>History of Added Plants</h1>
-      <ul id="prevAdd">{displayPlants}</ul>
+      <Grid container spacing={2} columns={"4"} id="addedGrid">
+        {displayPlants.map(plant => <Grid item xs={1} key={plant.key} className="addedItem">{plant}</Grid>)}
+      </Grid>
+
     </div>
   );
 }

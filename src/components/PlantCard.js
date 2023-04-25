@@ -26,6 +26,7 @@ function PlantCard({ plant }) {
             height="200"
             image={image}
             alt={name}
+            className="cardMedia"
           />
           <CardContent sx={{height:'120px'}}>
             <Typography gutterBottom variant="h5" component="div">

@@ -1,9 +1,11 @@
 import React from "react";
 import "../styles/checkout.css";
+import { Paper } from "@mui/material";
 
 function Checkout({ total, display, closeForm }) {
+
     return (
-        <div id="checkoutContainer" style={{ display: display }}>
+        <div id="checkoutContainer" style={{display: display}}>
             <form
                 id="checkoutForm"
                 style={{ display: display }}
@@ -36,6 +38,7 @@ function Checkout({ total, display, closeForm }) {
                 </button>
             </form>
         </div>
+
     );
 }
 

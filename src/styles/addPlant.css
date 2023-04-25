@@ -1,6 +1,6 @@
 .addPlantComp{
     background-color: lightGreen;
-    height: 100vh;
+    height: 100%;
     text-align: center;
 }
 
@@ -17,10 +17,15 @@ input{
     width: 500px;
 }
 
-#prevAdd{
-    border: 1px solid black;
-    display: inline-block;
-    height: fit-content;
-    width: 900px;
-    text-align: left;
+#addedGrid{
+    background-color: rgba(0, 128, 0, 0.314);
+    width: 70%;
+    position: relative;
+    left: 16%;
+    border-radius: 10px;
+}
+.addedItem{
+    position: relative;
+    right: .75%;
+    top: -7px;
 }

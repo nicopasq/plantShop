@@ -4,9 +4,8 @@
     height: 100%;
     background: rgba(128, 128, 128, 0.751);
     position: absolute;
-    z-index: 1000;
     top: 0vh;
-
+    z-index: 1000;
 }
 #checkoutForm{
     border: 1px solid black;
@@ -15,7 +14,7 @@
     height: fit-content;
     background: white;
     position: absolute;
-    left: 86.25vh;
+    left: 70vh;
     top: 20vh;
 }
 #checkoutForm input{
@@ -25,6 +24,7 @@
 }
 #checkoutForm p{
     margin-bottom: -2px;
+    margin-left: 2%;
     font-size: 16px;
 }
 #cardNum, #name{
@@ -61,8 +61,8 @@
     margin-bottom: -180px;
     width: fit-content;
     position: relative;
-    right: 167%;
-    top: -8.5vh;
+    right: 80%;
+    top: -11.5vh;
 }
 #xBtn{
     float: right;
