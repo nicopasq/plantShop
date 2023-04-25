@@ -54,7 +54,7 @@ function App() {
 
 
   function deleteFromCart(id) {
-   const updatedCart= cartData.filter((obj) => obj.index !== id);
+   const updatedCart= cartData.filter((obj) => obj.id !== id);
    setCartData(updatedCart);
   }
 

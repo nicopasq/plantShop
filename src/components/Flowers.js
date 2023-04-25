@@ -6,7 +6,7 @@ import { Grid, Typography } from "@mui/material";
 
 function Flowers({ plantList }) {
   const cards = plantList.map((plant) => (
-    <PlantCard key={plant.id} plant={plant} />
+    <PlantCard xs={2} key={plant.id} plant={plant} />
   ));
 
   return (

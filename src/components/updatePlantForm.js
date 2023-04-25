@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
 import "../styles/updatePlantForm.css";
 
 function UpdatePlantForm({
@@ -9,7 +8,6 @@ function UpdatePlantForm({
   updateFlowers,
 }) {
   const { name, image, category, instructions, price, id} = plant;
-  const history = useHistory();
   const [newPlantObj, setNewPlantObj] = useState({
     category: "",
     price: "",
@@ -33,22 +31,23 @@ function UpdatePlantForm({
         "Content-Type": "application/json",
       },
       body: JSON.stringify(newPlantObj),
+    })
+    .then(r => r.json())
+    .then(data => {
+      updateFlowers(data);
+      updateAddedHistory(id);
     });
     closeForm();
-    updateFlowers(newPlantObj);
-    updateAddedHistory();
   }
 
-  function updateAddedHistory() {
-    if (id > 30) {
-      fetch(`http://localhost:3000/addedHistory/${id - 30}`, {
+  function updateAddedHistory(id) {
+      fetch(`http://localhost:3000/addedHistory/${id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(newPlantObj),
       });
-    }
   }
 
   function closeOnly(e) {

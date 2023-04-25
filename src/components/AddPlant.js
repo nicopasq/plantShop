@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import "../styles/addPlant.css";
 import PlantCard from "./PlantCard";
 import Header from "./Header";
-import { Box, Grid, Typography } from "@mui/material";
+import { Grid } from "@mui/material";
 
 function AddPlant({ submitForm }) {
   const [addedPlants, setAddedPlants] = useState([]);
@@ -17,7 +17,7 @@ function AddPlant({ submitForm }) {
   const { category, price, image, name, instructions } = plantObj;
   const history = useHistory();
   const displayPlants = addedPlants.map((plant) => (
-    <PlantCard key={plant.id} plant={plant} />
+    <PlantCard xs={2.95} key={plant.id} plant={plant} />
   ));
 
 
@@ -54,7 +54,7 @@ function AddPlant({ submitForm }) {
       body: JSON.stringify(data),
     })
       .then((r) => r.json())
-      .then((data) => history.push(`/flowers/${data.id + 30}`));
+      .then((data) => history.push(`/flowers/${data.id}`));
   }
 
   function handleChange(event){
@@ -114,8 +114,8 @@ function AddPlant({ submitForm }) {
       </div>
 
       <h1>History of Added Plants</h1>
-      <Grid container spacing={2} columns={"4"} id="addedGrid">
-        {displayPlants.map(plant => <Grid item xs={1} key={plant.key} className="addedItem">{plant}</Grid>)}
+      <Grid container spacing={2}  id="addedGrid">
+        {displayPlants}
       </Grid>
 
     </div>

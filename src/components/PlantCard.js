@@ -7,19 +7,15 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea, Grid} from '@mui/material';
 
-function PlantCard({ plant }) {
+function PlantCard({ plant, xs }) {
   const { name, image, price, id, category } = plant;
   const history = useHistory();
 
   function handleClick() {
-    if (plant.new) {
-      history.push(`/flowers/${id + 30}`);
-    } else {
       history.push(`/flowers/${id}`);
-    }
   }
     return (
-      <Grid key={id} item xs={2} >
+      <Grid key={id} item xs={xs} >
       <Card  className="card" sx={{ maxWidth: 275 }}>
         <CardActionArea onClick={handleClick} >
           <CardMedia

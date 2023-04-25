@@ -267,40 +267,39 @@
       "qty": 1
     },
     {
-      "category": "Flowers",
-      "price": "42.00",
-      "instructions": "WATER IT!!!!",
+      "category": "TEST 1",
+      "price": "12",
+      "instructions": "AAAAAAAAA",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR96pZmCaUrt5eV1Q6L36NtmxPYNAIz-enmCrSiodrQKSaanaPJoKyPqDeblt5kxZbogCk&usqp=CAU",
       "name": "Blue Lily",
       "id": 31,
-      "qty": 1
+      "qty": "2"
+    },
+    {
+      "category": "TEST 2",
+      "price": "87",
+      "instructions": "HP: 360\nSp.Atck: 458 ",
+      "image": "https://freesvgs.com/wp-content/uploads/2021/06/Charizard-SVG-File-FREE.png",
+      "name": "Charizard",
+      "id": 32
     }
   ],
   "addedHistory": [
     {
-      "category": "Flowers",
-      "price": "42.00",
-      "instructions": "WATER IT!!!!",
+      "category": "TEST 1",
+      "price": "12",
+      "instructions": "AAAAAAAAA",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR96pZmCaUrt5eV1Q6L36NtmxPYNAIz-enmCrSiodrQKSaanaPJoKyPqDeblt5kxZbogCk&usqp=CAU",
       "name": "Blue Lily",
-      "new": "true",
-      "id": 1
+      "id": 31
     },
     {
-      "category": "",
-      "price": "",
-      "instructions": "",
-      "image": "",
-      "name": "",
+      "category": "TEST 2",
+      "price": "87",
+      "instructions": "HP: 360\nSp.Atck: 458 ",
+      "image": "https://freesvgs.com/wp-content/uploads/2021/06/Charizard-SVG-File-FREE.png",
+      "name": "Charizard",
       "id": 32
-    },
-    {
-      "category": "",
-      "price": "",
-      "instructions": "",
-      "image": "",
-      "name": "",
-      "id": 33
     }
   ]
 }

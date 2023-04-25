@@ -62,15 +62,12 @@ function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers, disabled }
     }
   }
 
-  function handleDelete(e) {
+  function handleDelete() {
     fetch(`http://localhost:3000/flowerlist/${id}`, { method: "DELETE" });
+    fetch(`http://localhost:3000/addedHistory/${id}`, {method: "DELETE",});
+
     deleteFromFlowers(id);
     history.goBack();
-    if(id > 30){
-      fetch(`http://localhost:3000/addedHistory/${id - 30}`, {
-        method: "DELETE",
-      });
-    }
   }
 
   if (!flower) return <h1>Loading...</h1>;
