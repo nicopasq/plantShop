@@ -10,22 +10,15 @@ function UpdatePlantForm({
 }) {
   const { name, image, category, instructions, price, id} = plant;
   const [newPlantObj, setNewPlantObj] = useState({
-    category: "",
-    price: "",
-    instructions: "",
-    image: "",
-    name: ""
+    category: '',
+    price: '',
+    instructions: instructions,
+    image: image,
+    name: ''
   });
 
   function updatePlant(e) {
     e.preventDefault();
-    //1) require input on the actual input tag
-    // for (let key in newPlantObj) {
-    //   if (newPlantObj[key] === "") {
-    //     newPlantObj[key] = plant[key];
-    //   }
-    // }
-    //2) DELETE ABOVE 
     fetch(`http://localhost:3000/flowerlist/${id}`, {
       method: "PATCH",
       headers: {

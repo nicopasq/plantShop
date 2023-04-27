@@ -1,16 +1,20 @@
 import React from "react";
 import "../styles/checkout.css";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
 function Checkout({ total, display, closeForm }) {
+    const history = useHistory();
+    function handleSubmit(){
+        alert("Payment successful. Thank you!");
+        history.push("/")
+    }
 
     return (
         <div id="checkoutContainer" style={{display: display}}>
             <form
                 id="checkoutForm"
                 style={{ display: display }}
-                onSubmit={() => {
-                    alert("Payment successful. Thank you!")
-                }}
+                onSubmit={handleSubmit}
             >
                 <div id="formHeader">
                     <p>Checkout</p>

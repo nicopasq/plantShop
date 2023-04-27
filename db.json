@@ -7,8 +7,7 @@
       "image": "https://cdn.britannica.com/41/93441-050-F58F8EF1/Gardeners-rhododendrons-flowers.jpg",
       "name": "Azalea",
       "id": 1,
-      "qty": 1,
-      "": "f"
+      "qty": 1
     },
     {
       "category": "Shrubs",
@@ -17,7 +16,7 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/9/9c/Tibouchina_semidecandra.jpg?20050507130046",
       "name": "Tibouchina Semidecandra",
       "id": 2,
-      "qty": "3"
+      "qty": 1
     },
     {
       "category": "Shrubs",
@@ -44,7 +43,7 @@
       "image": "https://cdn.shopify.com/s/files/1/0012/9689/2016/products/Jacks2_1024x1024@2x.jpg?v=1646599582",
       "name": "Camellia Japonica",
       "id": 5,
-      "qty": "2"
+      "qty": "12"
     },
     {
       "category": "Shrubs",
@@ -62,7 +61,7 @@
       "image": "https://h2.commercev3.net/cdn.springhillnursery.com/images/800/09337A.jpg",
       "name": "Rosa Burgundy",
       "id": 7,
-      "qty": 1
+      "qty": "7"
     },
     {
       "category": "Shrubs",
@@ -80,7 +79,7 @@
       "image": "https://i.etsystatic.com/17057214/r/il/3fb9ff/2570987170/il_fullxfull.2570987170_5a2x.jpg",
       "name": "Bonsai Tree",
       "id": 9,
-      "qty": 1
+      "qty": "20"
     },
     {
       "category": "Container Plants",

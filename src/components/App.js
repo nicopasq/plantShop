@@ -21,7 +21,6 @@ function App() {
       }
   })  
   const cartItems = [...new Set(updatedItems)];
-
   useEffect(() => {
     fetch("http://localhost:3000/flowerlist")
       .then((r) => r.json())
