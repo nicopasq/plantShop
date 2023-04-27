@@ -2,20 +2,28 @@
 ## Project Description
 For the phase-2 React project I decided to make a mock e-commerce website that uses a seller's point of view. The main navigable components are AddPlant, Flowers, and Cart.
 When viewing the website the links for these components are, "Add a New Plant", "Shop", and "Cart" respectively. In order to use the "Add a New Plant" link the "Editor Mode" needs to be switched on.
-### Description of Components
-1. AddPlant
+## Description of Components
+### App
 
-        AddPlant consists of a form, and a grid that contains newly created products. The grid is populated with the objects from the "addedHistory" resource. When a submit event happens the "handleSubmit()" function is called, it will create a new plant object from state ([plantObj, setPlantObj]) and persist the object to the "flowerList" resource. At the same time "addToHistory()" is called by "handleSubmit()", "addToHistory()" persists the new plant object to the "addedHistory" resource.
-2. App
-3. Cart
-4. CartPlantCard
-5. Checkout
-6. FlowerDetails
-7. Flowers
-8. Header
-9. NavBar
-10. PlantCard
-11. UpdatePlantForm 
+        App is at the top most level, it's job is to update and determine what data needs to be displayed on AddPlant, Flowers, and Cart. App also holds the Switch and Route components for navigation. 
+### PlantCard
+
+        This component is used by Flowers and AddPlant, it creates a Grid item that holds a Card component for each plant object that is passed to it as a prop. The Grid item xs is a dynamic value, and is set with props. When a PlantCard component is clicked, it will send the user to the FlowerDetails page for that specific plant.
+### Header
+
+        Returns the blue header where "The Garden" logo is.
+### NavBar
+
+        Returns a MUI Drawer component that has links to Shop (Flowers), Cart, and Add a New Plant, there is also a switch labeled "Editor Mode". When "Editor Mode" is switched on, the link to Add a New Plant and a MUI SpeedDial component become useable.
+### Flowers
+### FlowerDetails
+### UpdatePlantForm 
+### AddPlant
+
+        AddPlant consists of a form, and a grid that contains newly created products. The grid is populated with the objects from the "addedHistory" resource. When a submit event happens the "handleSubmit()" function is called, it will get a new plant object from state ([plantObj, setPlantObj]) and persist the object to the "flowerList" and "addedHistory" resources. 
+### Cart
+### CartPlantCard
+### Checkout
 ## Sources
 ### Images
 • https://cdn.britannica.com/41/93441-050-F58F8EF1/Gardeners-rhododendrons-flowers.jpg

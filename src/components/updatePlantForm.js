@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/updatePlantForm.css";
+import { Typography } from "@mui/material";
 
 function UpdatePlantForm({
   display,
@@ -19,11 +20,11 @@ function UpdatePlantForm({
   function updatePlant(e) {
     e.preventDefault();
     //1) require input on the actual input tag
-    for (let key in newPlantObj) {
-      if (newPlantObj[key] === "") {
-        newPlantObj[key] = plant[key];
-      }
-    }
+    // for (let key in newPlantObj) {
+    //   if (newPlantObj[key] === "") {
+    //     newPlantObj[key] = plant[key];
+    //   }
+    // }
     //2) DELETE ABOVE 
     fetch(`http://localhost:3000/flowerlist/${id}`, {
       method: "PATCH",
@@ -50,6 +51,10 @@ function UpdatePlantForm({
       });
   }
 
+  function handleChange(e){
+    setNewPlantObj({ ...newPlantObj, [e.target.name]: e.target.value })
+  }
+
   function closeOnly(e) {
     e.preventDefault();
     closeForm();
@@ -62,27 +67,27 @@ function UpdatePlantForm({
           <button onClick={closeOnly} id="x">
             x
           </button>
-          <h2>Update Plant</h2>
+          <Typography variant="h4">Update Plant</Typography>
+          <Typography variant="subtitle2" color="red" sx={{marginBottom:"2%"}}><em>(all fields required, add a space to remove a section.)</em></Typography>
           Image URL:
           <br />
           <input
             type="text"
             placeholder={image}
             value={newPlantObj.image}
-            onChange={(e) =>
-              setNewPlantObj({ ...newPlantObj, image: e.target.value })
-            }
+            onChange={handleChange}
+            name="image"
           />
           <br />
           Category:
           <br />
           <input
+          required={true}
             type="text"
             placeholder={category}
             value={newPlantObj.category}
-            onChange={(e) =>
-              setNewPlantObj({ ...newPlantObj, category: e.target.value })
-            }
+            onChange={handleChange}
+            name="category"
           />
           <br />
           Name of Plant:
@@ -91,9 +96,8 @@ function UpdatePlantForm({
             type="text"
             placeholder={name}
             value={newPlantObj.name}
-            onChange={(e) =>
-              setNewPlantObj({ ...newPlantObj, name: e.target.value })
-            }
+            onChange={handleChange}
+            name="name"
           />
           <br />
           Price:
@@ -102,9 +106,8 @@ function UpdatePlantForm({
             type="number"
             placeholder={price}
             value={newPlantObj.price}
-            onChange={(e) =>
-              setNewPlantObj({ ...newPlantObj, price: e.target.value })
-            }
+            onChange={handleChange}
+            name="price"
           />
           <br />
           Plant Care:
@@ -114,9 +117,8 @@ function UpdatePlantForm({
             type="text"
             placeholder={instructions}
             value={newPlantObj.instructions}
-            onChange={(e) =>
-              setNewPlantObj({ ...newPlantObj, instructions: e.target.value })
-            }
+            onChange={handleChange}
+            name="instructions"
           />
           <br />
           <button type="submit">Submit</button>

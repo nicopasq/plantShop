@@ -88,7 +88,7 @@ function App() {
         </Route>
         <Route path="/cart">
           <Paper className="contentContainer">
-          <Cart /*qty={qty}*/ cartItems={cartItems} deleteFromCart={deleteFromCart} />
+          <Cart cartItems={cartItems} deleteFromCart={deleteFromCart} />
           </Paper>
         </Route>
       </Switch>

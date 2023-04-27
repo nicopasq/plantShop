@@ -7,7 +7,8 @@
       "image": "https://cdn.britannica.com/41/93441-050-F58F8EF1/Gardeners-rhododendrons-flowers.jpg",
       "name": "Azalea",
       "id": 1,
-      "qty": 1
+      "qty": 1,
+      "": "f"
     },
     {
       "category": "Shrubs",
@@ -269,18 +270,18 @@
     {
       "category": "TEST 1",
       "price": "12",
-      "instructions": "AAAAAAAAA",
+      "instructions": "bbbbb",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR96pZmCaUrt5eV1Q6L36NtmxPYNAIz-enmCrSiodrQKSaanaPJoKyPqDeblt5kxZbogCk&usqp=CAU",
       "name": "Blue Lily",
       "id": 31,
-      "qty": "2"
+      "qty": 1
     }
   ],
   "addedHistory": [
     {
       "category": "TEST 1",
       "price": "12",
-      "instructions": "AAAAAAAAA",
+      "instructions": "bbbbb",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR96pZmCaUrt5eV1Q6L36NtmxPYNAIz-enmCrSiodrQKSaanaPJoKyPqDeblt5kxZbogCk&usqp=CAU",
       "name": "Blue Lily",
       "id": 31
