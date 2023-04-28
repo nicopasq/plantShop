@@ -4,7 +4,7 @@ import "../styles/cart.css";
 import Checkout from "./Checkout";
 import Header from "./Header";
 import CartPlantCard from "./CartPlantCard";
-import { Button, Paper, Typography } from "@mui/material";
+import { Button, Container, Paper, Typography } from "@mui/material";
 
 function Cart({ cartItems, deleteFromCart }) {
   const [displayCheckout, setDisplayCheckout] = useState('none');
@@ -30,6 +30,7 @@ cartItems.map(item => {
       <Typography variant="h2" id="title">
         Cart
       </Typography>
+
       <div id="cartDisplay">
         <ul id="cartContents">{displayPlants}</ul>
         <div id="checkout">
