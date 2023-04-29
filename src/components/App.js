@@ -57,6 +57,10 @@ function App() {
    setCartData(updatedCart);
   }
 
+  function clearCart(){
+    setCartData([])
+  }
+
   function enableEditor(){
     setDisabled(!disabled)
   }
@@ -87,7 +91,7 @@ function App() {
         </Route>
         <Route path="/cart">
           <Paper className="contentContainer">
-          <Cart cartItems={cartItems} deleteFromCart={deleteFromCart} />
+          <Cart cartItems={cartItems} clearCart={clearCart} deleteFromCart={deleteFromCart} />
           </Paper>
         </Route>
       </Switch>

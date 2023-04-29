@@ -2,11 +2,12 @@ import React from "react";
 import "../styles/checkout.css";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 
-function Checkout({ total, display, closeForm }) {
+function Checkout({ total, display, closeForm, clearCart }) {
     const history = useHistory();
     function handleSubmit(){
         alert("Payment successful. Thank you!");
-        history.push("/")
+        history.push("/");
+        clearCart();
     }
 
     return (

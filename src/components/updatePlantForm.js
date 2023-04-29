@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/updatePlantForm.css";
-import { Typography } from "@mui/material";
+import { Typography, cardActionAreaClasses } from "@mui/material";
 
 function UpdatePlantForm({
   display,
@@ -10,11 +10,11 @@ function UpdatePlantForm({
 }) {
   const { name, image, category, instructions, price, id} = plant;
   const [newPlantObj, setNewPlantObj] = useState({
-    category: '',
-    price: '',
+    category: category,
+    price: price,
     instructions: instructions,
     image: image,
-    name: ''
+    name: name
   });
 
   function updatePlant(e) {
@@ -61,7 +61,7 @@ function UpdatePlantForm({
             x
           </button>
           <Typography variant="h4">Update Plant</Typography>
-          <Typography variant="subtitle2" color="red" sx={{marginBottom:"2%"}}><em>(all fields required, add a space to remove a section.)</em></Typography>
+          <Typography variant="subtitle2" color="red" sx={{marginBottom:"2%"}}><em>(all fields required, delete text then add a space to remove a section.)</em></Typography>
           Image URL:
           <br />
           <input

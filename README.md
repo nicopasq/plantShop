@@ -13,20 +13,6 @@ To install ...
 3. type json-server --watch db.json, then press Enter key.
 4. type npm start, then press Enter key.
 ---
-## Tree
-|-App
-
-||--NavBar
-
-||--Flowers
-
-||--FlowerDetails
-
-||--AddPlant
-
-||--Cart
-
----
 ## Description of Components
 ### App
 
