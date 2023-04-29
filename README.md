@@ -1,7 +1,7 @@
 # Plant Shop
 ## Project Description
 For the phase-2 React project I decided to make a mock e-commerce website that uses a seller's point of view. The main navigable components are AddPlant, Flowers, and Cart.
-When viewing the website the links for these components are, "Add a New Plant", "Shop", and "Cart" respectively. In order to use the "Add a New Plant" link the "Editor Mode" needs to be switched on.
+When viewing the website the links for these components are, "Add a New Plant", "Shop", and "Cart" respectively. In order to use the "Add a New Plant" link, "Editor Mode" needs to be switched on.
 
 ---
 ## How to Use 
@@ -9,9 +9,23 @@ Interact with the links, cards, inputs, and buttons that are integrated into thi
 ### installation
 To install ...
 1. Fork and clone this repository.
-2. Open the console, type nmp install, then press Enter key.
+2. Open the console, type npm install, then press Enter key.
 3. type json-server --watch db.json, then press Enter key.
 4. type npm start, then press Enter key.
+---
+## Tree
+|-App
+
+||--NavBar
+
+||--Flowers
+
+||--FlowerDetails
+
+||--AddPlant
+
+||--Cart
+
 ---
 ## Description of Components
 ### App

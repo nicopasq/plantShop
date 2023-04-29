@@ -34,7 +34,7 @@
       "image": "https://images.immediate.co.uk/production/volatile/sites/10/2019/07/2048x1365-Plectranthus-fruticosus-LI3917943-5433d9d.jpg?quality=90&resize=960%2C640",
       "name": "Plectranthus",
       "id": 4,
-      "qty": 1
+      "qty": "8"
     },
     {
       "category": "Shrubs",
@@ -88,7 +88,7 @@
       "image": "https://ncfarmsinc.com/products_images/Calibrachoa-Noa-Mega-Pink.jpg",
       "name": "Calibrachoa Noa",
       "id": 10,
-      "qty": 1
+      "qty": "2"
     },
     {
       "category": "Container Plants",
@@ -115,7 +115,7 @@
       "image": "https://mullerseeds.de/app/uploads/2021/04/viola_cornuta_penny_orange_jump_up51.jpg",
       "name": " Viola Penny Orange Jump Up",
       "id": 13,
-      "qty": "5"
+      "qty": "3"
     },
     {
       "category": "Container Plants",
@@ -275,7 +275,7 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR96pZmCaUrt5eV1Q6L36NtmxPYNAIz-enmCrSiodrQKSaanaPJoKyPqDeblt5kxZbogCk&usqp=CAU",
       "name": "Blue Lily",
       "id": 31,
-      "qty": 1
+      "qty": "3"
     }
   ],
   "addedHistory": [
