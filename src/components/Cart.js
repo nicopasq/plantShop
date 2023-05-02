@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import "../styles/cart.css";
 import Checkout from "./Checkout";
-import Header from "./Header";
 import CartPlantCard from "./CartPlantCard";
 import { Button, Typography } from "@mui/material";
 
@@ -26,7 +25,7 @@ cartItems.map(item => {
 
   return (
     <div className="cartComponent">
-      <Header />
+    
       <Typography variant="h2" id="title">
         Cart
       </Typography>

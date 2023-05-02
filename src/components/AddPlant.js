@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import "../styles/addPlant.css";
 import PlantCard from "./PlantCard";
-import Header from "./Header";
 import { Grid } from "@mui/material";
 
 function AddPlant({ submitForm }) {
@@ -63,7 +62,6 @@ function AddPlant({ submitForm }) {
 
   return (
     <div className="addPlantComp">
-      <Header/>
       <h1>Add a plant to sell!</h1>
 
       <div id="addForm">

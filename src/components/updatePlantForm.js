@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/updatePlantForm.css";
-import { Typography, cardActionAreaClasses } from "@mui/material";
+import { Typography } from "@mui/material";
 
 function UpdatePlantForm({
   display,

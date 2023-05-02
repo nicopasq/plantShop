@@ -1,6 +1,8 @@
 .addPlantComp{
     background-color: lightGreen;
-    height: 100%;
+    height: 100vh;
+    position: relative;
+    top: -2.1vh;
     text-align: center;
 }
 
@@ -23,6 +25,7 @@ input{
     position: relative;
     left: 16%;
     border-radius: 10px;
+    overflow-y: scroll;
 }
 .addedItem{
     position: relative;

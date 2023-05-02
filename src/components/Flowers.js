@@ -1,7 +1,6 @@
 import React from "react";
 import PlantCard from "./PlantCard";
 import "../styles/flowers.css";
-import Header from "./Header";
 import { Grid, Typography } from "@mui/material";
 
 function Flowers({ plantList }) {
@@ -11,7 +10,6 @@ function Flowers({ plantList }) {
 
   return (
     <div id="flowersComp">
-      <Header/>
       <Typography variant="h2" sx={{textDecoration:"underline"}}>Available Plants</Typography>
       <Grid container spacing={3} id="flowerContainer">
         {cards}

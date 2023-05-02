@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import "../styles/flowerDetails.css";
 import UpdatePlantForm from "./UpdatePlantForm";
-import Header from "./Header";
+
 import { Alert, Button, Snackbar, Typography } from "@mui/material";
 import SpeedDial from '@mui/material/SpeedDial';
 import SpeedDialIcon from '@mui/material/SpeedDialIcon';
@@ -74,7 +74,7 @@ function FlowerDetails({ addToCart, updateFlowers, deleteFromFlowers, disabled }
 
   return (
     <div className="detailsContent">
-      <Header/>
+
       
       <Snackbar open={openAlert} autoHideDuration={3000} onClose={handleClose} anchorOrigin={{vertical:"top", horizontal:"center"}}>
         <Alert onClose={handleClose} severity="success" variant="filled">Added {name} to Cart</Alert>

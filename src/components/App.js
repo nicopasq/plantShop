@@ -5,6 +5,7 @@ import Flowers from "./Flowers";
 import FlowerDetails from "./FlowerDetails";
 import AddPlant from "./AddPlant";
 import Cart from "./Cart";
+import Header from "./Header";
 import { Switch, Route } from "react-router-dom";
 import { Paper } from "@mui/material";
 
@@ -67,6 +68,7 @@ function App() {
 
   return (
     <div>
+        <Header />
       <NavBar enableEditor={enableEditor}/>
       <Switch>
         <Route exact path="/">
