@@ -4,6 +4,7 @@ import "../styles/cart.css";
 import Checkout from "./Checkout";
 import CartPlantCard from "./CartPlantCard";
 import { Button, Typography } from "@mui/material";
+import Count from "./Count";
 
 function Cart({ cartItems, deleteFromCart, clearCart }) {
   const [displayCheckout, setDisplayCheckout] = useState('none');
@@ -29,6 +30,7 @@ cartItems.map(item => {
       <Typography variant="h2" id="title">
         Cart
       </Typography>
+          <Count/>
 
       <div id="cartDisplay">
         <ul id="cartContents">{displayPlants}</ul>
@@ -56,6 +58,7 @@ cartItems.map(item => {
       <Button className="back" onClick={() => history.push("/")}>
         <strong>Continue Shopping</strong>
       </Button>
+
     </div>
   );
 }

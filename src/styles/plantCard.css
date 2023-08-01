@@ -1,11 +1,15 @@
 .card{
-    border: 3px solid rgba(0, 100, 0, 0.673);
     border-radius: 10px;
     height: 350px;
+    margin: 12%;
 }
 .cardMedia{
     border-bottom: 1px solid darkgreen;
 }
 .card:hover{
-    border: 2px solid black;
-}
+    border-bottom: 1px solid black;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.578);
+    border-left: 1px solid rgba(0, 0, 0, 0.578);
+} 
+/* 
+*/
