@@ -7,7 +7,7 @@ import AddPlant from "./AddPlant";
 import Cart from "./Cart";
 import Header from "./Header";
 import { Switch, Route } from "react-router-dom";
-import { Container, Paper } from "@mui/material";
+import { Paper } from "@mui/material";
 
 function App() {
   const [displayPlants, setDisplayPlants] = useState([]);
@@ -67,7 +67,7 @@ function App() {
   }
 
   return (
-    <Container>
+    <div>
         <Header />
       <NavBar enableEditor={enableEditor}/>
       <Switch>
@@ -97,7 +97,7 @@ function App() {
           </Paper>
         </Route>
       </Switch>
-    </Container>
+    </div>
   );
 }
 

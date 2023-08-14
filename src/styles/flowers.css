@@ -1,7 +1,7 @@
 #flowersComp{
-    position: relative;
-    right: 7.5vw;
-    width:60vw;
-    height: 100%;
-    background-color: lightgreen;
+    background-color: lightGreen;
+}
+#flowerContainer{
+    width: 95%;
+    margin-left: 2.5%;
 }
